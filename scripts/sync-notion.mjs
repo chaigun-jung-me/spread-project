@@ -96,6 +96,7 @@ async function fetchBlocks(pageId) {
 async function convertBlock(block, pageId, imageCount) {
   const type = block.type;
   const data = block[type] || {};
+  if (type === 'divider') return { type };
   if (type === 'image') {
     const file = data.external?.url || data.file?.url;
     const url = await localImage(file, pageId, `body-${imageCount}`);
