@@ -386,7 +386,15 @@ function articleView(slug) {
     } else if (currentSection) currentSection.blocks.push(block);
     else lead.push(block);
   });
-  sections.splice(0, sections.length, ...sections.filter(section => section.blocks.length > 0));
+  // Empty Notion paragraphs still arrive as blocks, but they should not create a numbered section.
+  const hasVisibleContent = block => {
+    if (block.type === 'image') return Boolean(block.url);
+    if (block.type === 'bookmark') return Boolean((block.text || '').trim() || block.url);
+    if (block.type === 'to_do') return Boolean((block.text || '').trim() || (block.rich_text || []).some(run => (run.plain_text || '').trim()) || block.checked);
+    if (block.type === 'divider') return false;
+    return Boolean((block.text || '').trim() || (block.rich_text || []).some(run => (run.plain_text || '').trim()));
+  };
+  sections.splice(0, sections.length, ...sections.filter(section => section.blocks.some(hasVisibleContent)));
   if (!sections.length && lead.length) {
     sections.push({ blocks: lead.splice(0) });
   }
