@@ -24,6 +24,9 @@ jobs:
         run: node scripts/sync-notion.mjs
 
       - name: Commit generated site
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATA_SOURCE_ID: ${{ secrets.NOTION_DATA_SOURCE_ID }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -33,4 +36,25 @@ jobs:
             exit 0
           fi
           git commit -m "chore: sync published posts from Notion"
-          git push
+
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+
+            if [ "$attempt" -eq 3 ]; then
+              echo "Push failed after 3 attempts."
+              exit 1
+            fi
+
+            echo "Remote main advanced; refreshing and regenerating before retry $((attempt + 1))."
+            git fetch origin main
+            git reset --hard origin/main
+            node scripts/sync-notion.mjs
+            git add index.html posts.json posts assets
+            if git diff --cached --quiet; then
+              echo "Remote already contains all published posts."
+              exit 0
+            fi
+            git commit -m "chore: sync published posts from Notion"
+          done
