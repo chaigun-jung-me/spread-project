@@ -26,6 +26,17 @@ Create an internal Notion integration with read access to this data source, then
 
 The site reads `posts.json`. A sync also creates static pages for each published post so link preview crawlers receive that article's title, description, canonical URL, and thumbnail without running JavaScript. Uploaded Notion images are copied into `assets/notion/` so expiring Notion file URLs are not used by the public site. Each downloaded image must be at most 15 MB.
 
+## Near-real-time sync
+
+The manual GitHub Actions button remains available. To also sync automatically after Notion edits, deploy the merged project on Vercel, then configure:
+
+1. Create a fine-grained GitHub token for `chaigun-jung-me/spread-project` with **Actions: write** permission. Add it to Vercel Production environment variables as `GITHUB_DISPATCH_TOKEN`.
+2. In Vercel Production, set `NOTION_WEBHOOK_VERIFICATION_TOKEN` after creating the Notion webhook as described below. The function logs the initial one-time verification token so it can be copied from Vercel function logs. Store it in Vercel, redeploy, then paste that same value into Notion's verification dialog.
+3. In the Notion integration's **Webhooks** settings, create a subscription pointing to `https://source-spread.kr/api/notion-webhook`. Subscribe to `page.created`, `page.content_updated`, `page.properties_updated`, `page.deleted`, `page.undeleted`, `page.moved`, and `data_source.content_updated`. The integration should only be shared with the Source Spread database so unrelated pages do not trigger builds.
+4. Verify the webhook in Notion. Edits then dispatch the existing sync workflow on `main`; its generated commit triggers the connected Vercel deployment. The endpoint verifies Notion's HMAC signature before dispatching.
+
+Notion groups frequent page edits and typically delivers the event within about a minute, with documented delivery taking up to five minutes. GitHub Actions and Vercel deployment add time after that, so this is near-real-time rather than instantaneous. The manual sync action remains a fallback.
+
 ## Local preview
 
 Serve this directory with any static file server. After editing Notion content, run `node scripts/sync-notion.mjs` with the two environment variables set to regenerate the public data and pages.
