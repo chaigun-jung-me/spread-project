@@ -230,10 +230,9 @@ function visiblePosts() {
 // here: 'home' | 카테고리 이름(목록) | { post: 카테고리 이름 }(상세)
 function topBar(here) {
   const cur = typeof here === 'object' ? here.post : here;
-  // 목록에서 선택된 카테고리를 다시 누르면 전체 목록으로
   const item = c => {
     const on = cur === c;
-    return `<a href="${on && typeof here !== 'object' ? '#/' : catHref(c)}" class="${on ? 'on' : ''}">${c}</a>`;
+    return `<a href="${catHref(c)}" class="${on ? 'on' : ''}">${c}</a>`;
   };
   return `
     <div class="top">
@@ -371,7 +370,8 @@ function flowTitles() {
 
 function render(keepScroll) {
   const hash = decodeURIComponent(location.hash);
-  const post = location.pathname.match(/^\/posts\/([^/]+)\/?$/) || hash.match(/^#\/post\/(.+)$/);
+  // GNB hash links must take over even when the current page uses /posts/{slug}.
+  const post = hash.match(/^#\/post\/(.+)$/) || (!hash ? location.pathname.match(/^\/posts\/([^/]+)\/?$/) : null);
   if (!post) {
     const c = hash.match(/^#\/c\/(.+)$/);
     filter = c && categories.includes(c[1]) ? c[1] : null;
