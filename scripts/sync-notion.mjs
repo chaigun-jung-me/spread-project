@@ -31,6 +31,18 @@ async function notion(endpoint, options = {}) {
 }
 
 const asText = value => Array.isArray(value) ? value.map(item => item.plain_text || item.text?.content || '').join('') : '';
+const serializeRichText = value => Array.isArray(value) ? value.map(item => ({
+  text: item.plain_text || item.text?.content || '',
+  href: item.href || item.text?.link?.url || '',
+  annotations: {
+    bold: item.annotations?.bold === true,
+    italic: item.annotations?.italic === true,
+    strikethrough: item.annotations?.strikethrough === true,
+    underline: item.annotations?.underline === true,
+    code: item.annotations?.code === true,
+    color: item.annotations?.color || 'default',
+  },
+})) : [];
 const slugify = value => value.toLocaleLowerCase().normalize('NFKC').trim()
   .replace(/[^\p{Letter}\p{Number}]+/gu, '-')
   .replace(/^-+|-+$/g, '');
@@ -101,13 +113,19 @@ async function convertBlock(block, pageId, imageCount) {
     const file = data.external?.url || data.file?.url;
     const url = await localImage(file, pageId, `body-${imageCount}`);
     if (!url) return null;
-    return { type, url, caption: asText(data.caption) };
+    return { type, url, caption: asText(data.caption), caption_rich_text: serializeRichText(data.caption) };
   }
-  const supported = new Set(['paragraph', 'heading_1', 'heading_2', 'heading_3', 'quote', 'bulleted_list_item', 'numbered_list_item', 'code']);
+  const supported = new Set(['paragraph', 'heading_1', 'heading_2', 'heading_3', 'quote', 'bulleted_list_item', 'numbered_list_item', 'code', 'to_do', 'callout', 'bookmark', 'equation']);
   if (!supported.has(type)) return null;
-  const text = asText(data.rich_text);
-  if (!text.trim()) return null;
-  return { type, text, number: data.number || '' };
+  const source = type === 'bookmark' ? data.caption : type === 'equation' ? [] : data.rich_text;
+  const richText = serializeRichText(source);
+  const text = type === 'equation' ? data.expression || '' : asText(source);
+  if (!text.trim() && !['paragraph', 'callout', 'bookmark'].includes(type)) return null;
+  const result = { type, text, rich_text: richText };
+  if (type === 'to_do') result.checked = data.checked === true;
+  if (type === 'callout') result.icon = data.icon?.emoji || '';
+  if (type === 'bookmark') result.url = data.url || '';
+  return result;
 }
 
 const queryResults = [];

@@ -146,9 +146,26 @@
   .article .facts dd { margin: 0; color: var(--fg); }
   .article .facts .src { text-decoration: underline; text-underline-offset: 3px; }
   .article .facts .src:hover { background: var(--hl-bg); color: var(--hl-fg); text-decoration: none; }
-  .article p { margin: 0; text-indent: 2em; }
+  .article p { margin: 0 0 1em; text-indent: 2em; }
   .article p:first-child { text-indent: 0; }
-  .article [lang="ko"] p { line-height: 1.75; }
+  .article [lang="ko"] p { line-height: 1.9; }
+  .article p.notion-empty { min-height: 1.9em; margin-bottom: 1em; }
+  .article ul, .article ol { margin: .25em 0 1.2em; padding-left: 1.5em; }
+  .article li { padding-left: .15em; margin: .3em 0; }
+  .article h2, .article h3, .article h4 { font-family: 'Pretendard', sans-serif; line-height: 1.4; }
+  .article h2 { margin: 1.5em 0 .65em; font-size: 1.25em; }
+  .article h3 { margin: 1.25em 0 .55em; font-size: 1.1em; }
+  .article h4 { margin: 1em 0 .5em; font-size: 1em; }
+  .article a.notion-link { text-decoration: underline; text-underline-offset: 3px; }
+  .article code { padding: .08em .25em; background: #f3f3f3; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9em; }
+  .article pre code { padding: 0; background: transparent; font-size: inherit; }
+  .article .notion-todo { display: flex; align-items: baseline; gap: .55em; margin: 0 0 .8em; }
+  .article .notion-todo input { accent-color: var(--hl-bg); }
+  .article .notion-todo span { flex: 1; }
+  .article .notion-callout { display: flex; gap: .75em; margin: 0 0 1em; padding: 1em; background: #f5f5f5; border-radius: 4px; }
+  .article .notion-bookmark { margin: 0 0 1em; padding: 1em; border: 1px solid var(--line); }
+  .article .notion-bookmark a { text-decoration: underline; text-underline-offset: 3px; }
+  .article .notion-divider { margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
   .article .section { display: grid; grid-template-columns: 1fr 1.4fr; gap: 0 64px; margin-bottom: 48px; }
   .article .section > div { max-width: 600px; }
   .article .section .no { justify-self: end; color: var(--muted); font-size: 14px; line-height: 24px; font-variant-numeric: tabular-nums; }
@@ -181,7 +198,8 @@
   .article figure { margin: 0 0 24px; }
   .article figure img { display: block; max-width: 100%; height: auto; }
   .article figcaption { margin-top: 8px; color: var(--muted); font: 13px/1.5 -apple-system, BlinkMacSystemFont, "Pretendard", sans-serif; }
-  .article blockquote { margin: 0 0 16px; padding-left: 1.5em; border-left: 1px solid var(--line); }
+  .article blockquote { margin: 0 0 1em; padding-left: 1.5em; border-left: 1px solid var(--line); }
+  .article blockquote p { margin: 0; }
   .article pre { max-width: 100%; overflow-x: auto; white-space: pre-wrap; }
 </style>
 </head>
@@ -278,17 +296,81 @@ function articleView(slug) {
   if (!p) return `${topBar(null)}<main class="article"><p>Not found.</p></main>`;
   const lang = p.lang || 'ko';   // 글 언어 (기본 한국어, 영어 글은 lang: 'en')
   const pad = n => String(n).padStart(2, '0');
+  const colorMap = { gray: '#787774', brown: '#9f6b53', orange: '#d9730d', yellow: '#cb912f', green: '#448361', blue: '#337ea9', purple: '#9065b0', pink: '#c14c8a', red: '#d44c47' };
+  const backgroundMap = { gray: '#ebeced', brown: '#eee0da', orange: '#faebdd', yellow: '#fbf3db', green: '#ddedea', blue: '#ddebf1', purple: '#eae4f2', pink: '#f4dfeb', red: '#fbe4e4' };
+  const safeLink = value => {
+    if (!value) return '';
+    try {
+      const url = new URL(value, location.origin);
+      return ['http:', 'https:', 'mailto:'].includes(url.protocol) ? url.href : '';
+    } catch { return ''; }
+  };
+  const renderRichText = (runs, fallback = '') => {
+    if (!Array.isArray(runs) || !runs.length) return escapeHtml(fallback).replace(/\r\n|\r|\n/g, '<br>');
+    return runs.map(run => {
+      let html = escapeHtml(run.text || '').replace(/\r\n|\r|\n/g, '<br>');
+      const mark = run.annotations || {};
+      if (mark.code) html = `<code>${html}</code>`;
+      if (mark.bold) html = `<strong>${html}</strong>`;
+      if (mark.italic) html = `<em>${html}</em>`;
+      if (mark.strikethrough) html = `<del>${html}</del>`;
+      if (mark.underline) html = `<u>${html}</u>`;
+      const color = String(mark.color || 'default');
+      const background = color.endsWith('_background');
+      const name = background ? color.slice(0, -11) : color;
+      if (colorMap[name] && color !== 'default') {
+        const style = background
+          ? `background-color:${backgroundMap[name]};padding:0 .12em;border-radius:2px`
+          : `color:${colorMap[name]}`;
+        html = `<span style="${style}">${html}</span>`;
+      }
+      const href = safeLink(run.href || '');
+      if (href) html = `<a class="notion-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${html}</a>`;
+      return html;
+    }).join('');
+  };
+  const renderInline = block => renderRichText(block.rich_text, block.text || '');
   const renderBlock = block => {
-    const text = escapeHtml(block.text || '');
-    if (block.type === 'image') return `<figure><img src="${escapeHtml(block.url)}" alt="${escapeHtml(block.caption || '')}" loading="lazy">${block.caption ? `<figcaption>${escapeHtml(block.caption)}</figcaption>` : ''}</figure>`;
-    if (block.type === 'heading_1') return `<h2>${text}</h2>`;
-    if (block.type === 'heading_2') return `<h3>${text}</h3>`;
-    if (block.type === 'heading_3') return `<h4>${text}</h4>`;
-    if (block.type === 'quote') return `<blockquote><p>${text}</p></blockquote>`;
-    if (block.type === 'bulleted_list_item') return `<p>· ${text}</p>`;
-    if (block.type === 'numbered_list_item') return `<p>${escapeHtml(block.number || '')}. ${text}</p>`;
-    if (block.type === 'code') return `<pre><code>${text}</code></pre>`;
-    return text ? `<p>${text}</p>` : '';
+    const inline = renderInline(block);
+    if (block.type === 'image') return `<figure><img src="${escapeHtml(block.url)}" alt="${escapeHtml(block.caption || '')}" loading="lazy">${block.caption ? `<figcaption>${renderRichText(block.caption_rich_text, block.caption)}</figcaption>` : ''}</figure>`;
+    if (block.type === 'heading_1') return `<h2>${inline}</h2>`;
+    if (block.type === 'heading_2') return `<h3>${inline}</h3>`;
+    if (block.type === 'heading_3') return `<h4>${inline}</h4>`;
+    if (block.type === 'quote') return `<blockquote><p>${inline}</p></blockquote>`;
+    if (block.type === 'divider') return '<hr class="notion-divider">';
+    if (block.type === 'to_do') return `<label class="notion-todo"><input type="checkbox" disabled${block.checked ? ' checked' : ''}><span>${inline}</span></label>`;
+    if (block.type === 'callout') return `<aside class="notion-callout">${block.icon ? `<span>${escapeHtml(block.icon)}</span>` : ''}<div>${inline}</div></aside>`;
+    if (block.type === 'bookmark') {
+      const href = safeLink(block.url || '');
+      return `<div class="notion-bookmark">${href ? `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${inline || escapeHtml(block.url)}</a>` : inline}</div>`;
+    }
+    if (block.type === 'equation') return `<p><code>${inline}</code></p>`;
+    if (block.type === 'code') return `<pre><code>${escapeHtml(block.text || '')}</code></pre>`;
+    if (block.type === 'paragraph') return inline ? `<p>${inline}</p>` : '<p class="notion-empty"><br></p>';
+    return inline ? `<p>${inline}</p>` : '';
+  };
+  const renderBlocks = blocks => {
+    let html = '';
+    let listType = '';
+    let listItems = [];
+    const flushList = () => {
+      if (listType) html += `<${listType}>${listItems.join('')}</${listType}>`;
+      listType = '';
+      listItems = [];
+    };
+    for (const block of blocks) {
+      const nextListType = block.type === 'bulleted_list_item' ? 'ul' : block.type === 'numbered_list_item' ? 'ol' : '';
+      if (nextListType) {
+        if (listType && listType !== nextListType) flushList();
+        listType = nextListType;
+        listItems.push(`<li>${renderInline(block)}</li>`);
+      } else {
+        flushList();
+        html += renderBlock(block);
+      }
+    }
+    flushList();
+    return html;
   };
   const blocks = p.body || [];
   const lead = [];
@@ -303,6 +385,9 @@ function articleView(slug) {
     else lead.push(block);
   });
   sections.splice(0, sections.length, ...sections.filter(section => section.blocks.length > 0));
+  if (!sections.length && lead.length) {
+    sections.push({ blocks: lead.splice(0) });
+  }
   const thumb = p.thumbnail ? `<figure><img src="${escapeHtml(p.thumbnail)}" alt="${escapeHtml(p.title)}" loading="lazy"></figure>` : '';
   return `
     ${topBar({ post: p.category })}
@@ -317,9 +402,9 @@ function articleView(slug) {
             <dt>Source</dt><dd><a class="src" href="${escapeHtml(sourceHref(p.url))}" target="_blank" rel="noopener">${escapeHtml(p.source)}&nbsp;↗</a></dd>
           </dl>
         </div>
-        <div class="lede" lang="${escapeHtml(lang)}">${thumb}${lead.map(renderBlock).join('')}</div>
+        <div class="lede" lang="${escapeHtml(lang)}">${thumb}${renderBlocks(lead)}</div>
       </div>
-      ${sections.map((section, index) => `<section class="section"><span class="no">${pad(index + 1)}</span><div lang="${escapeHtml(lang)}">${section.title ? `<h2>${escapeHtml(section.title)}</h2>` : ''}${section.blocks.map(renderBlock).join('') || (!section.title ? '<p>본문이 없습니다.</p>' : '')}</div></section>`).join('')}
+      ${sections.map((section, index) => `<section class="section"><span class="no">${pad(index + 1)}</span><div lang="${escapeHtml(lang)}">${section.title ? `<h2>${escapeHtml(section.title)}</h2>` : ''}${renderBlocks(section.blocks) || (!section.title ? '<p>본문이 없습니다.</p>' : '')}</div></section>`).join('')}
     </main>`;
 }
 
