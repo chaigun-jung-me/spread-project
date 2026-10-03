@@ -152,10 +152,10 @@ for (const page of published) {
   posts.push({
     slug, title, category, date,
     from, source,
-    url: sourceUrl, thumbnail, body, lang: 'ko',
+    url: sourceUrl, thumbnail, body, lang: 'ko', createdTime: page.created_time || '',
   });
 }
-posts.sort((a, b) => (b.date || '').localeCompare(a.date || '') || a.title.localeCompare(b.title, 'ko'));
+posts.sort((a, b) => (b.date || '').localeCompare(a.date || '') || (b.createdTime || '').localeCompare(a.createdTime || '') || a.title.localeCompare(b.title, 'ko'));
 await writeFile(path.join(root, 'posts.json'), `${JSON.stringify(posts, null, 2)}\n`);
 
 // Each detail URL has its own HTML shell so link previews receive metadata without running JS.
