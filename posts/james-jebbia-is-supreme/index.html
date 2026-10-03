@@ -195,9 +195,17 @@
 let posts = [];
 const categories = ['Design', 'Fashion', 'Tech', 'People', 'Culture'];
 let sort = { key: null, dir: 'asc' };      // 처음엔 적어 둔 순서 그대로, 머리글을 누르면 정렬
-let filter = null;                          // 주소 #/c/Tech 에서 읽음
+let filter = null;                          // /category/tech 경로에서 읽음
 
-const catHref = c => c ? '#/c/' + encodeURIComponent(c) : '#/';
+const categorySlug = c => c.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const catHref = c => c ? `/category/${categorySlug(c)}` : '/';
+function categoryFromPath() {
+  const match = location.pathname.match(/^\/category\/([^/]+)\/?$/);
+  if (!match) return null;
+  let slug;
+  try { slug = decodeURIComponent(match[1]); } catch { return null; }
+  return categories.find(c => categorySlug(c) === slug) || null;
+}
 const compare = {
   title:    (a, b) => a.title.localeCompare(b.title, 'ko'),
   category: (a, b) => categories.indexOf(a.category) - categories.indexOf(b.category),
@@ -236,7 +244,7 @@ function topBar(here) {
   };
   return `
     <div class="top">
-      <a class="logo${cur === 'home' ? ' on' : ''}" href="#/">source<br>spread</a>
+      <a class="logo${cur === 'home' ? ' on' : ''}" href="/">source<br>spread</a>
       <nav>${categories.map(item).join('')}</nav>
     </div>`;
 }
@@ -316,7 +324,7 @@ function articleView(slug) {
 }
 
 /* ===== 라우터 ===== */
-// #/  전체 · #/c/Tech  카테고리 · #/post/slug  글
+// / 전체 · /category/tech 카테고리 · /posts/slug 글
 const app = document.getElementById('app');
 
 // 칸보다 넓은 제목만 한 글자씩 끊어 흐르게 한다.
@@ -371,13 +379,10 @@ function flowTitles() {
 }
 
 function render(keepScroll) {
-  const hash = decodeURIComponent(location.hash);
-  // GNB hash links must take over even when the current page uses /posts/{slug}.
-  const post = hash.match(/^#\/post\/(.+)$/) || (!hash ? location.pathname.match(/^\/posts\/([^/]+)\/?$/) : null);
-  if (!post) {
-    const c = hash.match(/^#\/c\/(.+)$/);
-    filter = c && categories.includes(c[1]) ? c[1] : null;
-  }
+  normalizeLegacyHashRoute();
+  const post = location.pathname.match(/^\/posts\/([^/]+)\/?$/);
+  const category = categoryFromPath();
+  filter = post ? filter : category;
   app.innerHTML = post ? articleView(post[1]) : listView();
   let routeSlug = post?.[1];
   try { routeSlug = routeSlug && decodeURIComponent(routeSlug); } catch {}
@@ -386,16 +391,17 @@ function render(keepScroll) {
   if (!keepScroll) scrollTo(0, 0);
 }
 function updateMeta(post) {
-  const title = post ? `${post.title} — source spread` : 'source spread';
+  const category = categoryFromPath();
+  const title = post ? `${post.title} — source spread` : category ? `${category} — source spread` : 'source spread';
   const excerpt = post?.body?.find(block => block.text)?.text;
-  const description = post ? (excerpt || `${post.from}에서 소개한 ${post.category} 콘텐츠를 번역하고 큐레이션합니다.`).replace(/\s+/g, ' ').slice(0, 160) : '해외 패션, 테크, 디자인, 문화 콘텐츠를 번역하고 큐레이션합니다.';
+  const description = post ? (excerpt || `${post.from}에서 소개한 ${post.category} 콘텐츠를 번역하고 큐레이션합니다.`).replace(/\s+/g, ' ').slice(0, 160) : category ? `${category} 카테고리의 해외 콘텐츠를 번역하고 큐레이션합니다.` : '해외 패션, 테크, 디자인, 문화 콘텐츠를 번역하고 큐레이션합니다.';
   document.title = title;
   document.querySelector('meta[name="description"]').content = description;
   document.querySelector('meta[property="og:title"]').content = title;
   document.querySelector('meta[property="og:description"]').content = description;
   document.querySelector('meta[property="og:type"]').content = post ? 'article' : 'website';
   const canonical = document.querySelector('link[rel="canonical"]');
-  canonical.href = post ? `https://source-spread.kr/posts/${encodeURIComponent(post.slug)}` : 'https://source-spread.kr/';
+  canonical.href = `https://source-spread.kr${post ? `/posts/${encodeURIComponent(post.slug)}` : category ? catHref(category) : '/'}`;
   let ogImage = document.querySelector('meta[property="og:image"]');
   if (post && post.thumbnail) {
     if (!ogImage) { ogImage = document.createElement('meta'); ogImage.setAttribute('property', 'og:image'); document.head.appendChild(ogImage); }
@@ -431,6 +437,21 @@ app.addEventListener('keydown', e => {
 });
 addEventListener('hashchange', () => render());
 addEventListener('popstate', () => render());
+
+function normalizeLegacyHashRoute() {
+  if (!location.hash.startsWith('#/')) return;
+  let destination = '/';
+  let match = location.hash.match(/^#\/c\/(.+)$/);
+  if (match) {
+    let oldCategory;
+    try { oldCategory = decodeURIComponent(match[1]); } catch { oldCategory = ''; }
+    const category = categories.find(c => c.toLowerCase() === oldCategory.toLowerCase());
+    destination = category ? catHref(category) : '/';
+  } else if ((match = location.hash.match(/^#\/post\/(.+)$/))) {
+    destination = `/posts/${encodeURIComponent(match[1])}`;
+  }
+  history.replaceState({}, '', destination);
+}
 
 
 /* ===== 하이라이트 색은 열 때마다 바뀐다 ===== */
