@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>source spread</title>
+<meta name="description" content="해외 패션, 테크, 디자인, 문화 콘텐츠를 번역하고 큐레이션합니다.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="source spread">
+<meta property="og:title" content="source spread">
+<meta property="og:description" content="해외 패션, 테크, 디자인, 문화 콘텐츠를 번역하고 큐레이션합니다.">
+<link rel="canonical" href="https://source-spread.kr/">
 <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
   :root {
@@ -172,6 +178,11 @@
   }
   .article [lang="ko"] p { word-break: break-all; line-break: strict; letter-spacing: -0.005em; }
   .article [lang="en"] p { hyphens: auto; -webkit-hyphens: auto; }
+  .article figure { margin: 0 0 24px; }
+  .article figure img { display: block; max-width: 100%; height: auto; }
+  .article figcaption { margin-top: 8px; color: var(--muted); font: 13px/1.5 -apple-system, BlinkMacSystemFont, "Pretendard", sans-serif; }
+  .article blockquote { margin: 0 0 16px; padding-left: 1.5em; border-left: 1px solid var(--line); }
+  .article pre { max-width: 100%; overflow-x: auto; white-space: pre-wrap; }
 </style>
 </head>
 <body>
@@ -180,69 +191,8 @@
 <footer class="foot">from source we spread</footer>
 
 <script>
-/* ===== 더미 데이터 — 나중에 실제 글로 교체 ===== */
-// 글 하나 = 제목 · 카테고리 · 날짜(형식 없는 자유 텍스트) · from · source · 원문 URL
-//   from    실어 준 곳의 이름 — 잡지 이름, 유튜브 채널 이름
-//   source  원문 자체의 이름 — 기사 제목, 영상 제목 (url 로 링크가 걸린다)
-// 본문은 아래 dummyBody 가 임시로 만든다.
-const posts = [
-  { slug: 'colophon', title: '오래된 잡지의 판권면을 들여다보다가 알게 된 이름들과 그 뒤에 남은 이야기', category: 'Design',
-    date: '2026. 10. 1.', from: 'Magazine A', source: 'What the Colophon Remembers: Names, Dates, and the People Who Set the Type', url: 'https://example.com/colophon' },
-  { slug: 'lorem-ipsum-dolor', title: '여백이 말하는 방식', category: 'Design',
-    date: '2026. 9. 29.', from: 'Magazine A', source: 'The Quiet Page', url: 'https://example.com/lorem-ipsum-dolor' },
-  { slug: 'consectetur', title: '유니폼을 벗은 오후', category: 'Fashion',
-    date: '2026. 9. 12.', from: 'Journal B', source: 'After the Uniform', url: 'https://example.com/consectetur' },
-  { slug: 'sed-do-eiusmod', title: '느린 인터페이스를 위한 변론', category: 'Tech',
-    date: '2026년 8월 말', from: 'Weekly C', source: 'In Defense of Slow Interfaces', url: 'https://example.com/sed-do-eiusmod' },
-  { slug: 'ut-labore', title: '을지로 인쇄소의 마지막 주문', category: 'People',
-    date: '2026. 8. 2.', from: 'Online D', source: '을지로, 마지막 주문', url: 'https://example.com/ut-labore' },
-  { slug: 'ut-enim-ad-minim', title: '심야 라디오가 남긴 것', category: 'Culture',
-    date: '2026년 7월', from: 'Magazine A', source: 'What Late-Night Radio Left', url: 'https://example.com/ut-enim-ad-minim' },
-  { slug: 'quis-nostrud', title: '서체를 고르는 일에 대하여', category: 'Design',
-    date: '2026. 6. 21.', from: 'Journal B', source: 'On Choosing a Typeface', url: 'https://example.com/quis-nostrud' },
-  { slug: 'laboris-nisi', title: '빈티지 시장에서 배운 치수', category: 'Fashion',
-    date: '2026년 봄', from: 'Weekly C', source: 'Sizes I Learned at the Flea Market', url: 'https://example.com/laboris-nisi' },
-  { slug: 'duis-aute-irure', title: '알림을 끈 지 일 년', category: 'Tech',
-    date: '2026. 4. 26.', from: 'Online D', source: 'A Year Without Notifications', url: 'https://example.com/duis-aute-irure' },
-  { slug: 'voluptate-velit', title: '첫 문장을 오래 붙드는 사람', category: 'People',
-    date: '2026. 3. 14.', from: 'Magazine A', source: 'The One Who Holds the First Sentence', url: 'https://example.com/voluptate-velit' },
-  { slug: 'excepteur-sint', title: '극장 맨 앞줄의 기억', category: 'Culture',
-    date: '2026. 2. 1.', from: 'Journal B', source: 'Front Row', url: 'https://example.com/excepteur-sint' },
-  { slug: 'sunt-in-culpa', title: '종이 지도의 색', category: 'Design',
-    date: '2025년 겨울', from: 'Weekly C', source: 'The Colors of Paper Maps', url: 'https://example.com/sunt-in-culpa' },
-  { slug: 'mollit-anim', title: '백업되지 않은 여름', category: 'Tech',
-    date: '2025. 11. 5.', from: 'Online D', source: 'The Summer That Was Never Backed Up', url: 'https://example.com/mollit-anim' },
-];
-
-
-// 더미 본문 생성: 리드 문단 + 섹션 3개 + 각주
-const sentences = [
-  '처음에는 아무것도 보이지 않았다. 오래 들여다본 뒤에야 형태가 조금씩 드러나기 시작했다.',
-  '좋은 물건은 설명을 기다리지 않는다. 손에 쥐는 순간 이미 대부분을 말해 버린다.',
-  '우리는 빠른 것을 편리하다고 부르지만, 그 편리함이 무엇을 지웠는지는 잘 묻지 않는다.',
-  '골목 끝의 작은 가게는 간판보다 문틈으로 새어 나오는 불빛으로 기억된다.',
-  '취향은 고르는 일이 아니라 버리는 일에 가깝다. 남은 것이 결국 나를 설명한다.',
-  '그날의 대화는 녹음되지 않았고, 그래서 더 정확하게 남았다.',
-  '유행은 늘 돌아온다고들 하지만, 돌아온 것은 언제나 조금씩 다른 얼굴을 하고 있다.',
-  '화면을 끄고 나서야 방 안의 소리가 들렸다. 냉장고와 시계와 먼 데서 오는 버스 소리.',
-  '한 사람의 작업실에는 그 사람이 미처 말하지 못한 문장들이 쌓여 있다.',
-  '오래된 것을 다시 꺼내 보는 일은 향수가 아니라 확인에 가깝다. 아직 유효한지 묻는 것이다.',
-];
-function dummyBody(seed) {
-  let n = seed;
-  const rand = () => (n = (n * 9301 + 49297) % 233280) / 233280;
-  const para = (min, extra) => {
-    const len = min + Math.floor(rand() * extra);
-    let text = Array.from({ length: len }, () => sentences[Math.floor(rand() * sentences.length)]).join(' ');
-    return `<p>${text}</p>`;
-  };
-  const lede = para(3, 2) + para(3, 2);
-  const sections = Array.from({ length: 3 }, () =>
-    Array.from({ length: 4 + Math.floor(rand() * 3) }, () => para(4, 4)).join(''));
-  return { lede, sections };
-}
-
 /* ===== 상태 ===== */
+let posts = [];
 const categories = ['Design', 'Fashion', 'Tech', 'People', 'Culture'];
 let sort = { key: null, dir: 'asc' };      // 처음엔 적어 둔 순서 그대로, 머리글을 누르면 정렬
 let filter = null;                          // 주소 #/c/Tech 에서 읽음
@@ -253,7 +203,22 @@ const compare = {
   category: (a, b) => categories.indexOf(a.category) - categories.indexOf(b.category),
   from:     (a, b) => a.from.localeCompare(b.from, 'ko'),
   source:   (a, b) => a.source.localeCompare(b.source, 'ko'),
+  date:     (a, b) => (a.date || '').localeCompare(b.date || ''),
 };
+const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+const sourceHref = value => {
+  try {
+    const u = new URL(value);
+    if (u.protocol !== 'https:' && u.protocol !== 'http:') return '#';
+    u.searchParams.set('ref', 'source-spread.kr');
+    return u.href;
+  } catch { return '#'; }
+};
+function displayDate(value) {
+  if (!value) return '';
+  const d = new Date(`${value}T00:00:00`);
+  return Number.isNaN(d.getTime()) ? value : `${d.getFullYear()}. ${d.getMonth() + 1}. ${d.getDate()}.`;
+}
 function visiblePosts() {
   const list = posts.filter(p => !filter || p.category === filter);
   if (!sort.key) return list;
@@ -284,43 +249,68 @@ function listView() {
   };
   // 제목은 span 으로 한 번 더 감싼다 — 좁은 화면에서 넘칠 때 이 span 만 흐른다.
   const rows = visiblePosts().map(p => `
-    <tr tabindex="0" data-slug="${p.slug}">
-      <td class="title" lang="${p.lang || 'ko'}"><span class="t">${p.title}</span></td>
-      <td class="from">${p.from}</td>
-      <td class="src"><a href="${p.url}" target="_blank" rel="noopener">${p.source}</a></td>
-      <td class="date" lang="${p.lang || 'ko'}">${p.date || ''}</td>
-      <td class="cat">${p.category}</td>
+    <tr tabindex="0" data-slug="${escapeHtml(p.slug)}">
+      <td class="title" lang="${escapeHtml(p.lang || 'ko')}"><span class="t">${escapeHtml(p.title)}</span></td>
+      <td class="from">${escapeHtml(p.from)}</td>
+      <td class="src"><a href="${escapeHtml(sourceHref(p.url))}" target="_blank" rel="noopener">${escapeHtml(p.source)}</a></td>
+      <td class="date" lang="${escapeHtml(p.lang || 'ko')}">${escapeHtml(displayDate(p.date))}</td>
+      <td class="cat">${escapeHtml(p.category)}</td>
     </tr>`).join('');
   return `
     ${topBar(filter || 'home')}
     <table class="list">
-      <thead><tr>${th('title', 'Title', 'title')}${th('from', 'From', 'from')}${th('source', 'Source', 'src')}<th>Date</th>${th('category', 'Category', 'cat')}</tr></thead>
+      <thead><tr>${th('title', 'Title', 'title')}${th('from', 'From', 'from')}${th('source', 'Source', 'src')}${th('date', 'Date', 'date')}${th('category', 'Category', 'cat')}</tr></thead>
       <tbody>${rows || '<tr class="empty"><td colspan="5">—</td></tr>'}</tbody>
     </table>`;
 }
 
 function articleView(slug) {
-  const p = posts.find(p => p.slug === slug);
+  let decodedSlug = slug;
+  try { decodedSlug = decodeURIComponent(slug); } catch {}
+  const p = posts.find(p => p.slug === decodedSlug);
   if (!p) return `${topBar(null)}<main class="article"><p>Not found.</p></main>`;
-  const { lede, sections } = dummyBody(posts.indexOf(p) + 7);
   const lang = p.lang || 'ko';   // 글 언어 (기본 한국어, 영어 글은 lang: 'en')
   const pad = n => String(n).padStart(2, '0');
+  const renderBlock = block => {
+    const text = escapeHtml(block.text || '');
+    if (block.type === 'image') return `<figure><img src="${escapeHtml(block.url)}" alt="${escapeHtml(block.caption || '')}" loading="lazy">${block.caption ? `<figcaption>${escapeHtml(block.caption)}</figcaption>` : ''}</figure>`;
+    if (block.type === 'heading_2') return `<h3>${text}</h3>`;
+    if (block.type === 'heading_3') return `<h4>${text}</h4>`;
+    if (block.type === 'quote') return `<blockquote><p>${text}</p></blockquote>`;
+    if (block.type === 'bulleted_list_item') return `<p>· ${text}</p>`;
+    if (block.type === 'numbered_list_item') return `<p>${escapeHtml(block.number || '')}. ${text}</p>`;
+    if (block.type === 'code') return `<pre><code>${text}</code></pre>`;
+    return text ? `<p>${text}</p>` : '';
+  };
+  const blocks = p.body || [];
+  const lead = [];
+  const sections = [];
+  let currentSection = null;
+  blocks.forEach(block => {
+    if (block.type === 'heading_1') {
+      currentSection = { title: block.text || '', blocks: [] };
+      sections.push(currentSection);
+    } else if (currentSection) currentSection.blocks.push(block);
+    else lead.push(block);
+  });
+  if (!sections.length) sections.push({ title: '', blocks });
+  const thumb = p.thumbnail ? `<figure><img src="${escapeHtml(p.thumbnail)}" alt="${escapeHtml(p.title)}" loading="lazy"></figure>` : '';
   return `
     ${topBar({ post: p.category })}
     <main class="article">
       <div class="head">
         <div>
-          <h1 lang="${lang}">${p.title}</h1>
+          <h1 lang="${escapeHtml(lang)}">${escapeHtml(p.title)}</h1>
           <dl class="facts">
-            ${p.date ? `<dt>Date</dt><dd lang="${lang}">${p.date}</dd>` : ''}
-            <dt>Category</dt><dd>${p.category}</dd>
-            <dt>From</dt><dd>${p.from}</dd>
-            <dt>Source</dt><dd><a class="src" href="${p.url}" target="_blank" rel="noopener">${p.source}&nbsp;↗</a></dd>
+            ${p.date ? `<dt>Date</dt><dd lang="${escapeHtml(lang)}">${escapeHtml(displayDate(p.date))}</dd>` : ''}
+            <dt>Category</dt><dd>${escapeHtml(p.category)}</dd>
+            <dt>From</dt><dd>${escapeHtml(p.from)}</dd>
+            <dt>Source</dt><dd><a class="src" href="${escapeHtml(sourceHref(p.url))}" target="_blank" rel="noopener">${escapeHtml(p.source)}&nbsp;↗</a></dd>
           </dl>
         </div>
-        <div class="lede" lang="${lang}">${lede}</div>
+        <div class="lede" lang="${escapeHtml(lang)}">${thumb}${lead.map(renderBlock).join('')}</div>
       </div>
-      ${sections.map((s, k) => `<section class="section"><span class="no">${pad(k + 1)}</span><div lang="${lang}">${s}</div></section>`).join('')}
+      ${sections.map((section, index) => `<section class="section"><span class="no">${pad(index + 1)}</span><div lang="${escapeHtml(lang)}">${section.title ? `<h2>${escapeHtml(section.title)}</h2>` : ''}${section.blocks.map(renderBlock).join('') || (!section.title ? '<p>본문이 없습니다.</p>' : '')}</div></section>`).join('')}
     </main>`;
 }
 
@@ -381,14 +371,34 @@ function flowTitles() {
 
 function render(keepScroll) {
   const hash = decodeURIComponent(location.hash);
-  const post = hash.match(/^#\/post\/(.+)$/);
+  const post = location.pathname.match(/^\/posts\/([^/]+)\/?$/) || hash.match(/^#\/post\/(.+)$/);
   if (!post) {
     const c = hash.match(/^#\/c\/(.+)$/);
     filter = c && categories.includes(c[1]) ? c[1] : null;
   }
   app.innerHTML = post ? articleView(post[1]) : listView();
+  let routeSlug = post?.[1];
+  try { routeSlug = routeSlug && decodeURIComponent(routeSlug); } catch {}
+  updateMeta(post && posts.find(p => p.slug === routeSlug));
   flowTitles();
   if (!keepScroll) scrollTo(0, 0);
+}
+function updateMeta(post) {
+  const title = post ? `${post.title} — source spread` : 'source spread';
+  const excerpt = post?.body?.find(block => block.text)?.text;
+  const description = post ? (excerpt || `${post.from}에서 소개한 ${post.category} 콘텐츠를 번역하고 큐레이션합니다.`).replace(/\s+/g, ' ').slice(0, 160) : '해외 패션, 테크, 디자인, 문화 콘텐츠를 번역하고 큐레이션합니다.';
+  document.title = title;
+  document.querySelector('meta[name="description"]').content = description;
+  document.querySelector('meta[property="og:title"]').content = title;
+  document.querySelector('meta[property="og:description"]').content = description;
+  document.querySelector('meta[property="og:type"]').content = post ? 'article' : 'website';
+  const canonical = document.querySelector('link[rel="canonical"]');
+  canonical.href = post ? `https://source-spread.kr/posts/${encodeURIComponent(post.slug)}` : 'https://source-spread.kr/';
+  let ogImage = document.querySelector('meta[property="og:image"]');
+  if (post && post.thumbnail) {
+    if (!ogImage) { ogImage = document.createElement('meta'); ogImage.setAttribute('property', 'og:image'); document.head.appendChild(ogImage); }
+    ogImage.content = post.thumbnail;
+  } else if (ogImage) ogImage.remove();
 }
 
 // 폭이 바뀌면 넘침도 바뀐다. 글꼴이 늦게 와도 폭이 변하니 그때도 다시 잰다.
@@ -409,15 +419,16 @@ app.addEventListener('click', e => {
   // 줄 어디를 눌러도 글로 이동, 단 글자를 드래그 중이면 무시
   if (e.target.closest('a')) return;
   const row = e.target.closest('tr[data-slug]');
-  if (row && !getSelection().toString()) location.hash = '#/post/' + row.dataset.slug;
+  if (row && !getSelection().toString()) { history.pushState({}, '', '/posts/' + encodeURIComponent(row.dataset.slug)); render(); }
 });
 app.addEventListener('keydown', e => {
   const th = e.target.closest('th[data-sort]');
   if (th && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); return toggleSort(th.dataset.sort); }
   const row = e.target.closest('tr[data-slug]');
-  if (row && e.key === 'Enter') location.hash = '#/post/' + row.dataset.slug;
+  if (row && e.key === 'Enter') { history.pushState({}, '', '/posts/' + encodeURIComponent(row.dataset.slug)); render(); }
 });
 addEventListener('hashchange', () => render());
+addEventListener('popstate', () => render());
 
 
 /* ===== 하이라이트 색은 열 때마다 바뀐다 ===== */
@@ -472,7 +483,10 @@ function rollHighlight() {
 }
 rollHighlight();
 
-render();
+fetch('/posts.json', { cache: 'no-cache' })
+  .then(response => { if (!response.ok) throw new Error(`posts.json: ${response.status}`); return response.json(); })
+  .then(data => { posts = Array.isArray(data) ? data : []; render(); })
+  .catch(error => { console.error('Could not load posts', error); app.innerHTML = `${topBar('home')}<main class="article"><p>글을 불러오지 못했습니다.</p></main>`; });
 </script>
 </body>
 </html>
