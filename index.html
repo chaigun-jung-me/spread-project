@@ -274,7 +274,6 @@ function articleView(slug) {
   const renderBlock = block => {
     const text = escapeHtml(block.text || '');
     if (block.type === 'image') return `<figure><img src="${escapeHtml(block.url)}" alt="${escapeHtml(block.caption || '')}" loading="lazy">${block.caption ? `<figcaption>${escapeHtml(block.caption)}</figcaption>` : ''}</figure>`;
-    if (block.type === 'heading_1') return `<h2>${text}</h2>`;
     if (block.type === 'heading_2') return `<h3>${text}</h3>`;
     if (block.type === 'heading_3') return `<h4>${text}</h4>`;
     if (block.type === 'quote') return `<blockquote><p>${text}</p></blockquote>`;
@@ -283,7 +282,18 @@ function articleView(slug) {
     if (block.type === 'code') return `<pre><code>${text}</code></pre>`;
     return text ? `<p>${text}</p>` : '';
   };
-  const body = (p.body || []).map(renderBlock).join('');
+  const blocks = p.body || [];
+  const lead = [];
+  const sections = [];
+  let currentSection = null;
+  blocks.forEach(block => {
+    if (block.type === 'heading_1') {
+      currentSection = { title: block.text || '', blocks: [] };
+      sections.push(currentSection);
+    } else if (currentSection) currentSection.blocks.push(block);
+    else lead.push(block);
+  });
+  if (!sections.length) sections.push({ title: '', blocks });
   const thumb = p.thumbnail ? `<figure><img src="${escapeHtml(p.thumbnail)}" alt="${escapeHtml(p.title)}" loading="lazy"></figure>` : '';
   return `
     ${topBar({ post: p.category })}
@@ -298,9 +308,9 @@ function articleView(slug) {
             <dt>Source</dt><dd><a class="src" href="${escapeHtml(sourceHref(p.url))}" target="_blank" rel="noopener">${escapeHtml(p.source)}&nbsp;↗</a></dd>
           </dl>
         </div>
-        <div class="lede" lang="${escapeHtml(lang)}">${thumb}</div>
+        <div class="lede" lang="${escapeHtml(lang)}">${thumb}${lead.map(renderBlock).join('')}</div>
       </div>
-      <section class="section"><span class="no">${pad(1)}</span><div lang="${escapeHtml(lang)}">${body || '<p>본문이 없습니다.</p>'}</div></section>
+      ${sections.map((section, index) => `<section class="section"><span class="no">${pad(index + 1)}</span><div lang="${escapeHtml(lang)}">${section.title ? `<h2>${escapeHtml(section.title)}</h2>` : ''}${section.blocks.map(renderBlock).join('') || (!section.title ? '<p>본문이 없습니다.</p>' : '')}</div></section>`).join('')}
     </main>`;
 }
 

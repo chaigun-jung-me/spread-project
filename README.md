@@ -20,6 +20,13 @@ The Source Spread database has been created in the connected Notion workspace. I
 
 Write article content in the page body. Paragraphs, headings, quotes, lists, code, and images are included. Only rows with `Published` checked are exported. An unpublished `[TEST] Sample article` is in the database as a field and body example; replace it with an actual article before publishing. Share the data source with the Notion integration used for the API token.
 
+### Article numbering
+
+- Add a Notion **Heading 1** block to start each numbered section. The site adds `01`, `02`, `03` automatically; do not type the numbers yourself.
+- Text before the first Heading 1 is the unnumbered lead.
+- Use **Heading 2** or **Heading 3** for subheadings inside a section; they do not increase the section number.
+- If the page has no Heading 1, its body is shown as one section numbered `01`.
+
 ## Manual sync
 
 Create an internal Notion integration with read access to this data source, then add its token as the repository Actions secret `NOTION_TOKEN`. The data source ID is already configured in the sync script; it can be overridden with the `NOTION_DATA_SOURCE_ID` environment variable if the database is moved. Then open **Actions → Sync Notion → Run workflow** and choose the branch to update. The workflow commits changed content to that branch; when run on the production branch, the connected Vercel project deploys the update.
