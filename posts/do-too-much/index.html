@@ -273,6 +273,7 @@ function articleView(slug) {
   const renderBlock = block => {
     const text = escapeHtml(block.text || '');
     if (block.type === 'image') return `<figure><img src="${escapeHtml(block.url)}" alt="${escapeHtml(block.caption || '')}" loading="lazy">${block.caption ? `<figcaption>${escapeHtml(block.caption)}</figcaption>` : ''}</figure>`;
+    if (block.type === 'heading_1') return `<h2>${text}</h2>`;
     if (block.type === 'heading_2') return `<h3>${text}</h3>`;
     if (block.type === 'heading_3') return `<h4>${text}</h4>`;
     if (block.type === 'quote') return `<blockquote><p>${text}</p></blockquote>`;
@@ -286,13 +287,14 @@ function articleView(slug) {
   const sections = [];
   let currentSection = null;
   blocks.forEach(block => {
-    if (block.type === 'heading_1') {
-      currentSection = { title: block.text || '', blocks: [] };
+    if (block.type === 'divider') {
+      if (currentSection && currentSection.blocks.length === 0) return;
+      currentSection = { blocks: [] };
       sections.push(currentSection);
     } else if (currentSection) currentSection.blocks.push(block);
     else lead.push(block);
   });
-  if (!sections.length) sections.push({ title: '', blocks });
+  sections.splice(0, sections.length, ...sections.filter(section => section.blocks.length > 0));
   const thumb = p.thumbnail ? `<figure><img src="${escapeHtml(p.thumbnail)}" alt="${escapeHtml(p.title)}" loading="lazy"></figure>` : '';
   return `
     ${topBar({ post: p.category })}
