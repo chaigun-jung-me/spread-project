@@ -19,7 +19,7 @@ The Source Spread database has been created in the connected Notion workspace. I
 | Published | Checkbox | Yes |
 | Slug | Rich text | No; generated from Title when empty |
 
-Write article content in the page body. Enter-created paragraphs get about one line of space between them; line breaks inside a paragraph stay visible. The site keeps inline bold/italic/underline/strikethrough/code, text colors, links, headings, quotes, bulleted and numbered lists, checklists, callouts, bookmarks, equations, dividers, and images. Empty paragraphs remain as extra spacing. Only rows with `Published` checked are exported. An unpublished `[TEST] Sample article` is in the database as a field and body example; replace it with an actual article before publishing. Share the data source with the Notion integration used for the API token.
+Write article content in the page body. Paragraphs start flush left without indentation and get about one line of space between them; line breaks inside a paragraph stay visible. The site keeps inline bold/italic/underline/strikethrough/code, text colors, links, headings, quotes, bulleted and numbered lists, checklists, callouts, bookmarks, equations, dividers, and images. Empty paragraphs remain as extra spacing. Only rows with `Published` checked are exported. An unpublished `[TEST] Sample article` is in the database as a field and body example; replace it with an actual article before publishing. Share the data source with the Notion integration used for the API token.
 
 ### Article numbering
 
