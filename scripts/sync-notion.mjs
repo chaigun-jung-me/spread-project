@@ -6,7 +6,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const token = process.env.NOTION_TOKEN;
 const dataSourceId = process.env.NOTION_DATA_SOURCE_ID || '7790a424-902d-44f2-ade0-560b2e51056c';
 const apiVersion = '2026-03-11';
-const categories = new Set(['Design', 'Fashion', 'Tech', 'People', 'Culture']);
+const categories = new Set(['Design', 'Fashion', 'Tech', 'Sports', 'Culture']);
 const assetsDirectory = path.join(root, 'assets', 'notion');
 await rm(assetsDirectory, { recursive: true, force: true });
 await mkdir(assetsDirectory, { recursive: true });
@@ -131,7 +131,7 @@ async function convertBlock(block, pageId, imageCount) {
 const queryResults = [];
 let cursor;
 do {
-  const body = { page_size: 100, sorts: [{ property: 'Date', direction: 'descending' }] };
+  const body = { page_size: 100, sorts: [{ property: 'Sort Date', direction: 'descending' }] };
   if (cursor) body.start_cursor = cursor;
   const result = await notion(`data_sources/${dataSourceId}/query`, { method: 'POST', body: JSON.stringify(body) });
   queryResults.push(...result.results);
@@ -148,8 +148,9 @@ for (const page of published) {
   const from = valueText(page, 'From');
   const source = valueText(page, 'Source');
   const date = valueDate(page, 'Date');
-  if (!title || !from || !source || !date || !categories.has(category) || !sourceUrl) {
-    throw new Error(`Published page ${page.id} must have Title, From, Source, Date, a supported Category, and Source URL.`);
+  const sortDate = valueDate(page, 'Sort Date');
+  if (!title || !from || !source || !date || !sortDate || !categories.has(category) || !sourceUrl) {
+    throw new Error(`Published page ${page.id} must have Title, From, Source, Date, Sort Date, a supported Category, and Source URL.`);
   }
   let parsedSource;
   try { parsedSource = new URL(sourceUrl); } catch { throw new Error(`Source URL is invalid on “${title}”.`); }
@@ -168,12 +169,12 @@ for (const page of published) {
     if (converted) body.push(converted);
   }
   posts.push({
-    slug, title, category, date,
+    slug, title, category, date, sortDate,
     from, source,
     url: sourceUrl, thumbnail, body, lang: 'ko', createdTime: page.created_time || '',
   });
 }
-posts.sort((a, b) => (b.date || '').localeCompare(a.date || '') || (b.createdTime || '').localeCompare(a.createdTime || '') || a.title.localeCompare(b.title, 'ko'));
+posts.sort((a, b) => (b.sortDate || b.date || '').localeCompare(a.sortDate || a.date || '') || (b.createdTime || '').localeCompare(a.createdTime || '') || a.title.localeCompare(b.title, 'ko'));
 await writeFile(path.join(root, 'posts.json'), `${JSON.stringify(posts, null, 2)}\n`);
 
 // Each detail URL has its own HTML shell so link previews receive metadata without running JS.

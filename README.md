@@ -11,8 +11,9 @@ The Source Spread database has been created in the connected Notion workspace. I
 | Title | Title | Yes |
 | From | Rich text | Yes |
 | Source | Rich text | Yes |
-| Date | Date | Yes |
-| Category | Select (`Design`, `Fashion`, `Tech`, `People`, `Culture`) | Yes |
+| Date | Date — original/source date shown on the site | Yes |
+| Sort Date | Date — controls newest-first order; initially matches Date | Yes |
+| Category | Select (`Design`, `Fashion`, `Tech`, `Sports`, `Culture`) | Yes |
 | Thumbnail | URL or Files & media | No |
 | Source URL | URL | Yes |
 | Published | Checkbox | Yes |
@@ -22,10 +23,12 @@ Write article content in the page body. Enter-created paragraphs get about one l
 
 ### Article numbering
 
-- Add a Notion **Divider** block to start each numbered section. The site adds `01`, `02`, `03` automatically; do not type the numbers yourself.
-- Text before the first Divider is the unnumbered lead.
-- Use **Heading 1**, **Heading 2**, or **Heading 3** for headings; headings do not increase the section number.
-- If the page has no Divider, the body is shown as one section numbered `01`.
+- Use a Notion **Heading 1** block to start each numbered section. The site adds `01`, `02`, `03` automatically; do not type section numbers yourself.
+- Text before the first **Heading 1** is the unnumbered lead. If there are no Heading 1 blocks but the article has body content, it is shown as one section numbered `01`. Empty sections are skipped and never get a number.
+- Use **Heading 2** and **Heading 3** for headings inside a section.
+- Use a Notion **Divider** only when you want a long blank space between paragraphs. It adds generous vertical space but does not create a numbered section.
+- For interview dialogue, put each turn in its own paragraph using `Name: dialogue`, for example `GQ: What inspired the first designs?` followed by `James Jebbia: The people around the store inspired us.` The site aligns the speaker and dialogue side by side on the same row.
+- `Date` is the original/source date displayed on the site. `Sort Date` determines newest-first order on both the Notion database view and the homepage. For existing articles, both dates were initially set to the existing `Date`; set `Sort Date` to the day you want a new or updated article to move to the top.
 
 ## Manual sync
 
