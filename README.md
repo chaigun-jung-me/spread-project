@@ -21,13 +21,13 @@ The Source Spread database has been created in the connected Notion workspace. I
 
 Write article content in the page body. Paragraphs start flush left without indentation and get about one line of space between them; line breaks inside a paragraph stay visible. The site keeps inline bold/italic/underline/strikethrough/code, text colors, links, headings, quotes, bulleted and numbered lists, checklists, callouts, bookmarks, equations, dividers, and images. Empty paragraphs remain as extra spacing. Only rows with `Published` checked are exported. An unpublished `[TEST] Sample article` is in the database as a field and body example; replace it with an actual article before publishing. Share the data source with the Notion integration used for the API token.
 
-### Article numbering
+### Article layout
 
-- Use a Notion **Heading 1** block to start each numbered section. The site adds `01`, `02`, `03` automatically; do not type section numbers yourself.
-- Text before the first **Heading 1** is the unnumbered lead. If there are no Heading 1 blocks but the article has body content, it is shown as one section numbered `01`. Empty sections are skipped and never get a number.
-- Use **Heading 2** and **Heading 3** for headings inside a section.
-- Use a Notion **Divider** only when you want a long blank space between paragraphs. It adds generous vertical space but does not create a numbered section.
-- For interview dialogue, put each turn in its own paragraph using `Name: dialogue`, for example `GQ: What inspired the first designs?` followed by `James Jebbia: The people around the store inspired us.` The site aligns the speaker and dialogue side by side on the same row.
+- The site does not add gray `01`, `02` section numbers. All regular text, headings, and paragraphs go in the second column.
+- Use a Notion **Divider** only when you want extra blank space between paragraphs. It never adds a number or other marker.
+- For interview dialogue, put each turn in its own paragraph as `Name: dialogue`, for example `GQ: What inspired the first designs?` followed by `James Jebbia: The people around the store inspired us.` The site places the speaker name in the first column and the dialogue in the second column on the same line. The colon is an input marker and is not shown on the site; the speaker name is black.
+- Text without a `Name:` prefix appears only in the second column. With or without Dividers, content starts with the first body block; it is not moved into a separate lead area.
+- Use **Heading 1**, **Heading 2**, and **Heading 3** for headings. They do not create section numbers.
 - `Date` is the original/source date displayed on the site. `Sort Date` determines newest-first order on both the Notion database view and the homepage. For existing articles, both dates were initially set to the existing `Date`; set `Sort Date` to the day you want a new or updated article to move to the top.
 
 ## Manual sync
