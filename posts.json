@@ -4,6 +4,7 @@
     "title": "슈프림 리더: 제임스 제비아 심층 인터뷰",
     "category": "Fashion",
     "date": "2026-10-03",
+    "sortDate": "2026-10-03",
     "from": "GQ",
     "source": "Supreme Leader: The Extended James Jebbia Interview",
     "url": "https://www.gq.com/story/supreme-james-jebbia-extended-interview",
@@ -31,14 +32,14 @@
         "type": "divider"
       },
       {
-        "type": "paragraph",
-        "text": "1. 수프림의 초기 스타일 영감과 품질 고집",
+        "type": "heading_1",
+        "text": "수프림의 초기 스타일 영감과 품질 고집",
         "rich_text": [
           {
-            "text": "1. 수프림의 초기 스타일 영감과 품질 고집",
+            "text": "수프림의 초기 스타일 영감과 품질 고집",
             "href": "",
             "annotations": {
-              "bold": true,
+              "bold": false,
               "italic": false,
               "strikethrough": false,
               "underline": false,
@@ -178,14 +179,14 @@
         "type": "divider"
       },
       {
-        "type": "paragraph",
-        "text": "2. 실용주의 디자인과 첫 제품",
+        "type": "heading_1",
+        "text": "실용주의 디자인과 첫 제품",
         "rich_text": [
           {
-            "text": "2. 실용주의 디자인과 첫 제품",
+            "text": "실용주의 디자인과 첫 제품",
             "href": "",
             "annotations": {
-              "bold": true,
+              "bold": false,
               "italic": false,
               "strikethrough": false,
               "underline": false,
@@ -289,14 +290,14 @@
         "type": "divider"
       },
       {
-        "type": "paragraph",
-        "text": "3. 품질 유지와 브랜드 정체성",
+        "type": "heading_1",
+        "text": "품질 유지와 브랜드 정체성",
         "rich_text": [
           {
-            "text": "3. 품질 유지와 브랜드 정체성",
+            "text": "품질 유지와 브랜드 정체성",
             "href": "",
             "annotations": {
-              "bold": true,
+              "bold": false,
               "italic": false,
               "strikethrough": false,
               "underline": false,
@@ -472,14 +473,14 @@
         "type": "divider"
       },
       {
-        "type": "paragraph",
-        "text": "4. 디자인 철학과 매장 연출 (90년대 감성과 일본의 영향)",
+        "type": "heading_1",
+        "text": "디자인 철학과 매장 연출 (90년대 감성과 일본의 영향)",
         "rich_text": [
           {
-            "text": "4. 디자인 철학과 매장 연출 (90년대 감성과 일본의 영향)",
+            "text": "디자인 철학과 매장 연출 (90년대 감성과 일본의 영향)",
             "href": "",
             "annotations": {
-              "bold": true,
+              "bold": false,
               "italic": false,
               "strikethrough": false,
               "underline": false,
@@ -583,14 +584,14 @@
         "type": "divider"
       },
       {
-        "type": "paragraph",
-        "text": "5. 스타일의 진화와 문화적 영감",
+        "type": "heading_1",
+        "text": "스타일의 진화와 문화적 영감",
         "rich_text": [
           {
-            "text": "5. 스타일의 진화와 문화적 영감",
+            "text": "스타일의 진화와 문화적 영감",
             "href": "",
             "annotations": {
-              "bold": true,
+              "bold": false,
               "italic": false,
               "strikethrough": false,
               "underline": false,
@@ -676,14 +677,14 @@
         "type": "divider"
       },
       {
-        "type": "paragraph",
-        "text": "6. '드롭(Drop)' 시스템의 탄생과 미래",
+        "type": "heading_1",
+        "text": "'드롭(Drop)' 시스템의 탄생과 미래",
         "rich_text": [
           {
-            "text": "6. '드롭(Drop)' 시스템의 탄생과 미래",
+            "text": "'드롭(Drop)' 시스템의 탄생과 미래",
             "href": "",
             "annotations": {
-              "bold": true,
+              "bold": false,
               "italic": false,
               "strikethrough": false,
               "underline": false,
@@ -828,6 +829,7 @@
     "title": "지나칠 정도로 하라",
     "category": "Tech",
     "date": "2026-10-03",
+    "sortDate": "2026-10-03",
     "from": "Alexander Wang Blog",
     "source": "DO TOO MUCH",
     "url": "https://substack.com/home/post/p-149929791",
@@ -1514,6 +1516,7 @@
     "title": "제임스 제비아가 곧 슈프림이다",
     "category": "Fashion",
     "date": "2026-10-03",
+    "sortDate": "2026-10-03",
     "from": "Interview magazine ",
     "source": "James jebbia is supreme",
     "url": "https://www.interviewmagazine.com/fashion/james-jebbia-is-supreme",

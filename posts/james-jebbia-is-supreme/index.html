@@ -166,7 +166,10 @@
   .article .notion-callout { display: flex; gap: .75em; margin: 0 0 1em; padding: 1em; background: #f5f5f5; border-radius: 4px; }
   .article .notion-bookmark { margin: 0 0 1em; padding: 1em; border: 1px solid var(--line); }
   .article .notion-bookmark a { text-decoration: underline; text-underline-offset: 3px; }
-  .article .notion-divider { margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
+  .article .notion-divider { height: 1px; margin: 4em 0; border: 0; }
+  .article .dialogue { display: grid; grid-template-columns: max-content minmax(0, 1fr); align-items: start; column-gap: .55em; margin: 0 0 1em; }
+  .article .dialogue-speaker { white-space: nowrap; font-weight: 600; }
+  .article .dialogue-text { min-width: 0; margin: 0; text-indent: 0; }
   .article .section { display: grid; grid-template-columns: 1fr 1.4fr; gap: 0 64px; margin-bottom: 48px; }
   .article .section > div { max-width: 600px; }
   .article .section .no { justify-self: end; color: var(--muted); font-size: 14px; line-height: 24px; font-variant-numeric: tabular-nums; }
@@ -213,7 +216,7 @@
 <script>
 /* ===== 상태 ===== */
 let posts = [];
-const categories = ['Design', 'Fashion', 'Tech', 'People', 'Culture'];
+const categories = ['Design', 'Fashion', 'Tech', 'Sports', 'Culture'];
 let sort = { key: null, dir: 'asc' };      // 처음엔 적어 둔 순서 그대로, 머리글을 누르면 정렬
 let filter = null;                          // /category/tech 경로에서 읽음
 
@@ -332,8 +335,36 @@ function articleView(slug) {
     }).join('');
   };
   const renderInline = block => renderRichText(block.rich_text, block.text || '');
+  const splitDialogue = block => {
+    if (block.type !== 'paragraph') return null;
+    const text = String(block.text || '');
+    const match = text.match(/^([\p{L}][^:\n]{0,39}):[ \t]*(\S[\s\S]*)$/u);
+    if (!match) return null;
+    const colon = text.indexOf(':') + 1;
+    const bodyStart = colon + (text.slice(colon).match(/^[ \t]*/) || [''])[0].length;
+    const sliceRuns = (start, end) => {
+      let offset = 0;
+      const result = [];
+      for (const run of block.rich_text || []) {
+        const value = String(run.text || '');
+        const from = Math.max(0, start - offset);
+        const to = Math.min(value.length, end - offset);
+        if (to > from) result.push({ ...run, text: value.slice(from, to) });
+        offset += value.length;
+      }
+      return result;
+    };
+    return {
+      speaker: text.slice(0, colon).trim(),
+      text: match[2].trim(),
+      speakerRuns: sliceRuns(0, colon),
+      textRuns: sliceRuns(bodyStart, text.length),
+    };
+  };
   const renderBlock = block => {
     const inline = renderInline(block);
+    const dialogue = splitDialogue(block);
+    if (dialogue) return `<div class=\"dialogue\"><span class=\"dialogue-speaker\">${renderRichText(dialogue.speakerRuns, dialogue.speaker)}</span><p class=\"dialogue-text\">${renderRichText(dialogue.textRuns, dialogue.text)}</p></div>`;
     if (block.type === 'image') return `<figure><img src="${escapeHtml(block.url)}" alt="${escapeHtml(block.caption || '')}" loading="lazy">${block.caption ? `<figcaption>${renderRichText(block.caption_rich_text, block.caption)}</figcaption>` : ''}</figure>`;
     if (block.type === 'heading_1') return `<h2>${inline}</h2>`;
     if (block.type === 'heading_2') return `<h3>${inline}</h3>`;
@@ -379,9 +410,8 @@ function articleView(slug) {
   const sections = [];
   let currentSection = null;
   blocks.forEach(block => {
-    if (block.type === 'divider') {
-      if (currentSection && currentSection.blocks.length === 0) return;
-      currentSection = { blocks: [] };
+    if (block.type === 'heading_1') {
+      currentSection = { titleBlock: block, blocks: [] };
       sections.push(currentSection);
     } else if (currentSection) currentSection.blocks.push(block);
     else lead.push(block);
@@ -394,15 +424,15 @@ function articleView(slug) {
     if (block.type === 'divider') return false;
     return Boolean((block.text || '').trim() || (block.rich_text || []).some(run => (run.plain_text || '').trim()));
   };
-  sections.splice(0, sections.length, ...sections.filter(section => section.blocks.some(hasVisibleContent)));
-  if (!sections.length && lead.length) {
+  sections.splice(0, sections.length, ...sections.filter(section => hasVisibleContent(section.titleBlock || {}) || section.blocks.some(hasVisibleContent)));
+  if (!sections.length && lead.some(hasVisibleContent)) {
     sections.push({ blocks: lead.splice(0) });
   }
   const thumb = p.thumbnail ? `<figure><img src="${escapeHtml(p.thumbnail)}" alt="${escapeHtml(p.title)}" loading="lazy"></figure>` : '';
   return `
     ${topBar({ post: p.category })}
     <main class="article">
-      <div class="head${lead.length ? '' : ' no-lede'}">
+      <div class="head${lead.some(hasVisibleContent) ? '' : ' no-lede'}">
         <div>
           <h1 lang="${escapeHtml(lang)}">${escapeHtml(p.title)}</h1>
           <dl class="facts">
@@ -414,7 +444,7 @@ function articleView(slug) {
         </div>
         <div class="lede" lang="${escapeHtml(lang)}">${thumb}${renderBlocks(lead)}</div>
       </div>
-      ${sections.map((section, index) => `<section class="section"><span class="no">${pad(index + 1)}</span><div lang="${escapeHtml(lang)}">${section.title ? `<h2>${escapeHtml(section.title)}</h2>` : ''}${renderBlocks(section.blocks) || (!section.title ? '<p>본문이 없습니다.</p>' : '')}</div></section>`).join('')}
+      ${sections.map((section, index) => `<section class="section"><span class="no">${pad(index + 1)}</span><div lang="${escapeHtml(lang)}">${section.titleBlock ? renderBlock(section.titleBlock) : ''}${renderBlocks(section.blocks) || (!section.titleBlock ? '<p>본문이 없습니다.</p>' : '')}</div></section>`).join('')}
     </main>`;
 }
 
