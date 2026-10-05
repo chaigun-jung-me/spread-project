@@ -170,7 +170,7 @@
   .article-content { display: grid; grid-template-columns: 1fr 1.4fr; column-gap: 64px; }
   .article-content > .article-row { grid-column: 2; min-width: 0; }
   .article-content > .dialogue { grid-column: 1 / -1; display: grid; grid-template-columns: inherit; column-gap: inherit; align-items: baseline; margin-bottom: 1em; }
-  .article .dialogue-speaker { color: var(--fg); font-weight: 600; }
+  .article .dialogue-speaker { color: var(--fg); font-weight: 600; text-align: right; }
   .article .dialogue-text { min-width: 0; margin: 0; text-indent: 0; }
   @media (max-width: 760px) {
     .article { padding: 24px 16px 120px; font-size: 15px; }
@@ -337,8 +337,8 @@ function articleView(slug) {
     const text = String(block.text || '');
     const match = text.match(/^([\p{L}][^:\n]{0,39}):[ \t]*(\S[\s\S]*)$/u);
     if (!match) return null;
-    const colon = text.indexOf(':') + 1;
-    const bodyStart = colon + (text.slice(colon).match(/^[ \t]*/) || [''])[0].length;
+    const colonIndex = text.indexOf(':');
+    const bodyStart = colonIndex + 1 + (text.slice(colonIndex + 1).match(/^[ \t]*/) || [''])[0].length;
     const sliceRuns = (start, end) => {
       let offset = 0;
       const result = [];
@@ -352,7 +352,7 @@ function articleView(slug) {
       return result;
     };
     return {
-      speaker: text.slice(0, colon).trim(),
+      speaker: text.slice(0, colonIndex).trim(),
       text: match[2].trim(),
       textRuns: sliceRuns(bodyStart, text.length),
     };
