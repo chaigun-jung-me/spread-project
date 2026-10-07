@@ -149,10 +149,11 @@
   /* ===== 글 상세: 본문은 오른쪽 칸, 이름: 발언 문단은 왼쪽 칸과 같은 줄 ===== */
   @font-face { font-family: 'iA Quattro'; font-weight: 400; font-display: swap; src: url('https://cdn.jsdelivr.net/gh/iaolo/iA-Fonts@master/iA%20Writer%20Quattro/Webfonts/iAWriterQuattroS-Regular.woff2') format('woff2'); }
   .article { max-width: 1040px; margin: 0 auto; padding: 40px 16px 160px; font: 16px/1.5 'iA Quattro', 'Pretendard', sans-serif; }
-  .article .head { display: grid; grid-template-columns: 1fr 1.4fr; gap: 40px 64px; margin-bottom: 120px; }
+  .article .head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 40px 64px; margin-bottom: 120px; }
+  .article .head > div { min-width: 0; }
   .article .head.no-lede { margin-bottom: 48px; }
   .article h1 { font: 800 16px/1.5 'Pretendard', sans-serif; margin: 0; }
-  .article .facts { display: grid; grid-template-columns: 7em 1fr; margin: 24px 0 0; color: var(--muted); }
+  .article .facts { display: grid; grid-template-columns: 7em minmax(0, 1fr); min-width: 0; margin: 24px 0 0; color: var(--muted); }
   .article .facts dt { font-size: 14px; line-height: 24px; }
   .article .facts dd { margin: 0; color: var(--fg); }
   .article .facts .src { text-decoration: underline; text-underline-offset: 3px; }
@@ -184,7 +185,7 @@
   .article .dialogue-text { min-width: 0; margin: 0; text-indent: 0; }
   @media (max-width: 760px) {
     .article { padding: 24px 16px 120px; font-size: 15px; }
-    .article .head { grid-template-columns: 1fr; margin-bottom: 64px; }
+    .article .head { grid-template-columns: minmax(0, 1fr); margin-bottom: 64px; }
     .article .head.no-lede { margin-bottom: 32px; }
     .article h1 { font-size: 20px; line-height: 1.35; }
     .article-content { grid-template-columns: max-content minmax(0, 1fr); column-gap: 12px; }
