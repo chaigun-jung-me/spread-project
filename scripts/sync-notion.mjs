@@ -47,7 +47,30 @@ const slugify = value => value.toLocaleLowerCase().normalize('NFKC').trim()
   .replace(/[^\p{Letter}\p{Number}]+/gu, '-')
   .replace(/^-+|-+$/g, '');
 const plain = value => String(value || '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
-const summary = post => (post.body.find(block => block.text)?.text || `${post.from}에서 소개한 ${post.category} 콘텐츠를 번역하고 큐레이션합니다.`).replace(/\s+/g, ' ').slice(0, 160);
+function autoDescription(post) {
+  const sentences = [];
+  const paragraphs = post.body
+    .filter(block => block.type === 'paragraph' && block.text)
+    .map(block => block.text.replace(/\s+/g, ' ').trim())
+    .filter(text => text && !/^[^\s:\n][^:\n]{0,39}:[ \t]*\S/u.test(text));
+  for (const paragraph of paragraphs) {
+    const parts = paragraph.match(/[^.!?]+(?:[.!?]+(?=\s|$)|$)/gu) || [];
+    for (const part of parts) {
+      const sentence = part.trim();
+      if (sentence) sentences.push(sentence);
+      if (sentences.length === 2) break;
+    }
+    if (sentences.length === 2) break;
+  }
+  const fallback = `${post.from}에서 소개한 ${post.category} 분야의 글입니다.`;
+  if (!sentences.length) {
+    const title = post.title.replace(/[.!?]+$/u, '').trim();
+    sentences.push(`${title}의 핵심 내용을 다룹니다.`, fallback);
+  }
+  if (sentences.length === 1) sentences.push(fallback);
+  return sentences.slice(0, 2).join(' ');
+}
+const summary = post => (post.description || autoDescription(post)).replace(/\s+/g, ' ').trim();
 
 function imageExtension(url, contentType = '') {
   const type = contentType.split(';')[0].trim().toLowerCase();
@@ -168,11 +191,24 @@ for (const page of published) {
     const converted = await convertBlock(block, page.id, imageCount);
     if (converted) body.push(converted);
   }
-  posts.push({
+  const post = {
     slug, title, category, date, sortDate,
     from, source,
     url: sourceUrl, thumbnail, body, lang: 'ko', createdTime: page.created_time || '',
-  });
+    description: valueText(page, 'Description').trim(),
+  };
+  if (!post.description) {
+    post.description = autoDescription(post);
+    try {
+      await notion(`pages/${page.id}`, {
+        method: 'PATCH',
+        body: JSON.stringify({ properties: { Description: { rich_text: [{ text: { content: post.description } }] } } }),
+      });
+    } catch (error) {
+      console.warn(`Could not save the generated Description to Notion for “${title}”: ${error.message}`);
+    }
+  }
+  posts.push(post);
 }
 posts.sort((a, b) => (b.sortDate || b.date || '').localeCompare(a.sortDate || a.date || '') || (b.createdTime || '').localeCompare(a.createdTime || '') || a.title.localeCompare(b.title, 'ko'));
 await writeFile(path.join(root, 'posts.json'), `${JSON.stringify(posts, null, 2)}\n`);
