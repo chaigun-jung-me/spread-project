@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="/favicon.png">
+<title>할리우드는 애니메이션 없이 버틸 수 없다. 그런데 왜 업계는 여전히 찬밥 취급할까? — source spread</title>
+<meta name="description" content="&lt;코렐라인: 비밀의 문&gt;과 &lt;파라노만&gt;을 만든 애니메이션 스튜디오 &#39;라이카(Laika)&#39;의 트래비스 나이트(Travis Knight) CEO는 2020년 오스카 노미니 오찬 행사에서 겪은 일을 아직도 잊지 못한다.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="source spread">
+<meta property="og:title" content="할리우드는 애니메이션 없이 버틸 수 없다. 그런데 왜 업계는 여전히 찬밥 취급할까? — source spread">
+<meta property="og:description" content="&lt;코렐라인: 비밀의 문&gt;과 &lt;파라노만&gt;을 만든 애니메이션 스튜디오 &#39;라이카(Laika)&#39;의 트래비스 나이트(Travis Knight) CEO는 2020년 오스카 노미니 오찬 행사에서 겪은 일을 아직도 잊지 못한다.">
+<link rel="canonical" href="https://source-spread.kr/posts/hollywood-can-t-survive-without-animation">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  :root {
+    --bg: #fff;
+    --fg: #111;
+    --muted: #888;
+    --line: #e5e5e5;
+    /* 호버·드래그·현재 위치가 한 쌍을 같이 쓴다. 여기만 바꾸면 세 곳이 같이 바뀐다 —
+       줄 호버, 드래그(::selection), 지금 있는 곳(로고·카테고리). */
+    /* 사용자가 사진으로 준 색 조합(2026-10-01). 검정+노랑 → 검정+연두빛 흰색 →
+       지금의 남청+흰색으로 두 번 바뀌었다. 사진에서 뽑은 값 그대로 쓴다 —
+       글자가 순백(#FFF)이 아니라 살짝 따뜻한 흰색이고, 그게 사진의 인상이다.
+       대비 9.07:1 (순백으로 하면 11.39:1). */
+    --hl-bg: #302B8B;   /* 호버·드래그 배경 */
+    --hl-fg: #E9E5DD;   /* 호버·드래그 글씨 */
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--fg); }
+  html { scrollbar-gutter: stable; overflow-y: scroll; overscroll-behavior-x: none; }
+  body { font: 14px/1.6 -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", sans-serif; word-break: keep-all; }
+  a { color: inherit; text-decoration: none; }
+  [lang="ko"] { font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif; }
+
+  /* 드래그(선택) 시 검은 배경 + 노란 글씨 */
+  ::selection { background: var(--hl-bg); color: var(--hl-fg); }
+
+  /* ===== 상단: 왼쪽 위 로고, 오른쪽 카테고리 ===== */
+  .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 16px; }
+  /* 지금 있는 곳(홈=로고, 카테고리, 글의 카테고리)은 검정·노랑 고대비. 여백은 늘 잡아 둬서 글자가 안 움직임 */
+  .top .logo { display: inline-block; font-size: 16px; font-weight: 700; line-height: 1.2; padding: 2px 4px; margin: -2px 0 0 -4px; }
+  .top nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0 6px; margin-right: -4px; }
+  .top nav a { color: var(--muted); padding: 0 4px; }
+  .top nav a:hover { color: var(--fg); }
+  .top .logo.on, .top nav a.on { background: var(--hl-bg); color: var(--hl-fg); }
+
+  /* ===== 목록 ===== */
+  /* 표 아래 여백은 두지 않는다. 한때 상세 페이지와 같게 208px 을 줬다가
+     사용자가 되돌리라고 했다(2026-10-01) — 목록은 표가 끝나면 바로 푸터다. */
+  .list { width: 100%; border-collapse: collapse; }
+  .list th {
+    /* [머리글은 본문과 같은 크기] 사용자 지정(2026-10-01).
+       처음엔 22px 로 키웠다가, 머리글과 줄의 제목이 한 크기여야 하고 그 기준은
+       **본문**이라고 정리됐다 — 그래서 14px. 본래 12px 이었으니 조금 커진 것이다.
+       자간은 전부 대문자(TITLE…)일 때 벌려 둔 .04em 이었는데, 머리글자 표기로
+       바뀌면서 느슨해 보여 .01em 으로 좁혔다. */
+    text-align: left; font-weight: 600; font-size: 14px; letter-spacing: .01em;
+    padding: 8px 16px; border-bottom: 1px solid var(--fg); white-space: nowrap;
+  }
+  .list th[data-sort] { cursor: pointer; user-select: none; }
+  .list th[data-sort]:hover, .list th[data-sort]:focus-visible { color: var(--muted); outline: none; }
+  .list th .arrow { margin-left: 4px; }
+  .list td { padding: 10px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .list tbody tr[data-slug] { cursor: pointer; }
+  .list tbody tr[data-slug]:hover, .list tbody tr[data-slug]:focus-visible { background: var(--hl-bg); color: var(--hl-fg); outline: none; }
+  .list .title { width: 32%; }
+  .list td.date { white-space: nowrap; }
+  .list td.src a { text-decoration: underline; text-underline-offset: 3px; }
+  .list .empty td { color: var(--muted); }
+  /* 칸 너비 고정 — 카테고리를 바꿔도 칸이 움직이지 않게 (PC) */
+  @media (min-width: 641px) {
+    .list { table-layout: fixed; }
+    .list thead th:nth-child(1) { width: 32%; }
+    .list thead th:nth-child(2) { width: 13%; }
+    .list thead th:nth-child(3) { width: 28%; }
+    .list thead th:nth-child(4) { width: 14%; }
+    .list thead th:nth-child(5) { width: 13%; }
+  }
+
+
+  /* ===== 모바일 목록 — 한 줄에 제목, 오른쪽 끝에 카테고리 =====
+     이 배치가 /justify/ 에 있던 것이고, 2026-10-01 그게 정식버전이 되었다.
+     (한때 본체에는 제목 한 줄 + 아래 작은 줄로 2단 배치가 있었다. 정식판을 올릴 때
+      본문 조판만 가져오고 이 목록 블록을 버려서 '정식버전이 아니다'는 지적을 받았다.
+      목록은 이쪽이 맞다 — 한 줄이라 줄높이가 40px 로 떨어지고 훑기 쉽다.)
+
+     그 위에 사용자 지시 셋을 얹었다.
+       · FROM 도 접는다 — 보이는 건 제목과 카테고리뿐
+       · 긴 제목은 … 로 자르지 않고 한 글자씩 흐른다(움직임은 flowTitles 가 건다)
+       · 줄 사이를 조금 좁혔다 — 상하 12 → 9 */
+  @media (max-width: 640px) {
+    .top { gap: 8px; }
+    .top nav { gap: 0; margin-right: -3px; }
+    .top nav a { padding: 0 3px; }
+
+    /* [표를 블록으로 푼다] 줄은 flex 로 바꿔 쓰지만 바깥이 <table> 인 동안에는
+       표의 내재 폭이 칸 내용에 끌려간다. 제목에 nowrap 을 걸면 그 폭이 표의
+       최소 폭이 되어, 제목이 칸을 넘치는 게 아니라 표가 화면을 넘어가 버렸다
+       (390px 화면에서 칸이 410px, 실측). 표·머리·몸을 블록으로 두면 그 고리가 끊긴다. */
+    .list, .list thead, .list tbody { display: block; width: 100%; }
+    .list thead tr, .list tbody tr { display: flex; flex-wrap: nowrap; align-items: baseline; gap: 12px; padding: 0 16px; }
+    .list thead tr { border-bottom: 1px solid var(--fg); }
+    .list tbody tr { padding: 9px 16px; border-bottom: 1px solid var(--line); }
+    .list th, .list td { padding: 0; border: 0; }
+    .list thead th { padding: 8px 0; }
+
+    /* 제목이 남는 폭을 다 쓰고, 카테고리는 오른쪽 끝에 붙는다.
+       [고정 70px 을 버렸다] 머리글이 22px 이 되면서 'Category' 가 95px 이라 잘렸다.
+       폭을 내용에 맡기고 머리글·본문 둘 다 오른쪽 정렬로 두면, 글자 크기가 달라도
+       오른쪽 변이 딱 맞는다(머리 22px · 본문 14px).
+       font-size 는 td 에만 준다 — th 까지 덮으면 22px 지정이 모바일에서 무효가 된다. */
+    .list th.title, .list td.title { flex: 1 1 auto; width: auto; margin: 0; }
+    .list th.cat, .list td.cat { flex: none; width: auto; text-align: right; }
+    .list td.cat { font-size: 14px; color: var(--muted); white-space: nowrap; }
+    .list tbody tr:hover td, .list tbody tr:focus-visible td { color: inherit; }
+
+    /* FROM · SOURCE · DATE 는 접는다. 목록에서 고르는 데 필요한 건 제목이고,
+       나머지는 글을 열면 다 있다. */
+    .list th.from, .list th.src, .list thead th:not([data-sort]),
+    .list td.from, .list td.src, .list td.date { display: none; }
+
+    /* [긴 제목은 한 글자씩 뚝뚝 흐른다] 여기 CSS 는 '한 줄로 두고 넘치면 가린다'까지만.
+       움직임은 flowTitles 가 타이머로 transform 을 직접 써서 만든다(아래 설명 참고).
+       min-width: 0 이 꼭 있어야 한다 — flex 항목의 기본값은 auto 라서 nowrap 인 제목의
+       min-content(=글 전체 폭) 밑으로 안 줄어들고, 그러면 넘침이 0 이 되어 안 흐른다. */
+    .list td.title { min-width: 0; overflow: hidden; white-space: nowrap; }
+    .list td.title > .t { display: inline-block; }
+  }
+
+  /* ===== 푸터 ===== */
+  /* 오른쪽 정렬, 옅은 회색 한 줄(사용자 지정 2026-10-01). 링크도 아니고 설명도 없다.
+     처음엔 이름만 'source spread' 로 두었는데 'from source we spread' 로 바꿨다 —
+     위에 로고가 이미 이름을 말하므로, 아래에서는 그 이름을 문장으로 풀어 준다.
+     #b5b5b5 는 흰 바탕에서 2.1:1 이라 본문 글씨로는 못 쓸 값이다. 읽히려고 둔 글자가 아니라
+     장식이라 일부러 옅게 뒀고, 크기는 본문과 같은 14px 로 둔다(작게까지 줄이면 그냥 안 보인다). */
+  .foot { padding: 56px 16px 28px; text-align: right; color: #b5b5b5; }
+
+  /* ===== 글 상세: 본문은 오른쪽 칸, 이름: 발언 문단은 왼쪽 칸과 같은 줄 ===== */
+  @font-face { font-family: 'iA Quattro'; font-weight: 400; font-display: swap; src: url('https://cdn.jsdelivr.net/gh/iaolo/iA-Fonts@master/iA%20Writer%20Quattro/Webfonts/iAWriterQuattroS-Regular.woff2') format('woff2'); }
+  .article { max-width: 1040px; margin: 0 auto; padding: 40px 16px 160px; font: 16px/1.5 'iA Quattro', 'Pretendard', sans-serif; }
+  .article .head { display: grid; grid-template-columns: 1fr 1.4fr; gap: 40px 64px; margin-bottom: 120px; }
+  .article .head.no-lede { margin-bottom: 48px; }
+  .article h1 { font: 800 16px/1.5 'Pretendard', sans-serif; margin: 0; }
+  .article .facts { display: grid; grid-template-columns: 7em 1fr; margin: 24px 0 0; color: var(--muted); }
+  .article .facts dt { font-size: 14px; line-height: 24px; }
+  .article .facts dd { margin: 0; color: var(--fg); }
+  .article .facts .src { text-decoration: underline; text-underline-offset: 3px; }
+  .article .facts .src:hover { background: var(--hl-bg); color: var(--hl-fg); text-decoration: none; }
+  .article p { margin: 0 0 1em; text-indent: 0; }
+  .article [lang="ko"] p { line-height: 1.9; }
+  .article p.notion-empty { min-height: 1.9em; margin-bottom: 1em; }
+  .article ul, .article ol { margin: .25em 0 1.2em; padding-left: 1.5em; }
+  .article li { padding-left: .15em; margin: .3em 0; }
+  .article h2, .article h3, .article h4 { font-family: 'Pretendard', sans-serif; line-height: 1.4; }
+  .article h2 { margin: 1.5em 0 .65em; font-size: 1.25em; }
+  .article h3 { margin: 1.25em 0 .55em; font-size: 1.1em; }
+  .article h4 { margin: 1em 0 .5em; font-size: 1em; }
+  .article a.notion-link { text-decoration: underline; text-underline-offset: 3px; }
+  .article code { padding: .08em .25em; background: #f3f3f3; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9em; }
+  .article pre code { padding: 0; background: transparent; font-size: inherit; }
+  .article .notion-todo { display: flex; align-items: baseline; gap: .55em; margin: 0 0 .8em; }
+  .article .notion-todo input { accent-color: var(--hl-bg); }
+  .article .notion-todo span { flex: 1; }
+  .article .notion-callout { display: flex; gap: .75em; margin: 0 0 1em; padding: 1em; background: #f5f5f5; border-radius: 4px; }
+  .article .notion-bookmark { margin: 0 0 1em; padding: 1em; border: 1px solid var(--line); }
+  .article .notion-bookmark a { text-decoration: underline; text-underline-offset: 3px; }
+  .article .notion-divider { height: 1px; margin: 4em 0; border: 0; }
+  .article-content { display: grid; grid-template-columns: 1fr 1.4fr; column-gap: 64px; }
+  .article-content > .article-row { grid-column: 2; min-width: 0; }
+  .article-content > .dialogue { grid-column: 1 / -1; display: grid; grid-template-columns: inherit; column-gap: inherit; align-items: baseline; margin-bottom: 1em; }
+  .article .dialogue-speaker { color: var(--fg); font-weight: 600; text-align: right; }
+  .article .dialogue-text { min-width: 0; margin: 0; text-indent: 0; }
+  @media (max-width: 760px) {
+    .article { padding: 24px 16px 120px; font-size: 15px; }
+    .article .head { grid-template-columns: 1fr; margin-bottom: 64px; }
+    .article .head.no-lede { margin-bottom: 32px; }
+    .article h1 { font-size: 20px; line-height: 1.35; }
+    .article-content { grid-template-columns: max-content minmax(0, 1fr); column-gap: 12px; }
+  }
+
+  /* ===== 잡지식 양끝맞춤 (2026-10-01 정식 채택) =====
+     한동안 /justify/ 로 따로 두고 본 사이트는 건드리지 말라고 했는데,
+     사용자가 "저스티파이가 정식버전임"으로 바꿨다. 그래서 본문 조판을 여기로 옮긴다.
+     한글은 글자 단위로 줄을 바꿔야 띄어쓰기가 고르게 벌어진다(단행본·잡지 조판).
+
+     [모바일 목록 블록은 가져오지 않았다] make-justify.py 에는 목록을 다시 짜는
+     @media 블록도 같이 있었다. 그게 위쪽 모바일 규칙을 덮어서 줄 여백을 12px 로
+     되돌리고, 제목을 흐르게 하는 대신 … 로 자르고, 접어 둔 FROM 칸을 되살렸다 —
+     최근 지시 세 개(제목·카테고리만 / 한 글자씩 흐르기 / 줄 사이 좁게)를 전부
+     무르는 셈이라 버렸다. 목록은 위쪽 규칙 하나로만 간다. */
+  .article .lede p, .article .section p {
+    text-align: justify;
+    text-justify: inter-character;
+    text-align-last: left;
+    hanging-punctuation: allow-end;
+  }
+  .article [lang="ko"] p { word-break: break-all; line-break: strict; letter-spacing: -0.005em; }
+  .article [lang="en"] p { hyphens: auto; -webkit-hyphens: auto; }
+  .article figure { margin: 0 0 24px; }
+  .article figure img { display: block; max-width: 100%; height: auto; }
+  .article figcaption { margin-top: 8px; color: var(--muted); font: 13px/1.5 -apple-system, BlinkMacSystemFont, "Pretendard", sans-serif; }
+  .article blockquote { margin: 0 0 1em; padding-left: 1.5em; border-left: 1px solid var(--line); }
+  .article blockquote p { margin: 0; }
+  .article pre { max-width: 100%; overflow-x: auto; white-space: pre-wrap; }
+</style>
+</head>
+<body>
+
+<div id="app"></div>
+<footer class="foot">from source we spread</footer>
+
+<script>
+/* ===== 상태 ===== */
+let posts = [];
+const categories = ['Design', 'Fashion', 'Tech', 'Sports', 'Culture'];
+let sort = { key: null, dir: 'asc' };      // 처음엔 적어 둔 순서 그대로, 머리글을 누르면 정렬
+let filter = null;                          // /category/tech 경로에서 읽음
+
+const categorySlug = c => c.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const catHref = c => c ? `/category/${categorySlug(c)}` : '/';
+function categoryFromPath() {
+  const match = location.pathname.match(/^\/category\/([^/]+)\/?$/);
+  if (!match) return null;
+  let slug;
+  try { slug = decodeURIComponent(match[1]); } catch { return null; }
+  return categories.find(c => categorySlug(c) === slug) || null;
+}
+const compare = {
+  title:    (a, b) => a.title.localeCompare(b.title, 'ko'),
+  category: (a, b) => categories.indexOf(a.category) - categories.indexOf(b.category),
+  from:     (a, b) => a.from.localeCompare(b.from, 'ko'),
+  source:   (a, b) => a.source.localeCompare(b.source, 'ko'),
+  date:     (a, b) => (a.date || '').localeCompare(b.date || ''),
+};
+const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+const sourceHref = value => {
+  try {
+    const u = new URL(value);
+    if (u.protocol !== 'https:' && u.protocol !== 'http:') return '#';
+    u.searchParams.set('ref', 'source-spread.kr');
+    return u.href;
+  } catch { return '#'; }
+};
+function displayDate(value) {
+  if (!value) return '';
+  const d = new Date(`${value}T00:00:00`);
+  return Number.isNaN(d.getTime()) ? value : `${d.getFullYear()}. ${d.getMonth() + 1}. ${d.getDate()}.`;
+}
+function visiblePosts() {
+  const list = posts.filter(p => !filter || p.category === filter);
+  if (!sort.key) return list;
+  const sign = sort.dir === 'asc' ? 1 : -1;
+  return list.sort((a, b) => sign * compare[sort.key](a, b) || posts.indexOf(a) - posts.indexOf(b));
+}
+
+/* ===== 화면 ===== */
+// here: 'home' | 카테고리 이름(목록) | { post: 카테고리 이름 }(상세)
+function topBar(here) {
+  const cur = typeof here === 'object' ? here.post : here;
+  const item = c => {
+    const on = cur === c;
+    return `<a href="${catHref(c)}" class="${on ? 'on' : ''}">${c}</a>`;
+  };
+  return `
+    <div class="top">
+      <a class="logo${cur === 'home' ? ' on' : ''}" href="/">source<br>spread</a>
+      <nav>${categories.map(item).join('')}</nav>
+    </div>`;
+}
+
+function listView() {
+  const th = (key, label, cls = '') => {
+    const arrow = sort.key === key ? `<span class="arrow">${sort.dir === 'asc' ? '↑' : '↓'}</span>` : '';
+    return `<th class="${cls}" data-sort="${key}" tabindex="0">${label}${arrow}</th>`;
+  };
+  // 제목은 span 으로 한 번 더 감싼다 — 좁은 화면에서 넘칠 때 이 span 만 흐른다.
+  const rows = visiblePosts().map(p => `
+    <tr tabindex="0" data-slug="${escapeHtml(p.slug)}">
+      <td class="title" lang="${escapeHtml(p.lang || 'ko')}"><span class="t">${escapeHtml(p.title)}</span></td>
+      <td class="from">${escapeHtml(p.from)}</td>
+      <td class="src"><a href="${escapeHtml(sourceHref(p.url))}" target="_blank" rel="noopener">${escapeHtml(p.source)}</a></td>
+      <td class="date" lang="${escapeHtml(p.lang || 'ko')}">${escapeHtml(displayDate(p.date))}</td>
+      <td class="cat">${escapeHtml(p.category)}</td>
+    </tr>`).join('');
+  return `
+    ${topBar(filter || 'home')}
+    <table class="list">
+      <thead><tr>${th('title', 'Title', 'title')}${th('from', 'From', 'from')}${th('source', 'Source', 'src')}${th('date', 'Date', 'date')}${th('category', 'Category', 'cat')}</tr></thead>
+      <tbody>${rows || '<tr class="empty"><td colspan="5">—</td></tr>'}</tbody>
+    </table>`;
+}
+
+function articleView(slug) {
+  let decodedSlug = slug;
+  try { decodedSlug = decodeURIComponent(slug); } catch {}
+  const p = posts.find(p => p.slug === decodedSlug);
+  if (!p) return `${topBar(null)}<main class="article"><p>Not found.</p></main>`;
+  const lang = p.lang || 'ko';   // 글 언어 (기본 한국어, 영어 글은 lang: 'en')
+  const colorMap = { gray: '#787774', brown: '#9f6b53', orange: '#d9730d', yellow: '#cb912f', green: '#448361', blue: '#337ea9', purple: '#9065b0', pink: '#c14c8a', red: '#d44c47' };
+  const backgroundMap = { gray: '#ebeced', brown: '#eee0da', orange: '#faebdd', yellow: '#fbf3db', green: '#ddedea', blue: '#ddebf1', purple: '#eae4f2', pink: '#f4dfeb', red: '#fbe4e4' };
+  const safeLink = value => {
+    if (!value) return '';
+    try {
+      const url = new URL(value, location.origin);
+      return ['http:', 'https:', 'mailto:'].includes(url.protocol) ? url.href : '';
+    } catch { return ''; }
+  };
+  const renderRichText = (runs, fallback = '') => {
+    if (!Array.isArray(runs) || !runs.length) return escapeHtml(fallback).replace(/\r\n|\r|\n/g, '<br>');
+    return runs.map(run => {
+      let html = escapeHtml(run.text || '').replace(/\r\n|\r|\n/g, '<br>');
+      const mark = run.annotations || {};
+      if (mark.code) html = `<code>${html}</code>`;
+      if (mark.bold) html = `<strong>${html}</strong>`;
+      if (mark.italic) html = `<em>${html}</em>`;
+      if (mark.strikethrough) html = `<del>${html}</del>`;
+      if (mark.underline) html = `<u>${html}</u>`;
+      const color = String(mark.color || 'default');
+      const background = color.endsWith('_background');
+      const name = background ? color.slice(0, -11) : color;
+      if (colorMap[name] && color !== 'default') {
+        const style = background
+          ? `background-color:${backgroundMap[name]};padding:0 .12em;border-radius:2px`
+          : `color:${colorMap[name]}`;
+        html = `<span style="${style}">${html}</span>`;
+      }
+      const href = safeLink(run.href || '');
+      if (href) html = `<a class="notion-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${html}</a>`;
+      return html;
+    }).join('');
+  };
+  const renderInline = block => renderRichText(block.rich_text, block.text || '');
+  const splitDialogue = block => {
+    if (block.type !== 'paragraph') return null;
+    const text = String(block.text || '');
+    const match = text.match(/^([\p{L}][^:\n]{0,39}):[ \t]*(\S[\s\S]*)$/u);
+    if (!match) return null;
+    const colonIndex = text.indexOf(':');
+    const bodyStart = colonIndex + 1 + (text.slice(colonIndex + 1).match(/^[ \t]*/) || [''])[0].length;
+    const sliceRuns = (start, end) => {
+      let offset = 0;
+      const result = [];
+      for (const run of block.rich_text || []) {
+        const value = String(run.text || '');
+        const from = Math.max(0, start - offset);
+        const to = Math.min(value.length, end - offset);
+        if (to > from) result.push({ ...run, text: value.slice(from, to) });
+        offset += value.length;
+      }
+      return result;
+    };
+    return {
+      speaker: text.slice(0, colonIndex).trim(),
+      text: match[2].trim(),
+      textRuns: sliceRuns(bodyStart, text.length),
+    };
+  };
+  const renderBlock = block => {
+    const inline = renderInline(block);
+    if (block.type === 'image') return `<figure><img src="${escapeHtml(block.url)}" alt="${escapeHtml(block.caption || '')}" loading="lazy">${block.caption ? `<figcaption>${renderRichText(block.caption_rich_text, block.caption)}</figcaption>` : ''}</figure>`;
+    if (block.type === 'heading_1') return `<h2>${inline}</h2>`;
+    if (block.type === 'heading_2') return `<h3>${inline}</h3>`;
+    if (block.type === 'heading_3') return `<h4>${inline}</h4>`;
+    if (block.type === 'quote') return `<blockquote><p>${inline}</p></blockquote>`;
+    if (block.type === 'divider') return '<hr class="notion-divider">';
+    if (block.type === 'to_do') return `<label class="notion-todo"><input type="checkbox" disabled${block.checked ? ' checked' : ''}><span>${inline}</span></label>`;
+    if (block.type === 'callout') return `<aside class="notion-callout">${block.icon ? `<span>${escapeHtml(block.icon)}</span>` : ''}<div>${inline}</div></aside>`;
+    if (block.type === 'bookmark') {
+      const href = safeLink(block.url || '');
+      return `<div class="notion-bookmark">${href ? `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${inline || escapeHtml(block.url)}</a>` : inline}</div>`;
+    }
+    if (block.type === 'equation') return `<p><code>${inline}</code></p>`;
+    if (block.type === 'code') return `<pre><code>${escapeHtml(block.text || '')}</code></pre>`;
+    if (block.type === 'paragraph') return inline ? `<p>${inline}</p>` : '<p class="notion-empty"><br></p>';
+    return inline ? `<p>${inline}</p>` : '';
+  };
+  const renderContentBlock = block => {
+    const dialogue = splitDialogue(block);
+    if (dialogue) return `<div class=\"dialogue\"><span class=\"dialogue-speaker\">${escapeHtml(dialogue.speaker)}</span><p class=\"dialogue-text\">${renderRichText(dialogue.textRuns, dialogue.text)}</p></div>`;
+    const html = renderBlock(block);
+    return html ? `<div class=\"article-row\">${html}</div>` : '';
+  };
+  const renderBlocks = blocks => {
+    let html = '';
+    let listType = '';
+    let listItems = [];
+    const flushList = () => {
+      if (listType) html += `<div class=\"article-row\"><${listType}>${listItems.join('')}</${listType}></div>`;
+      listType = '';
+      listItems = [];
+    };
+    for (const block of blocks) {
+      const nextListType = block.type === 'bulleted_list_item' ? 'ul' : block.type === 'numbered_list_item' ? 'ol' : '';
+      if (nextListType) {
+        if (listType && listType !== nextListType) flushList();
+        listType = nextListType;
+        listItems.push(`<li>${renderInline(block)}</li>`);
+      } else {
+        flushList();
+        html += renderContentBlock(block);
+      }
+    }
+    flushList();
+    return html;
+  };
+  const blocks = p.body || [];
+  const thumb = p.thumbnail ? `<div class=\"article-row\"><figure><img src=\"${escapeHtml(p.thumbnail)}\" alt=\"${escapeHtml(p.title)}\" loading=\"lazy\"></figure></div>` : '';
+  return `
+    ${topBar({ post: p.category })}
+    <main class=\"article\">
+      <div class=\"head no-lede\">
+        <div>
+          <h1 lang=\"${escapeHtml(lang)}\">${escapeHtml(p.title)}</h1>
+          <dl class=\"facts\">
+            ${p.date ? `<dt>Date</dt><dd lang=\"${escapeHtml(lang)}\">${escapeHtml(displayDate(p.date))}</dd>` : ''}
+            <dt>Category</dt><dd>${escapeHtml(p.category)}</dd>
+            <dt>From</dt><dd>${escapeHtml(p.from)}</dd>
+            <dt>Source</dt><dd><a class=\"src\" href=\"${escapeHtml(sourceHref(p.url))}\" target=\"_blank\" rel=\"noopener\">${escapeHtml(p.source)}&nbsp;↗</a></dd>
+          </dl>
+        </div>
+      </div>
+      <div class=\"article-content\" lang=\"${escapeHtml(lang)}\">${thumb}${renderBlocks(blocks)}</div>
+    </main>`;
+}
+
+/* ===== 라우터 ===== */
+// / 전체 · /category/tech 카테고리 · /posts/slug 글
+const app = document.getElementById('app');
+
+// 칸보다 넓은 제목만 한 글자씩 끊어 흐르게 한다.
+//
+// 걸음 폭 = 글자 한 칸 평균 폭(제목 전체 폭 ÷ 글자 수). 한글은 전각이라 평균이 곧 한 글자다.
+// 글자마다 Range 로 재면 줄 수만큼 만들어야 해서 목록 전체로는 비싸다.
+//
+// [CSS 도 WAAPI 도 안 쓴다 — 타이머로 직접 민다]
+//   1차: `animation: ... steps(var(--flow-steps), end)` → **steps() 안의 var() 를 사파리가
+//        못 읽어** 애니메이션이 통째로 안 걸렸다. 크롬은 멀쩡해서 못 잡았다.
+//   2차: `span.animate()` 로 옮겼는데 기기에서는 여전히 안 돌았다.
+//   그래서 세 번째는 아무 기능에도 기대지 않는다. 0.33초마다 transform 을 한 칸씩
+//   바꿔 적는 것뿐이라, 스크립트가 돌면 반드시 움직인다. 본래 '뚝뚝' 이 목적이라
+//   부드러운 보간이 필요 없어 손해도 없다.
+//
+// [동작 줄이기 가드는 뺐다] 폰에서 '동작 줄이기'가 켜져 있으면 스스로 꺼져서,
+// 정작 요청한 움직임을 못 보게 된다(사용자가 두 번 지적). 본인 사이트이므로 요청을 따른다.
+const TICK = 330;   // 한 걸음 간격(ms)
+const HOLD = 3;     // 양 끝에서 쉬는 걸음 수
+let flows = [];     // [{ el, stops, i, dir, wait }]
+let flowTimer2 = 0;
+
+function flowStep() {
+  for (const f of flows) {
+    if (f.wait > 0) { f.wait--; continue; }
+    f.i += f.dir;
+    if (f.i <= 0) { f.i = 0; f.dir = 1; f.wait = HOLD; }
+    else if (f.i >= f.stops.length - 1) { f.i = f.stops.length - 1; f.dir = -1; f.wait = HOLD; }
+    f.el.style.transform = 'translateX(' + f.stops[f.i] + 'px)';
+  }
+}
+
+function flowTitles() {
+  flows = [];
+  app.querySelectorAll('.list td.title').forEach(td => {
+    const span = td.firstElementChild;
+    if (!span) return;
+    span.style.transform = '';
+    const over = Math.round(span.scrollWidth - td.clientWidth);
+    td.classList.toggle('flow', over > 1);
+    if (over <= 1) return;
+
+    const chars = (span.textContent || '').trim().length || 1;
+    const n = Math.max(1, Math.round(over / (span.scrollWidth / chars)));
+    const stops = [];
+    for (let k = 0; k <= n; k++) stops.push(-Math.round(over * k / n));
+    flows.push({ el: span, stops: stops, i: 0, dir: 1, wait: HOLD });
+  });
+
+  clearInterval(flowTimer2);
+  if (flows.length) flowTimer2 = setInterval(flowStep, TICK);
+}
+
+function render(keepScroll) {
+  normalizeLegacyHashRoute();
+  const post = location.pathname.match(/^\/posts\/([^/]+)\/?$/);
+  const category = categoryFromPath();
+  filter = post ? filter : category;
+  app.innerHTML = post ? articleView(post[1]) : listView();
+  let routeSlug = post?.[1];
+  try { routeSlug = routeSlug && decodeURIComponent(routeSlug); } catch {}
+  updateMeta(post && posts.find(p => p.slug === routeSlug));
+  flowTitles();
+  if (!keepScroll) scrollTo(0, 0);
+}
+function updateMeta(post) {
+  const category = categoryFromPath();
+  const title = post ? `${post.title} — source spread` : category ? `${category} — source spread` : 'source spread';
+  const excerpt = post?.body?.find(block => block.text)?.text;
+  const description = post ? (excerpt || `${post.from}에서 소개한 ${post.category} 콘텐츠를 번역하고 큐레이션합니다.`).replace(/\s+/g, ' ').slice(0, 160) : category ? `${category} 카테고리의 해외 콘텐츠를 번역하고 큐레이션합니다.` : '해외 패션, 테크, 디자인, 문화 콘텐츠를 번역하고 큐레이션합니다.';
+  document.title = title;
+  document.querySelector('meta[name="description"]').content = description;
+  document.querySelector('meta[property="og:title"]').content = title;
+  document.querySelector('meta[property="og:description"]').content = description;
+  document.querySelector('meta[property="og:type"]').content = post ? 'article' : 'website';
+  const canonical = document.querySelector('link[rel="canonical"]');
+  canonical.href = `https://source-spread.kr${post ? `/posts/${encodeURIComponent(post.slug)}` : category ? catHref(category) : '/'}`;
+  let ogImage = document.querySelector('meta[property="og:image"]');
+  if (post && post.thumbnail) {
+    if (!ogImage) { ogImage = document.createElement('meta'); ogImage.setAttribute('property', 'og:image'); document.head.appendChild(ogImage); }
+    ogImage.content = post.thumbnail;
+  } else if (ogImage) ogImage.remove();
+}
+
+// 폭이 바뀌면 넘침도 바뀐다. 글꼴이 늦게 와도 폭이 변하니 그때도 다시 잰다.
+let flowTimer = 0;
+addEventListener('resize', () => {
+  clearTimeout(flowTimer);
+  flowTimer = setTimeout(flowTitles, 120);
+});
+if (document.fonts) document.fonts.ready.then(flowTitles);
+function toggleSort(key) {
+  sort = { key, dir: sort.key !== key ? 'asc' : sort.dir === 'asc' ? 'desc' : 'asc' };
+  render(true);
+  app.querySelector(`th[data-sort="${key}"]`).focus({ preventScroll: true });
+}
+app.addEventListener('click', e => {
+  const th = e.target.closest('th[data-sort]');
+  if (th) return toggleSort(th.dataset.sort);
+  // 줄 어디를 눌러도 글로 이동, 단 글자를 드래그 중이면 무시
+  if (e.target.closest('a')) return;
+  const row = e.target.closest('tr[data-slug]');
+  if (row && !getSelection().toString()) { history.pushState({}, '', '/posts/' + encodeURIComponent(row.dataset.slug)); render(); }
+});
+app.addEventListener('keydown', e => {
+  const th = e.target.closest('th[data-sort]');
+  if (th && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); return toggleSort(th.dataset.sort); }
+  const row = e.target.closest('tr[data-slug]');
+  if (row && e.key === 'Enter') { history.pushState({}, '', '/posts/' + encodeURIComponent(row.dataset.slug)); render(); }
+});
+addEventListener('hashchange', () => render());
+addEventListener('popstate', () => render());
+
+function normalizeLegacyHashRoute() {
+  if (!location.hash.startsWith('#/')) return;
+  let destination = '/';
+  let match = location.hash.match(/^#\/c\/(.+)$/);
+  if (match) {
+    let oldCategory;
+    try { oldCategory = decodeURIComponent(match[1]); } catch { oldCategory = ''; }
+    const category = categories.find(c => c.toLowerCase() === oldCategory.toLowerCase());
+    destination = category ? catHref(category) : '/';
+  } else if ((match = location.hash.match(/^#\/post\/(.+)$/))) {
+    destination = `/posts/${encodeURIComponent(match[1])}`;
+  }
+  history.replaceState({}, '', destination);
+}
+
+
+/* ===== 하이라이트 색은 열 때마다 바뀐다 ===== */
+// 사용자 제안(2026-10-01). 아무 RGB 나 뽑으면 탁해지고 조합이 무너지므로,
+// **색상(hue)만 굴리고 채도·밝기는 고정한다** — 배경은 깊고 진하게, 글씨는 같은
+// 색상을 머금은 흰색. 지금까지 쓰던 남청+따뜻한 흰색의 성격을 그대로 유지한다.
+//
+// 같은 밝기값이라도 색상에 따라 실제 밝기가 크게 다르다(노랑이 파랑보다 훨씬 밝다).
+// 그래서 숫자를 믿지 않고 대비를 재서, 기준(8.5:1)을 넘을 때까지 배경을 한 칸씩
+// 어둡게 내린다. 지금 색인 #302B8B 가 9.07:1 이라 그 또래로 맞춘 값이다.
+//
+// CSS 의 :root 에는 남청 한 쌍을 그대로 남겨 둔다 — 스크립트가 못 돌아도 화면은 멀쩡하다.
+function lum(c) {
+  const f = v => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); };
+  return 0.2126 * f(c[0]) + 0.7152 * f(c[1]) + 0.0722 * f(c[2]);
+}
+function hsl(h, s, l) {
+  s /= 100; l /= 100;
+  const k = n => (n + h / 30) % 12;
+  const a = s * Math.min(l, 1 - l);
+  const f = n => Math.round(255 * (l - a * Math.max(-1, Math.min(k(n) - 3, Math.min(9 - k(n), 1)))));
+  return [f(0), f(8), f(4)];
+}
+function hex(c) {
+  return '#' + c.map(v => v.toString(16).padStart(2, '0')).join('');
+}
+function rollHighlight() {
+  // [색은 가리지 않는다] 한때 노랑~황록(20°~100°)을 빼 뒀다. 어둡게 내리면 카키·갈색
+  // 진흙이 돼서였다. 사용자가 "어떠한 색 조합이 되던 고대비만 유지되면 돼" 라고 해서
+  // 전부 열었다. 대신 극성을 같이 굴린다 — 어두운 바탕 + 흰 글씨, 또는 그 반대.
+  // 어둡게 내리면 탁해지는 색(노랑·황록)은 밝은 바탕 쪽에서 가장 좋게 나오므로,
+  // 색을 안 가려도 조합이 무너지지 않는다. 지킬 것은 대비 하나다.
+  const h = Math.floor(Math.random() * 360);
+  const deep = Math.random() < 0.5;
+
+  // 글씨는 고정해 두고 바탕의 밝기만 기준(8.5:1)을 넘을 때까지 밀어낸다.
+  // 같은 밝기값이라도 색상에 따라 실제 밝기가 크게 달라서(노랑이 파랑보다 훨씬 밝다)
+  // 숫자를 믿지 않고 매번 대비를 재는 쪽이 맞다.
+  const fg = deep ? hsl(h, 26, 92) : hsl(h, 45, 11);
+  const Lf = lum(fg);
+  let bg = hsl(h, deep ? 58 : 76, deep ? 32 : 66);
+  for (let k = 0; k <= 16; k++) {
+    const l = deep ? 32 - k * 2 : 66 + k * 2;
+    bg = hsl(h, deep ? 58 : 76, Math.max(4, Math.min(96, l)));
+    const Lb = lum(bg);
+    if ((Math.max(Lf, Lb) + 0.05) / (Math.min(Lf, Lb) + 0.05) >= 8.5) break;
+  }
+
+  const root = document.documentElement.style;
+  root.setProperty('--hl-bg', hex(bg));
+  root.setProperty('--hl-fg', hex(fg));
+}
+rollHighlight();
+
+fetch('/posts.json', { cache: 'no-cache' })
+  .then(response => { if (!response.ok) throw new Error(`posts.json: ${response.status}`); return response.json(); })
+  .then(data => { posts = Array.isArray(data) ? data : []; render(); })
+  .catch(error => { console.error('Could not load posts', error); app.innerHTML = `${topBar('home')}<main class="article"><p>글을 불러오지 못했습니다.</p></main>`; });
+</script>
+</body>
+</html>
