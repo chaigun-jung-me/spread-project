@@ -1,15 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="source spread">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
 <title>“창의성은 적이다”: 톰 삭스가 말하는 자기 정체성의 포기, 완벽함의 추구, 그리고 고된 노동 — source spread</title>
-<meta name="description" content="이달 초 프리즈 위크(Frieze Week) 기간, 톰 삭스(Tom Sachs)는 런던 도버 스트리트에 위치한 타데우스 로팍(Thaddaeus Ropac) 갤러리의 바 뒤에서 직접 에스프레소와 알코올 도수 43도의 메스칼을 손님들에게 내어주고 있었다.">
+<meta name="description" content="톰 삭스는 전시와 작업 경험을 돌아보며 창작자의 정체성, 완벽을 향한 집요함, 노동의 의미를 이야기한다. 우연과 반복, 손으로 만드는 과정이 창의성을 어떻게 키우는지 그의 작업 철학을 통해 살펴본다.">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="source spread">
 <meta property="og:title" content="“창의성은 적이다”: 톰 삭스가 말하는 자기 정체성의 포기, 완벽함의 추구, 그리고 고된 노동 — source spread">
-<meta property="og:description" content="이달 초 프리즈 위크(Frieze Week) 기간, 톰 삭스(Tom Sachs)는 런던 도버 스트리트에 위치한 타데우스 로팍(Thaddaeus Ropac) 갤러리의 바 뒤에서 직접 에스프레소와 알코올 도수 43도의 메스칼을 손님들에게 내어주고 있었다.">
+<meta property="og:description" content="톰 삭스는 전시와 작업 경험을 돌아보며 창작자의 정체성, 완벽을 향한 집요함, 노동의 의미를 이야기한다. 우연과 반복, 손으로 만드는 과정이 창의성을 어떻게 키우는지 그의 작업 철학을 통해 살펴본다.">
 <link rel="canonical" href="https://source-spread.kr/posts/creativity-is-the-enemy-tom-sachs">
 <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
@@ -29,7 +34,7 @@
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; background: var(--bg); color: var(--fg); }
-  html { scrollbar-gutter: stable; overflow-y: scroll; overscroll-behavior-x: none; }
+  html { scrollbar-gutter: stable; overflow-y: scroll; overscroll-behavior-x: none; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   body { font: 14px/1.6 -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", sans-serif; word-break: keep-all; }
   a { color: inherit; text-decoration: none; }
   [lang="ko"] { font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif; }
@@ -69,6 +74,15 @@
   .list td.date { white-space: nowrap; }
   .list td.src a { text-decoration: underline; text-underline-offset: 3px; }
   .list .empty td { color: var(--muted); }
+  .list td.title { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: clip; }
+  .list td.title > .t { display: inline-block; white-space: nowrap; }
+  .list td.title.flow > .t { will-change: transform; }
+  .list tbody tr:hover .title.flow > .t,
+  .list tbody tr:focus-visible .title.flow > .t { animation: title-roll var(--title-duration, 7s) ease-in-out infinite alternate; }
+  @keyframes title-roll {
+    0%, 15% { transform: translateX(0); }
+    85%, 100% { transform: translateX(var(--title-shift)); }
+  }
   /* 칸 너비 고정 — 카테고리를 바꿔도 칸이 움직이지 않게 (PC) */
   @media (min-width: 641px) {
     .list { table-layout: fixed; }
@@ -88,7 +102,7 @@
 
      그 위에 사용자 지시 셋을 얹었다.
        · FROM 도 접는다 — 보이는 건 제목과 카테고리뿐
-       · 긴 제목은 … 로 자르지 않고 한 글자씩 흐른다(움직임은 flowTitles 가 건다)
+       · 제목은 한 줄로 고정하고, 넘치는 제목만 호버·키보드 포커스 때 흐른다
        · 줄 사이를 조금 좁혔다 — 상하 12 → 9 */
   @media (max-width: 640px) {
     .top { gap: 8px; }
@@ -121,12 +135,7 @@
     .list th.from, .list th.src, .list thead th:not([data-sort]),
     .list td.from, .list td.src, .list td.date { display: none; }
 
-    /* [긴 제목은 한 글자씩 뚝뚝 흐른다] 여기 CSS 는 '한 줄로 두고 넘치면 가린다'까지만.
-       움직임은 flowTitles 가 타이머로 transform 을 직접 써서 만든다(아래 설명 참고).
-       min-width: 0 이 꼭 있어야 한다 — flex 항목의 기본값은 auto 라서 nowrap 인 제목의
-       min-content(=글 전체 폭) 밑으로 안 줄어들고, 그러면 넘침이 0 이 되어 안 흐른다. */
-    .list td.title { min-width: 0; overflow: hidden; white-space: nowrap; }
-    .list td.title > .t { display: inline-block; }
+    /* 제목 칸은 남는 폭을 모두 쓰되 flex 안에서 줄어들 수 있도록 min-width:0 을 유지한다. */
   }
 
   /* ===== 푸터 ===== */
@@ -335,7 +344,7 @@ function articleView(slug) {
   const splitDialogue = block => {
     if (block.type !== 'paragraph') return null;
     const text = String(block.text || '');
-    const match = text.match(/^([\p{L}][^:\n]{0,39}):[ \t]*(\S[\s\S]*)$/u);
+    const match = text.match(/^([^\s:\n][^:\n]{0,39}):[ \t]*(\S[\s\S]*)$/u);
     if (!match) return null;
     const colonIndex = text.indexOf(':');
     const bodyStart = colonIndex + 1 + (text.slice(colonIndex + 1).match(/^[ \t]*/) || [''])[0].length;
@@ -429,55 +438,25 @@ function articleView(slug) {
 // / 전체 · /category/tech 카테고리 · /posts/slug 글
 const app = document.getElementById('app');
 
-// 칸보다 넓은 제목만 한 글자씩 끊어 흐르게 한다.
+// 모든 화면에서 한 줄로 두고, 넘치는 제목은 마우스 호버나 키보드 포커스 때 흐르게 한다.
 //
-// 걸음 폭 = 글자 한 칸 평균 폭(제목 전체 폭 ÷ 글자 수). 한글은 전각이라 평균이 곧 한 글자다.
-// 글자마다 Range 로 재면 줄 수만큼 만들어야 해서 목록 전체로는 비싸다.
-//
-// [CSS 도 WAAPI 도 안 쓴다 — 타이머로 직접 민다]
-//   1차: `animation: ... steps(var(--flow-steps), end)` → **steps() 안의 var() 를 사파리가
-//        못 읽어** 애니메이션이 통째로 안 걸렸다. 크롬은 멀쩡해서 못 잡았다.
-//   2차: `span.animate()` 로 옮겼는데 기기에서는 여전히 안 돌았다.
-//   그래서 세 번째는 아무 기능에도 기대지 않는다. 0.33초마다 transform 을 한 칸씩
-//   바꿔 적는 것뿐이라, 스크립트가 돌면 반드시 움직인다. 본래 '뚝뚝' 이 목적이라
-//   부드러운 보간이 필요 없어 손해도 없다.
-//
-// [동작 줄이기 가드는 뺐다] 폰에서 '동작 줄이기'가 켜져 있으면 스스로 꺼져서,
-// 정작 요청한 움직임을 못 보게 된다(사용자가 두 번 지적). 본인 사이트이므로 요청을 따른다.
-const TICK = 330;   // 한 걸음 간격(ms)
-const HOLD = 3;     // 양 끝에서 쉬는 걸음 수
-let flows = [];     // [{ el, stops, i, dir, wait }]
-let flowTimer2 = 0;
-
-function flowStep() {
-  for (const f of flows) {
-    if (f.wait > 0) { f.wait--; continue; }
-    f.i += f.dir;
-    if (f.i <= 0) { f.i = 0; f.dir = 1; f.wait = HOLD; }
-    else if (f.i >= f.stops.length - 1) { f.i = f.stops.length - 1; f.dir = -1; f.wait = HOLD; }
-    f.el.style.transform = 'translateX(' + f.stops[f.i] + 'px)';
-  }
-}
-
 function flowTitles() {
-  flows = [];
   app.querySelectorAll('.list td.title').forEach(td => {
     const span = td.firstElementChild;
     if (!span) return;
     span.style.transform = '';
-    const over = Math.round(span.scrollWidth - td.clientWidth);
+    const style = getComputedStyle(td);
+    const contentWidth = td.clientWidth - (Number.parseFloat(style.paddingLeft) || 0) - (Number.parseFloat(style.paddingRight) || 0);
+    const over = Math.round(span.scrollWidth - contentWidth);
     td.classList.toggle('flow', over > 1);
-    if (over <= 1) return;
-
-    const chars = (span.textContent || '').trim().length || 1;
-    const n = Math.max(1, Math.round(over / (span.scrollWidth / chars)));
-    const stops = [];
-    for (let k = 0; k <= n; k++) stops.push(-Math.round(over * k / n));
-    flows.push({ el: span, stops: stops, i: 0, dir: 1, wait: HOLD });
+    if (over > 1) {
+      span.style.setProperty('--title-shift', `${-over}px`);
+      span.style.setProperty('--title-duration', `${Math.max(4, Math.min(12, over / 22))}s`);
+    } else {
+      span.style.removeProperty('--title-shift');
+      span.style.removeProperty('--title-duration');
+    }
   });
-
-  clearInterval(flowTimer2);
-  if (flows.length) flowTimer2 = setInterval(flowStep, TICK);
 }
 
 function render(keepScroll) {
@@ -496,7 +475,7 @@ function updateMeta(post) {
   const category = categoryFromPath();
   const title = post ? `${post.title} — source spread` : category ? `${category} — source spread` : 'source spread';
   const excerpt = post?.body?.find(block => block.text)?.text;
-  const description = post ? (excerpt || `${post.from}에서 소개한 ${post.category} 콘텐츠를 번역하고 큐레이션합니다.`).replace(/\s+/g, ' ').slice(0, 160) : category ? `${category} 카테고리의 해외 콘텐츠를 번역하고 큐레이션합니다.` : '해외 패션, 테크, 디자인, 문화 콘텐츠를 번역하고 큐레이션합니다.';
+  const description = post ? (post.description || excerpt || `${post.from}에서 소개한 ${post.category} 콘텐츠를 번역하고 큐레이션합니다.`).replace(/\s+/g, ' ').slice(0, 320) : category ? `${category} 카테고리의 해외 콘텐츠를 번역하고 큐레이션합니다.` : '해외 패션, 테크, 디자인, 문화 콘텐츠를 번역하고 큐레이션합니다.';
   document.title = title;
   document.querySelector('meta[name="description"]').content = description;
   document.querySelector('meta[property="og:title"]').content = title;
