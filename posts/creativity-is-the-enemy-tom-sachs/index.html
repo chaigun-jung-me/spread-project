@@ -166,7 +166,8 @@
   .article h2 { margin: 1.5em 0 .65em; font-size: 1.25em; }
   .article h3 { margin: 1.25em 0 .55em; font-size: 1.1em; }
   .article h4 { margin: 1em 0 .5em; font-size: 1em; }
-  .article a.notion-link { text-decoration: underline; text-underline-offset: 3px; }
+  .article a.notion-link { display: inline-block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; vertical-align: bottom; text-decoration: underline; text-underline-offset: 3px; }
+  .article .notion-bookmark a, .article .facts .src { display: inline-block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; vertical-align: bottom; }
   .article code { padding: .08em .25em; background: #f3f3f3; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9em; }
   .article pre code { padding: 0; background: transparent; font-size: inherit; }
   .article .notion-todo { display: flex; align-items: baseline; gap: .55em; margin: 0 0 .8em; }
