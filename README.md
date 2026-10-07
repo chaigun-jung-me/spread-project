@@ -2,6 +2,8 @@
 
 Static site for Source Spread. The page layout remains in `index.html`; published articles are generated from the Notion source database into `posts.json` and static `/posts/{slug}/` pages.
 
+On the homepage, each Source link stays on one line. Long source names are shortened with an ellipsis; the link remains clickable.
+
 ## Notion database
 
 The Source Spread database has been created in the connected Notion workspace. Its database URL is <https://app.notion.com/p/e7896766856a4e06b57cd259c694c161> and its data source ID is `7790a424-902d-44f2-ade0-560b2e51056c`. Its properties are:
