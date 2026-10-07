@@ -17,6 +17,7 @@ The Source Spread database has been created in the connected Notion workspace. I
 | Thumbnail | URL or Files & media | No |
 | Source URL | URL | Yes |
 | Published | Checkbox | Yes |
+| Description | Rich text | No; generated from the opening when empty |
 | Slug | Rich text | No; generated from Title when empty |
 
 Write article content in the page body. Paragraphs start flush left without indentation and get about one line of space between them; line breaks inside a paragraph stay visible. The site keeps inline bold/italic/underline/strikethrough/code, text colors, links, headings, quotes, bulleted and numbered lists, checklists, callouts, bookmarks, equations, dividers, and images. Empty paragraphs remain as extra spacing. Only rows with `Published` checked are exported. An unpublished `[TEST] Sample article` is in the database as a field and body example; replace it with an actual article before publishing. Share the data source with the Notion integration used for the API token.
@@ -25,16 +26,16 @@ Write article content in the page body. Paragraphs start flush left without inde
 
 - The site does not add gray `01`, `02` section numbers. All regular text, headings, and paragraphs go in the second column.
 - Use a Notion **Divider** only when you want extra blank space between paragraphs. It never adds a number or other marker.
-- For interview dialogue, put each turn in its own paragraph as `Name: dialogue`, for example `GQ: What inspired the first designs?` followed by `James Jebbia: The people around the store inspired us.` The site places the speaker name in the first column and the dialogue in the second column on the same line. The colon is an input marker and is not shown on the site; the speaker name is black.
+- For interview dialogue, put each turn in its own paragraph as `Name: dialogue`, for example `GQ: What inspired the first designs?` followed by `James Jebbia: The people around the store inspired us.` A numeric label also works, such as `00: Opening line.` The site places the speaker label right-aligned in the first column and dialogue in the second column on the same line. The colon is an input marker and is not shown on the site; the label is black.
 - Text without a `Name:` prefix appears only in the second column. With or without Dividers, content starts with the first body block; it is not moved into a separate lead area.
 - Use **Heading 1**, **Heading 2**, and **Heading 3** for headings. They do not create section numbers.
 - `Date` is the original/source date displayed on the site. `Sort Date` determines newest-first order on both the Notion database view and the homepage. For existing articles, both dates were initially set to the existing `Date`; set `Sort Date` to the day you want a new or updated article to move to the top.
 
 ## Manual sync
 
-Create an internal Notion integration with read access to this data source, then add its token as the repository Actions secret `NOTION_TOKEN`. The data source ID is already configured in the sync script; it can be overridden with the `NOTION_DATA_SOURCE_ID` environment variable if the database is moved. Then open **Actions → Sync Notion → Run workflow** and choose the branch to update. The workflow commits changed content to that branch; when run on the production branch, the connected Vercel project deploys the update.
+Create an internal Notion integration with edit access to this data source, then add its token as the repository Actions secret `NOTION_TOKEN`. The data source ID is already configured in the sync script; it can be overridden with the `NOTION_DATA_SOURCE_ID` environment variable if the database is moved. Then open **Actions → Sync Notion → Run workflow** and choose the branch to update. The workflow commits changed content to that branch; when run on the production branch, the connected Vercel project deploys the update.
 
-The site reads `posts.json`. A sync also creates static pages for each published post so link preview crawlers receive that article's title, description, canonical URL, and thumbnail without running JavaScript. Uploaded Notion images are copied into `assets/notion/` so expiring Notion file URLs are not used by the public site. Each downloaded image must be at most 15 MB.
+The site reads `posts.json`. Each published article has a two-sentence `Description` used for search and social previews. Existing descriptions can be edited in Notion; if left blank, sync makes a two-sentence description from the opening paragraphs and saves it back to Notion. A sync also creates static pages for each published post so link preview crawlers receive that article's title, description, canonical URL, and thumbnail without running JavaScript. Uploaded Notion images are copied into `assets/notion/` so expiring Notion file URLs are not used by the public site. Each downloaded image must be at most 15 MB.
 
 ## Near-real-time sync
 
@@ -46,6 +47,10 @@ The manual GitHub Actions button remains available. To also sync automatically a
 4. Verify the webhook in Notion. Edits then dispatch the existing sync workflow on `main`; its generated commit triggers the connected Vercel deployment. The endpoint verifies Notion's HMAC signature before dispatching.
 
 Notion groups frequent page edits and typically delivers the event within about a minute, with documented delivery taking up to five minutes. GitHub Actions and Vercel deployment add time after that, so this is near-real-time rather than instantaneous. The manual sync action remains a fallback.
+
+## Site icons and titles
+
+Long article titles stay on one line in the homepage list; hovering or keyboard-focusing a row rolls only a title that overflows. The home-screen icon uses `apple-touch-icon.png` for iPhone and the manifest icons for supported installable browsers.
 
 ## Local preview
 
