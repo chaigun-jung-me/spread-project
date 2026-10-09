@@ -138,16 +138,21 @@ async function convertBlock(block, pageId, imageCount) {
     if (!url) return null;
     return { type, url, caption: asText(data.caption), caption_rich_text: serializeRichText(data.caption) };
   }
-  const supported = new Set(['paragraph', 'heading_1', 'heading_2', 'heading_3', 'quote', 'bulleted_list_item', 'numbered_list_item', 'code', 'to_do', 'callout', 'bookmark', 'equation']);
+  const supported = new Set(['paragraph', 'heading_1', 'heading_2', 'heading_3', 'quote', 'bulleted_list_item', 'numbered_list_item', 'code', 'to_do', 'callout', 'bookmark', 'video', 'embed', 'equation']);
   if (!supported.has(type)) return null;
-  const source = type === 'bookmark' ? data.caption : type === 'equation' ? [] : data.rich_text;
+  const source = ['bookmark', 'video'].includes(type) ? data.caption : ['equation', 'embed'].includes(type) ? [] : data.rich_text;
   const richText = serializeRichText(source);
-  const text = type === 'equation' ? data.expression || '' : asText(source);
-  if (!text.trim() && !['paragraph', 'callout', 'bookmark'].includes(type)) return null;
+  const text = type === 'equation' ? data.expression || '' : type === 'embed' ? data.url || '' : asText(source);
+  if (!text.trim() && !['paragraph', 'callout', 'bookmark', 'video', 'embed'].includes(type)) return null;
   const result = { type, text, rich_text: richText };
   if (type === 'to_do') result.checked = data.checked === true;
   if (type === 'callout') result.icon = data.icon?.emoji || '';
   if (type === 'bookmark') result.url = data.url || '';
+  if (type === 'video') {
+    result.url = data.external?.url || data.file?.url || '';
+    result.caption = asText(data.caption);
+  }
+  if (type === 'embed') result.url = data.url || '';
   return result;
 }
 
@@ -172,9 +177,15 @@ for (const page of published) {
   const source = valueText(page, 'Source');
   const date = valueDate(page, 'Date');
   const sortDate = valueDate(page, 'Sort Date');
-  if (!title || !from || !source || !date || !sortDate || !categories.has(category) || !sourceUrl) {
-    throw new Error(`Published page ${page.id} must have Title, From, Source, Date, Sort Date, a supported Category, and Source URL.`);
-  }
+  const missing = [];
+  if (!title) missing.push('Title');
+  if (!from) missing.push('From');
+  if (!source) missing.push('Source');
+  if (!date) missing.push('Date');
+  if (!sortDate) missing.push('Sort Date');
+  if (!categories.has(category)) missing.push(`Category${category ? ` (${category} is unsupported)` : ''}`);
+  if (!sourceUrl) missing.push('Source URL');
+  if (missing.length) throw new Error(`Published page “${title || page.id}” is missing required fields: ${missing.join(', ')}.`);
   let parsedSource;
   try { parsedSource = new URL(sourceUrl); } catch { throw new Error(`Source URL is invalid on “${title}”.`); }
   if (!['http:', 'https:'].includes(parsedSource.protocol)) throw new Error(`Source URL must use HTTP or HTTPS on “${title}”.`);
