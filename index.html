@@ -73,12 +73,15 @@
   .list .title { width: 32%; }
   .list td.date { white-space: nowrap; }
   .list td.src a { display: block; max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-decoration: underline; text-underline-offset: 3px; }
+  .list .mobile-date { display: none; }
   .list .empty td { color: var(--muted); }
   .list td.title { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: clip; }
   .list td.title > .t { display: inline-block; white-space: nowrap; }
   .list td.title.flow > .t { will-change: transform; }
-  .list tbody tr:hover .title.flow > .t,
-  .list tbody tr:focus-visible .title.flow > .t { animation: title-roll var(--title-duration, 7s) ease-in-out infinite alternate; }
+  @media (hover: hover) and (pointer: fine) {
+    .list tbody tr:hover .title.flow > .t,
+    .list tbody tr:focus-visible .title.flow > .t { animation: title-roll var(--title-duration, 7s) ease-in-out infinite alternate; }
+  }
   @keyframes title-roll {
     0%, 15% { transform: translateX(0); }
     85%, 100% { transform: translateX(var(--title-shift)); }
@@ -102,7 +105,7 @@
 
      그 위에 사용자 지시 셋을 얹었다.
        · FROM 도 접는다 — 보이는 건 제목과 카테고리뿐
-       · 제목은 한 줄로 고정하고, 넘치는 제목만 호버·키보드 포커스 때 흐른다
+       · 제목은 한 줄로 고정하고, PC에서만 넘치는 제목이 호버·키보드 포커스 때 흐른다
        · 줄 사이를 조금 좁혔다 — 상하 12 → 9 */
   @media (max-width: 640px) {
     .top { gap: 8px; }
@@ -116,7 +119,7 @@
     .list, .list thead, .list tbody { display: block; width: 100%; }
     .list thead tr, .list tbody tr { display: flex; flex-wrap: nowrap; align-items: baseline; gap: 12px; padding: 0 16px; }
     .list thead tr { border-bottom: 1px solid var(--fg); }
-    .list tbody tr { padding: 9px 16px; border-bottom: 1px solid var(--line); }
+    .list tbody tr { align-items: flex-start; padding: 9px 16px; border-bottom: 1px solid var(--line); }
     .list th, .list td { padding: 0; border: 0; }
     .list thead th { padding: 8px 0; }
 
@@ -126,12 +129,14 @@
        오른쪽 변이 딱 맞는다(머리 22px · 본문 14px).
        font-size 는 td 에만 준다 — th 까지 덮으면 22px 지정이 모바일에서 무효가 된다. */
     .list th.title, .list td.title { flex: 1 1 auto; width: auto; margin: 0; }
+    .list td.title { display: flex; min-width: 0; flex-direction: column; align-items: stretch; white-space: normal; }
+    .list td.title > .t { display: block; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .list td.title > .mobile-date { display: block; margin-top: 2px; color: var(--muted); font-size: 12px; line-height: 1.4; white-space: nowrap; }
     .list th.cat, .list td.cat { flex: none; width: auto; text-align: right; }
-    .list td.cat { font-size: 14px; color: var(--muted); white-space: nowrap; }
+    .list td.cat { align-self: flex-start; font-size: 14px; color: var(--muted); white-space: nowrap; }
     .list tbody tr:hover td, .list tbody tr:focus-visible td { color: inherit; }
 
-    /* FROM · SOURCE · DATE 는 접는다. 목록에서 고르는 데 필요한 건 제목이고,
-       나머지는 글을 열면 다 있다. */
+    /* FROM · SOURCE 는 접고 원본 날짜는 제목 아래 작게 유지한다. */
     .list th.from, .list th.src, .list thead th:not([data-sort]),
     .list td.from, .list td.src, .list td.date { display: none; }
 
@@ -177,6 +182,8 @@
   .article .notion-callout { display: flex; gap: .75em; margin: 0 0 1em; padding: 1em; background: #f5f5f5; border-radius: 4px; }
   .article .notion-bookmark { margin: 0 0 1em; padding: 1em; border: 1px solid var(--line); }
   .article .notion-bookmark a { text-decoration: underline; text-underline-offset: 3px; }
+  .article .notion-video { width: 100%; aspect-ratio: 16 / 9; margin: 0 0 24px; overflow: hidden; background: #000; }
+  .article .notion-video iframe { display: block; width: 100%; height: 100%; border: 0; }
   .article .notion-divider { height: 1px; margin: 4em 0; border: 0; }
   .article-content { display: grid; grid-template-columns: 1fr 1.4fr; column-gap: 64px; }
   .article-content > .article-row { grid-column: 2; min-width: 0; }
@@ -289,7 +296,7 @@ function listView() {
   // 제목은 span 으로 한 번 더 감싼다 — 좁은 화면에서 넘칠 때 이 span 만 흐른다.
   const rows = visiblePosts().map(p => `
     <tr tabindex="0" data-slug="${escapeHtml(p.slug)}">
-      <td class="title" lang="${escapeHtml(p.lang || 'ko')}"><span class="t">${escapeHtml(p.title)}</span></td>
+      <td class="title" lang="${escapeHtml(p.lang || 'ko')}"><span class="t">${escapeHtml(p.title)}</span><span class="mobile-date">${escapeHtml(displayDate(p.date))}</span></td>
       <td class="from">${escapeHtml(p.from)}</td>
       <td class="src"><a href="${escapeHtml(sourceHref(p.url))}" target="_blank" rel="noopener">${escapeHtml(p.source)}</a></td>
       <td class="date" lang="${escapeHtml(p.lang || 'ko')}">${escapeHtml(displayDate(p.date))}</td>
@@ -316,6 +323,25 @@ function articleView(slug) {
     try {
       const url = new URL(value, location.origin);
       return ['http:', 'https:', 'mailto:'].includes(url.protocol) ? url.href : '';
+    } catch { return ''; }
+  };
+  const youtubeEmbedUrl = value => {
+    const href = safeLink(value);
+    if (!href) return '';
+    try {
+      const url = new URL(href);
+      const host = url.hostname.toLowerCase().replace(/^www\./, '');
+      let id = '';
+      if (host === 'youtu.be') id = url.pathname.split('/').filter(Boolean)[0] || '';
+      else if (['youtube.com', 'm.youtube.com', 'youtube-nocookie.com'].includes(host)) {
+        id = url.searchParams.get('v') || url.pathname.match(/^\/(?:embed|shorts|live)\/([^/?]+)/)?.[1] || '';
+      }
+      if (!/^[A-Za-z0-9_-]{6,}$/.test(id)) return '';
+      const timestamp = url.searchParams.get('start') || url.searchParams.get('t') || '';
+      const numericStart = /^\d+$/.test(timestamp) ? Number(timestamp) : 0;
+      const parts = timestamp.match(/^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?$/);
+      const parsedStart = numericStart || (parts && timestamp ? Number(parts[1] || 0) * 3600 + Number(parts[2] || 0) * 60 + Number(parts[3] || 0) : 0);
+      return `https://www.youtube-nocookie.com/embed/${id}${parsedStart > 0 ? `?start=${parsedStart}` : ''}`;
     } catch { return ''; }
   };
   const renderRichText = (runs, fallback = '') => {
@@ -371,6 +397,13 @@ function articleView(slug) {
   const renderBlock = block => {
     const inline = renderInline(block);
     if (block.type === 'image') return `<figure><img src="${escapeHtml(block.url)}" alt="${escapeHtml(block.caption || '')}" loading="lazy">${block.caption ? `<figcaption>${renderRichText(block.caption_rich_text, block.caption)}</figcaption>` : ''}</figure>`;
+    if (block.type === 'video' || block.type === 'embed') {
+      const href = safeLink(block.url || '');
+      const player = youtubeEmbedUrl(href);
+      return player
+        ? `<div class="notion-video"><iframe src="${escapeHtml(player)}" title="${escapeHtml(block.caption || 'YouTube video')}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`
+        : (href ? `<p><a class="notion-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(block.caption || href)}</a></p>` : '');
+    }
     if (block.type === 'heading_1') return `<h2>${inline}</h2>`;
     if (block.type === 'heading_2') return `<h3>${inline}</h3>`;
     if (block.type === 'heading_3') return `<h4>${inline}</h4>`;

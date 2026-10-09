@@ -22,7 +22,7 @@ The Source Spread database has been created in the connected Notion workspace. I
 | Description | Rich text | No; generated from the opening when empty |
 | Slug | Rich text | No; generated from Title when empty |
 
-Write article content in the page body. Paragraphs start flush left without indentation and get about one line of space between them; line breaks inside a paragraph stay visible. The site keeps inline bold/italic/underline/strikethrough/code, text colors, links, headings, quotes, bulleted and numbered lists, checklists, callouts, bookmarks, equations, dividers, and images. Empty paragraphs remain as extra spacing. Only rows with `Published` checked are exported. An unpublished `[TEST] Sample article` is in the database as a field and body example; replace it with an actual article before publishing. Share the data source with the Notion integration used for the API token.
+Write article content in the page body. Paragraphs start flush left without indentation and get about one line of space between them; line breaks inside a paragraph stay visible. The site keeps inline bold/italic/underline/strikethrough/code, text colors, links, headings, quotes, bulleted and numbered lists, checklists, callouts, bookmarks, YouTube video embeds, equations, dividers, and images. Empty paragraphs remain as extra spacing. Only rows with `Published` checked are exported. An unpublished `[TEST] Sample article` is in the database as a field and body example; replace it with an actual article before publishing. Share the data source with the Notion integration used for the API token.
 
 ### Article layout
 
@@ -32,6 +32,7 @@ Write article content in the page body. Paragraphs start flush left without inde
 - Text without a `Name:` prefix appears only in the second column. With or without Dividers, content starts with the first body block; it is not moved into a separate lead area.
 - Use **Heading 1**, **Heading 2**, and **Heading 3** for headings. They do not create section numbers.
 - `Date` is the original/source date displayed on the site. `Sort Date` determines newest-first order on both the Notion database view and the homepage. For existing articles, both dates were initially set to the existing `Date`; set `Sort Date` to the day you want a new or updated article to move to the top.
+- On mobile, the homepage keeps each title on one line, shows the original date underneath in small gray text, and keeps the category at the right. Title scrolling is reserved for desktop hover and keyboard focus; tapping a row opens the article.
 
 ## Manual sync
 
