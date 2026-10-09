@@ -72,7 +72,7 @@
   .list tbody tr[data-slug]:hover, .list tbody tr[data-slug]:focus-visible { background: var(--hl-bg); color: var(--hl-fg); outline: none; }
   .list .title { width: 32%; }
   .list td.date { white-space: nowrap; }
-  .list td.src a { text-decoration: underline; text-underline-offset: 3px; }
+  .list td.src a { display: block; max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-decoration: underline; text-underline-offset: 3px; }
   .list .empty td { color: var(--muted); }
   .list td.title { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: clip; }
   .list td.title > .t { display: inline-block; white-space: nowrap; }

@@ -1,5 +1,2983 @@
 [
   {
+    "slug": "good-product-manager-bad-product-manager",
+    "title": "좋은 PM, 나쁜 PM",
+    "category": "Tech",
+    "date": "2012-06-15",
+    "sortDate": "2026-10-08",
+    "from": "a16z.com",
+    "source": "Good Product Manager/Bad Product Manager",
+    "url": "https://a16z.com/good-product-manager-bad-product-manager/",
+    "thumbnail": "",
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "경고: 이 문서는 15년 전에 작성된 것으로, 오늘날의 프로덕트 매니저에게는 적합하지 않을 수 있습니다. 유용한 교육용 문서의 한 예시로 제시합니다.",
+        "rich_text": [
+          {
+            "text": "경고:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 이 문서는 15년 전에 작성된 것으로, 오늘날의 프로덕트 매니저에게는 적합하지 않을 수 있습니다. 유용한 교육용 문서의 한 예시로 제시합니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "좋은 프로덕트 매니저(PM)는 시장, 제품, 제품 라인, 경쟁사를 매우 잘 알고 있으며, 확고한 지식과 자신감을 바탕으로 행동합니다. 좋은 프로덕트 매니저는 '제품의 CEO'입니다. 좋은 PM은 모든 책임을 지며, 제품의 성공 여부로 스스로를 평가합니다. 적절한 시기에 적절한 제품을 선보이는 것과 그에 수반되는 모든 일에 책임을 집니다. 좋은 PM은 시작 단계부터 전체 맥락(회사 상황, 매출 및 자금 조달, 경쟁 환경 등)을 파악하고 있으며, 변명 없이 승리하는 계획을 수립하고 실행할 책임을 집니다.",
+        "rich_text": [
+          {
+            "text": "좋은 프로덕트 매니저(PM)는 시장, 제품, 제품 라인, 경쟁사를 매우 잘 알고 있으며, 확고한 지식과 자신감을 바탕으로 행동합니다. 좋은 프로덕트 매니저는 '제품의 CEO'입니다. 좋은 PM은 모든 책임을 지며, 제품의 성공 여부로 스스로를 평가합니다. 적절한 시기에 적절한 제품을 선보이는 것과 그에 수반되는 모든 일에 책임을 집니다. 좋은 PM은 시작 단계부터 전체 맥락(회사 상황, 매출 및 자금 조달, 경쟁 환경 등)을 파악하고 있으며, 변명 없이 승리하는 계획을 수립하고 실행할 책임을 집니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "나쁜 프로덕트 매니저는 핑계가 많습니다. 예산이 부족하다, 엔지니어링 매니저가 무능하다, 마이크로소프트는 우리보다 엔지니어가 10배나 많다, 일이 너무 많다, 지시받은 게 없다 등입니다. 벅스데일(전 넷스케이프 CEO)은 이런 변명을 하지 않았으며, 제품의 CEO인 PM 역시 마찬가지여야 합니다.",
+        "rich_text": [
+          {
+            "text": "나쁜 프로덕트 매니저는 핑계가 많습니다. 예산이 부족하다, 엔지니어링 매니저가 무능하다, 마이크로소프트는 우리보다 엔지니어가 10배나 많다, 일이 너무 많다, 지시받은 게 없다 등입니다. 벅스데일(전 넷스케이프 CEO)은 이런 변명을 하지 않았으며, 제품의 CEO인 PM 역시 마찬가지여야 합니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "좋은 프로덕트 매니저는 적절한 시기에 적절한 제품을 출시하기 위해 함께 협력해야 하는 여러 조직들에 자신의 시간을 온통 빼앗기지 않습니다. 제품 팀의 회의록을 대신 적지 않고, 각 직무를 개별 프로젝트 관리하지 않으며, 엔지니어링의 심부름꾼 노릇을 하지 않습니다. 그들은 단순히 제품 팀의 일원이 아니라 제품 팀을 관리합니다. 엔지니어링 팀은 좋은 PM을 단순한 '마케팅 지원 인력'으로 보지 않습니다. 좋은 PM은 엔지니어링 매니저와 대등하게 협력하는 마케팅 파트너입니다. 좋은 PM은 목표와 '무엇을 만들 것인가(What)'를 명확히 정의하며(어떻게 만들 것인가가 아님), 그 'What'을 실현하는 과정을 관리합니다. 나쁜 PM은 자신들이 '어떻게(How)' 만들지 기술적인 해법을 도출해냈을 때 가장 만족스러워합니다. 좋은 PM은 구두뿐만 아니라 서면으로도 엔지니어링 팀에 명확하게 전달합니다. 좋은 PM은 비공식적으로 지시하지 않지만, 비공식적으로 정보는 수집합니다.",
+        "rich_text": [
+          {
+            "text": "좋은 프로덕트 매니저는 적절한 시기에 적절한 제품을 출시하기 위해 함께 협력해야 하는 여러 조직들에 자신의 시간을 온통 빼앗기지 않습니다. 제품 팀의 회의록을 대신 적지 않고, 각 직무를 개별 프로젝트 관리하지 않으며, 엔지니어링의 심부름꾼 노릇을 하지 않습니다. 그들은 단순히 제품 팀의 일원이 아니라 제품 팀을 관리합니다. 엔지니어링 팀은 좋은 PM을 단순한 '마케팅 지원 인력'으로 보지 않습니다. 좋은 PM은 엔지니어링 매니저와 대등하게 협력하는 마케팅 파트너입니다. 좋은 PM은 목표와 '무엇을 만들 것인가(What)'를 명확히 정의하며(어떻게 만들 것인가가 아님), 그 'What'을 실현하는 과정을 관리합니다. 나쁜 PM은 자신들이 '어떻게(How)' 만들지 기술적인 해법을 도출해냈을 때 가장 만족스러워합니다. 좋은 PM은 구두뿐만 아니라 서면으로도 엔지니어링 팀에 명확하게 전달합니다. 좋은 PM은 비공식적으로 지시하지 않지만, 비공식적으로 정보는 수집합니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "좋은 프로덕트 매니저는 재활용 가능한 영업 자료, FAQ, 발표 자료, 백서를 작성합니다. 나쁜 PM은 영업팀의 질문에 답하느라 하루 종일 시간을 다 빼앗기고 업무에 치인다고 불평합니다. 좋은 PM은 제품의 심각한 결함을 미리 예측하고 실질적인 해결책을 구축합니다. 나쁜 PM은 하루 종일 급한 불만 끄고 다니기 바쁩니다. 좋은 PM은 중요한 이슈(경쟁사를 이길 결정적 무기, 어려운 아키텍처 선택, 힘든 제품 판단, 공격하거나 포기할 시장 등)에 대해 문서로 명확한 입장을 취합니다. 나쁜 PM은 구두로만 의견을 내고 '윗선'에서 허락해주지 않는다며 한탄합니다. 그리고 실패하고 나면 자신이 실패할 줄 미리 알고 있었다고 변명합니다.",
+        "rich_text": [
+          {
+            "text": "좋은 프로덕트 매니저는 재활용 가능한 영업 자료, FAQ, 발표 자료, 백서를 작성합니다. 나쁜 PM은 영업팀의 질문에 답하느라 하루 종일 시간을 다 빼앗기고 업무에 치인다고 불평합니다. 좋은 PM은 제품의 심각한 결함을 미리 예측하고 실질적인 해결책을 구축합니다. 나쁜 PM은 하루 종일 급한 불만 끄고 다니기 바쁩니다. 좋은 PM은 중요한 이슈(경쟁사를 이길 결정적 무기, 어려운 아키텍처 선택, 힘든 제품 판단, 공격하거나 포기할 시장 등)에 대해 문서로 명확한 입장을 취합니다. 나쁜 PM은 구두로만 의견을 내고 '윗선'에서 허락해주지 않는다며 한탄합니다. 그리고 실패하고 나면 자신이 실패할 줄 미리 알고 있었다고 변명합니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "좋은 프로덕트 매니저는 팀의 시선을 매출과 고객에 집중시킵니다. 나쁜 PM은 마이크로소프트가 얼마나 많은 기능을 만들고 있는지에 집중합니다. 좋은 PM은 강력한 노력을 기울이면 실행 가능한 좋은 제품을 정의합니다. 나쁜 PM은 실행 불가능한 제품을 정의하거나, 엔지니어링 팀이 원하는 것(예: 가장 어려운 기술적 문제 풀기)을 마음대로 만들게 방치합니다.",
+        "rich_text": [
+          {
+            "text": "좋은 프로덕트 매니저는 팀의 시선을 매출과 고객에 집중시킵니다. 나쁜 PM은 마이크로소프트가 얼마나 많은 기능을 만들고 있는지에 집중합니다. 좋은 PM은 강력한 노력을 기울이면 실행 가능한 좋은 제품을 정의합니다. 나쁜 PM은 실행 불가능한 제품을 정의하거나, 엔지니어링 팀이 원하는 것(예: 가장 어려운 기술적 문제 풀기)을 마음대로 만들게 방치합니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "좋은 프로덕트 매니저는 인바운드 기획 시 시장에 우수한 가치를 전달하는 것을 고민하고, 아웃바운드 활동 시 점유율 및 매출 목표 달성을 고민합니다. 나쁜 PM은 가치 전달, 경쟁사 기능 따라잡기, 가격 책정, 시장 선점 간의 차이에 대해 매우 혼란스러워합니다. 좋은 PM은 문제를 세분화하여 해결합니다. 나쁜 PM은 모든 문제를 하나로 뭉뚱그려버립니다.",
+        "rich_text": [
+          {
+            "text": "좋은 프로덕트 매니저는 인바운드 기획 시 시장에 우수한 가치를 전달하는 것을 고민하고, 아웃바운드 활동 시 점유율 및 매출 목표 달성을 고민합니다. 나쁜 PM은 가치 전달, 경쟁사 기능 따라잡기, 가격 책정, 시장 선점 간의 차이에 대해 매우 혼란스러워합니다. 좋은 PM은 문제를 세분화하여 해결합니다. 나쁜 PM은 모든 문제를 하나로 뭉뚱그려버립니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "좋은 프로덕트 매니저는 언론에 어떤 기사가 실리길 원하는지 '스토리'를 고민합니다. 나쁜 PM은 언론을 상대로 모든 기능을 빠짐없이 다루고 기술적으로 완벽하게 정확해야 한다는 생각만 합니다. 좋은 PM은 언론에 질문을 던집니다. 나쁜 PM은 언론의 어떤 질문이든 대답하기 바쁩니다. 좋은 PM은 언론인과 분석가들이 매우 똑똑하다고 전제합니다. 나쁜 PM은 언론인과 분석가들이 '푸시(Push)'와 '시뮬레이션된 푸시(Simulated Push)'의 차이를 이해하지 못한다고 해서 그들이 멍청하다고 단정합니다.",
+        "rich_text": [
+          {
+            "text": "좋은 프로덕트 매니저는 언론에 어떤 기사가 실리길 원하는지 '스토리'를 고민합니다. 나쁜 PM은 언론을 상대로 모든 기능을 빠짐없이 다루고 기술적으로 완벽하게 정확해야 한다는 생각만 합니다. 좋은 PM은 언론에 질문을 던집니다. 나쁜 PM은 언론의 어떤 질문이든 대답하기 바쁩니다. 좋은 PM은 언론인과 분석가들이 매우 똑똑하다고 전제합니다. 나쁜 PM은 언론인과 분석가들이 '푸시(Push)'와 '시뮬레이션된 푸시(Simulated Push)'의 차이를 이해하지 못한다고 해서 그들이 멍청하다고 단정합니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "좋은 프로덕트 매니저는 당연해 보이는 소리를 반복하는 한이 있더라도 명확함을 기하는 쪽을 선택합니다. 나쁜 PM은 당연해 보이는 것은 절대 설명하지 않습니다. 좋은 PM은 자신의 역할과 성공 기준을 스스로 정의합니다. 나쁜 PM은 끊임없이 남이 무엇을 해야 할지 알려주기만을 바랍니다.",
+        "rich_text": [
+          {
+            "text": "좋은 프로덕트 매니저는 당연해 보이는 소리를 반복하는 한이 있더라도 명확함을 기하는 쪽을 선택합니다. 나쁜 PM은 당연해 보이는 것은 절대 설명하지 않습니다. 좋은 PM은 자신의 역할과 성공 기준을 스스로 정의합니다. 나쁜 PM은 끊임없이 남이 무엇을 해야 할지 알려주기만을 바랍니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "좋은 프로덕트 매니저는 절제와 규율을 갖추고 있어 매주 제때 주간 보고서를 제출합니다. 나쁜 PM은 규율을 중요하게 생각하지 않아 주간 보고서를 제때 제출하는 것을 잊어버립니다.",
+        "rich_text": [
+          {
+            "text": "좋은 프로덕트 매니저는 절제와 규율을 갖추고 있어 매주 제때 주간 보고서를 제출합니다. 나쁜 PM은 규율을 중요하게 생각하지 않아 주간 보고서를 제때 제출하는 것을 잊어버립니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      }
+    ],
+    "lang": "ko",
+    "createdTime": "2026-10-08T02:10:00.000Z",
+    "description": "강력한 오너십을 갖고 고객과 성과에 집중하는 '좋은 PM'과 변명에 치우치는 '나쁜 PM'의 결정적 차이를 대조한 실무 가이드."
+  },
+  {
+    "slug": "one-eye-on-the-world",
+    "title": "세계를 바라보는 하나의 시선",
+    "category": "Culture",
+    "date": "2022-12-31",
+    "sortDate": "2026-10-08",
+    "from": "MAGAZEUM",
+    "source": "One Eye on the World",
+    "url": "https://magazeum.co/content/tyler-brule-2#:~:text=Tyler%20Br%C3%BBl%C3%A9%3A%20I%20think%20we%20talk%20in,loft%20and%20heft%20to%20it%20in%20format.",
+    "thumbnail": "",
+    "body": [
+      {
+        "type": "heading_1",
+        "text": "종이 매체는 죽었다 (영원하라 종이 매체여!)",
+        "rich_text": [
+          {
+            "text": "종이 매체는 죽었다 (영원하라 종이 매체여!)",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "편집장이자 창립자 타일러 브륄레(모노클, 월페이퍼, 콘펙트 등)와의 대화",
+        "rich_text": [
+          {
+            "text": "편집장이자 창립자 타일러 브륄레(모노클, 월페이퍼, 콘펙트 등)와의 대화",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "\"삶 자체가 광기처럼 보일 때, 광기가 어디에 있는지 그 누가 알겠는가? 어쩌면 지나치게 현실적인 것이 광기일지도 모른다. 꿈을 포기하는 것, 이것이 광기일지도 모른다. 쓰레기밖에 없는 곳에서 보물을 찾는 것. 지나친 제정신이야말로 광기일지도 모른다. 그리고 가장 미친 짓은, 삶을 마땅히 있어야 할 모습이 아니라 있는 그대로 보는 것이다!\"",
+        "rich_text": [
+          {
+            "text": "\"삶 자체가 광기처럼 보일 때, 광기가 어디에 있는지 그 누가 알겠는가? 어쩌면 지나치게 현실적인 것이 광기일지도 모른다. 꿈을 포기하는 것, 이것이 광기일지도 모른다. 쓰레기밖에 없는 곳에서 보물을 찾는 것. 지나친 제정신이야말로 광기일지도 모른다. 그리고 가장 미친 짓은, 삶을 마땅히 있어야 할 모습이 아니라 있는 그대로 보는 것이다!\"",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "캐나다 출신 해외 거주 잡지 제작자인 타일러 브륄레의 구상으로 탄생한 <모노클(Monocle)>은 전 세계는 물론 잡지 산업에 상당히 악재가 겹쳤던 2007년 초 세상에 나왔다. 그해에만 100개가 넘는 인쇄 잡지가 문을 닫았거나(위키피디아 표현으로는 '폐간'되었거나) 했다. 그중에는 <라이프(Life)>(또다시), <프리미어(Premiere)>, <레드 헤링(Red Herring)>, <하우스 & 가든(House & Garden)>, <제인(Jane)>, <차일드(Child)>, <비즈니스 2.0(Business 2.0)> 등이 있었다. 몇 달 뒤, 세계 경제는 대침체(Great Recession)의 직격탄을 맞았다.",
+        "rich_text": [
+          {
+            "text": "캐나다 출신 해외 거주 잡지 제작자인 타일러 브륄레의 구상으로 탄생한 <모노클(Monocle)>은 전 세계는 물론 잡지 산업에 상당히 악재가 겹쳤던 2007년 초 세상에 나왔다. 그해에만 100개가 넘는 인쇄 잡지가 문을 닫았거나(위키피디아 표현으로는 '폐간'되었거나) 했다. 그중에는 <라이프(Life)>(또다시), <프리미어(Premiere)>, <레드 헤링(Red Herring)>, <하우스 & 가든(House & Garden)>, <제인(Jane)>, <차일드(Child)>, <비즈니스 2.0(Business 2.0)> 등이 있었다. 몇 달 뒤, 세계 경제는 대침체(Great Recession)의 직격탄을 맞았다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "하지만 브륄레는 이전 스타트업이었던 <월페이퍼*(Wallpaper*)>를 미국 미디어 공룡 타임(Time Inc.)에 매각한 후 맺은 꽤 긴 경업금지(non-compete) 계약에서 막 벗어나던 참이었고, 편집국으로 돌아가기를 간절히 바라고 있었다.",
+        "rich_text": [
+          {
+            "text": "하지만 브륄레는 이전 스타트업이었던 <월페이퍼*(Wallpaper*)>를 미국 미디어 공룡 타임(Time Inc.)에 매각한 후 맺은 꽤 긴 경업금지(non-compete) 계약에서 막 벗어나던 참이었고, 편집국으로 돌아가기를 간절히 바라고 있었다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "시국과 스러져가는 인쇄 매체들의 행렬을 고려할 때, 첫머리 영상에서 돈 키호테가 외쳤듯 브륄레의 결단 역시 '광기'로 평가받을 수도 있었다. 디지털이 한창 대세였고 아이패드가 출시를 앞두고 있었으며, 닷컴 붕괴의 광풍이 남긴 여파는 여전히 기존 레거시 미디어를 천천히 말려 죽이고 있었다.",
+        "rich_text": [
+          {
+            "text": "시국과 스러져가는 인쇄 매체들의 행렬을 고려할 때, 첫머리 영상에서 돈 키호테가 외쳤듯 브륄레의 결단 역시 '광기'로 평가받을 수도 있었다. 디지털이 한창 대세였고 아이패드가 출시를 앞두고 있었으며, 닷컴 붕괴의 광풍이 남긴 여파는 여전히 기존 레거시 미디어를 천천히 말려 죽이고 있었다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "'광기'라고? 타일러 브륄레를 아는 사람이라면 그렇게 말하지 않는다. 그가 다스리는 세계에서 \"마땅히 있어야 할 삶\"이란 풍요로운 삶이다. 북적이는 카페에서 마시는 아침 에스프레소, 자신이 선택한 로맨스 언어로 쓰이고 편집된 따끈따끈한 신문, 밤열차를 타고 비엔나로 향하는 동안 알프스에서의 주말 스키나 지중해에서의 휴식을 계획하는 삶 말이다.",
+        "rich_text": [
+          {
+            "text": "'광기'라고? 타일러 브륄레를 아는 사람이라면 그렇게 말하지 않는다. 그가 다스리는 세계에서 \"마땅히 있어야 할 삶\"이란 풍요로운 삶이다. 북적이는 카페에서 마시는 아침 에스프레소, 자신이 선택한 로맨스 언어로 쓰이고 편집된 따끈따끈한 신문, 밤열차를 타고 비엔나로 향하는 동안 알프스에서의 주말 스키나 지중해에서의 휴식을 계획하는 삶 말이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "그리고 인쇄 매체가 있다. 9가지가 넘는 서로 다른 종이 재질로 인쇄되고 코스타리카의 탄소 중립 항공사나 두바이의 날렵한 아프가니스탄 레스토랑 같은 지극히 니치한 기사들로 가득 찬 잡지 본지뿐만 아니라, 특별판 신문, 포토북(Coffee table book), 모노클이 승인한 여행 가이드북까지 포함해서다. (누군가 브륄레와 그의 뛰어난 팀원들에게 인쇄 매체가 죽었다는 사실을 알려주는 것을 깜빡했나 보다.)",
+        "rich_text": [
+          {
+            "text": "그리고 인쇄 매체가 있다. 9가지가 넘는 서로 다른 종이 재질로 인쇄되고 코스타리카의 탄소 중립 항공사나 두바이의 날렵한 아프가니스탄 레스토랑 같은 지극히 니치한 기사들로 가득 찬 잡지 본지뿐만 아니라, 특별판 신문, 포토북(Coffee table book), 모노클이 승인한 여행 가이드북까지 포함해서다. (누군가 브륄레와 그의 뛰어난 팀원들에게 인쇄 매체가 죽었다는 사실을 알려주는 것을 깜빡했나 보다.)",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "무슨 수를 써서라도 규모(Scale)를 확장하는 데 집착해 온 미디어 문화 속에서, <모노클>의 고작 10만 부라는 소박한 발행 부수는 소셜 미디어의 유혹을 당당히 무시하는 번창하는 멀티미디어 거인의 위상을 가리고 있다. 브륄레는 말한다.",
+        "rich_text": [
+          {
+            "text": "무슨 수를 써서라도 규모(Scale)를 확장하는 데 집착해 온 미디어 문화 속에서, <모노클>의 고작 10만 부라는 소박한 발행 부수는 소셜 미디어의 유혹을 당당히 무시하는 번창하는 멀티미디어 거인의 위상을 가리고 있다. 브륄레는 말한다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "\"우리가 독립 출판사라는 점에서 매우 운이 좋은 위치에 있다. 대형 모기업이 주는 상업적 압박이 없기 때문이다. 그 상업적 압박은 두 가지다. 하나는 비용 절감이고, 다른 하나는 모든 새로운 트렌드를 무작정 쫓아가야 한다는 압박이다.\"",
+        "rich_text": [
+          {
+            "text": "\"우리가 독립 출판사라는 점에서 매우 운이 좋은 위치에 있다. 대형 모기업이 주는 상업적 압박이 없기 때문이다. 그 상업적 압박은 두 가지다. 하나는 비용 절감이고, 다른 하나는 모든 새로운 트렌드를 무작정 쫓아가야 한다는 압박이다.\"",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "실제로 브륄레는 <모노클>을 일종의 가업(Family business)으로 여긴다.",
+        "rich_text": [
+          {
+            "text": "실제로 브륄레는 <모노클>을 일종의 가업(Family business)으로 여긴다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "\"우리는 선구자가 되려고 작정하지는 않지만, 가업 형태의 회사이기 때문에 원한다면 어떤 일이든 신속하게 결정하고 실행할 수 있다.\"",
+        "rich_text": [
+          {
+            "text": "\"우리는 선구자가 되려고 작정하지는 않지만, 가업 형태의 회사이기 때문에 원한다면 어떤 일이든 신속하게 결정하고 실행할 수 있다.\"",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "또한 미디어 업계 문화는 스스로 창업자로서의 신빙성을 증명해야 한다는 압박을 만들어냈다. 단순한 편집장이 아니라, '창립 편집장', '창립 크리에이티브 디렉터', '창립 이사'가 되는 식이다. 하지만 그 자신을 어떻게 생각하고 칭하는지 묻자, 브륄레는 단순하게 대답한다.",
+        "rich_text": [
+          {
+            "text": "또한 미디어 업계 문화는 스스로 창업자로서의 신빙성을 증명해야 한다는 압박을 만들어냈다. 단순한 편집장이 아니라, '창립 편집장', '창립 크리에이티브 디렉터', '창립 이사'가 되는 식이다. 하지만 그 자신을 어떻게 생각하고 칭하는지 묻자, 브륄레는 단순하게 대답한다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "\"‘내가 무슨 일을 하는가?’에 대해 생각해보면, 나는 저널리스트다. 현장의 목격자가 되기 위해, 흡수하고, 해석하고, 전달하기 위해 존재한다.\"",
+        "rich_text": [
+          {
+            "text": "\"‘내가 무슨 일을 하는가?’에 대해 생각해보면, 나는 저널리스트다. 현장의 목격자가 되기 위해, 흡수하고, 해석하고, 전달하기 위해 존재한다.\"",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "인쇄 매체를 중심에 둔 미디어 현상, 가업으로 시작되어 저널리스트가 이끄는 회사. 놀라운가? 마땅히 있어야 할 삶을 만들어가고 있는 사람에게는 전혀 놀랍지 않은 일이다.",
+        "rich_text": [
+          {
+            "text": "인쇄 매체를 중심에 둔 미디어 현상, 가업으로 시작되어 저널리스트가 이끄는 회사. 놀라운가? 마땅히 있어야 할 삶을 만들어가고 있는 사람에게는 전혀 놀랍지 않은 일이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "다음은 객원 편집장(Editor-at-large) 조지 젠드론(George Gendron)과 타일러 브륄레의 대화다.",
+        "rich_text": [
+          {
+            "text": "다음은 객원 편집장(Editor-at-large) 조지 젠드론(George Gendron)과 타일러 브륄레의 대화다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "\"인쇄 매체는 우리가 하는 일의 절대적인 핵심이며, 우리는 이에 대해 전혀 미안해하거나 두둔조로 말하지 않는다.\"",
+        "rich_text": [
+          {
+            "text": "\"인쇄 매체는 우리가 하는 일의 절대적인 핵심이며, 우리는 이에 대해 전혀 미안해하거나 두둔조로 말하지 않는다.\"",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 유치하게 들릴 수도 있는 질문으로 시작해보겠다. 내가 이 자리에 없었다면 많은 사람이 정말 묻고 싶어 했을 질문이다. '타일러 브륄레'로 산다는 건 얼마나 멋진(cool) 일인가?",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 유치하게 들릴 수도 있는 질문으로 시작해보겠다. 내가 이 자리에 없었다면 많은 사람이 정말 묻고 싶어 했을 질문이다. '타일러 브륄레'로 산다는 건 얼마나 멋진(cool) 일인가?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 20대 후반이나 30대 초반이었을 때가—누구나 그렇듯—더 멋지지 않았나 싶다. 물론 지금도 출판 커리어의 전성기라고 생각하지만 말이다. 그래도 여전히 괜찮다. 나쁘지 않다. 그렇게까지 '멋진'지는 잘 모르겠지만, 오랫동안 이렇게 살아오다 보니 익숙해진 것 같다. 그 이야기는 나중에 다시 하자.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 20대 후반이나 30대 초반이었을 때가—누구나 그렇듯—더 멋지지 않았나 싶다. 물론 지금도 출판 커리어의 전성기라고 생각하지만 말이다. 그래도 여전히 괜찮다. 나쁘지 않다. 그렇게까지 '멋진'지는 잘 모르겠지만, 오랫동안 이렇게 살아오다 보니 익숙해진 것 같다. 그 이야기는 나중에 다시 하자.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: \"출판 커리어의 전성기\"라니 무슨 뜻인가? 내가 보기엔 당신들은 한동안 최정상의 성과를 내고 있는 것처럼 보인다.",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " \"출판 커리어의 전성기\"라니 무슨 뜻인가? 내가 보기엔 당신들은 한동안 최정상의 성과를 내고 있는 것처럼 보인다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 여전히 출판 전성기라 느끼지만, 다른 단계를 지나고 있다고 본다. 그래도 다 괜찮다. 다 좋은 상태다. 다만 얼마나 '멋진지'는 잘 모르겠다. 오랫동안 이런 삶을 살다 보니 그런 것 같다. 나중에 이 주제로 다시 돌아오자.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 여전히 출판 전성기라 느끼지만, 다른 단계를 지나고 있다고 본다. 그래도 다 괜찮다. 다 좋은 상태다. 다만 얼마나 '멋진지'는 잘 모르겠다. 오랫동안 이런 삶을 살다 보니 그런 것 같다. 나중에 이 주제로 다시 돌아오자.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 지리적으로 현재 어디에 있는가? 1년에 250일을 출장 다니니 지금 어디에 있는지 궁금하다.",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 지리적으로 현재 어디에 있는가? 1년에 250일을 출장 다니니 지금 어디에 있는지 궁금하다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 지금 취리히 두푸어슈트라세(Dufourstrasse) 90번지에 있는 본사에서 우리가 '라운지 공간'이라 부르는 곳 한가운데 서 있다. 온갖 오디오 작업뿐만 아니라 다양한 이벤트를 개최하기에도 훌륭한 설비를 갖춘 곳이다. 이곳 두푸어슈트라세 90번지에는 아름다운 소형 키오스크, 근사한 카페 및 바 공간, 모노클 리테일 매장, 그리고 트렁크 클로디어스(Trunk Clothiers, 브륄레의 동반자 마츠 클링베르그가 소유한 남성복 매장) 매장이 있다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 지금 취리히 두푸어슈트라세(Dufourstrasse) 90번지에 있는 본사에서 우리가 '라운지 공간'이라 부르는 곳 한가운데 서 있다. 온갖 오디오 작업뿐만 아니라 다양한 이벤트를 개최하기에도 훌륭한 설비를 갖춘 곳이다. 이곳 두푸어슈트라세 90번지에는 아름다운 소형 키오스크, 근사한 카페 및 바 공간, 모노클 리테일 매장, 그리고 트렁크 클로디어스(Trunk Clothiers, 브륄레의 동반자 마츠 클링베르그가 소유한 남성복 매장) 매장이 있다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "그리고 이 건물 최상층에는 모노클의 과반 지분을 소유한 지주회사이자, 전 세계 모든 글로벌 사업과 에이전시 비즈니스를 총괄하는 본사가 있다. 그러니 이곳을 '집'이라 부를 수 있겠다. 지난 5년간 우리의 거점이 되어준 곳에서 말하고 있다.",
+        "rich_text": [
+          {
+            "text": "그리고 이 건물 최상층에는 모노클의 과반 지분을 소유한 지주회사이자, 전 세계 모든 글로벌 사업과 에이전시 비즈니스를 총괄하는 본사가 있다. 그러니 이곳을 '집'이라 부를 수 있겠다. 지난 5년간 우리의 거점이 되어준 곳에서 말하고 있다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 흥미로운 질문이 떠오른다. 모노클 본사가 취리히에 있다는 걸 몰랐다면 런던이나 베를린, 혹은 도쿄에 있을 거라고 생각했을 것이다. 그런데 취리히라니? 취리히를 잘 알지는 못하지만 제네바는 좀 아는데, 솔직히 그런 도시들은 지루하다고 느낀다.",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 흥미로운 질문이 떠오른다. 모노클 본사가 취리히에 있다는 걸 몰랐다면 런던이나 베를린, 혹은 도쿄에 있을 거라고 생각했을 것이다. 그런데 취리히라니? 취리히를 잘 알지는 못하지만 제네바는 좀 아는데, 솔직히 그런 도시들은 지루하다고 느낀다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 아, 취리히에 안 온 지 좀 됐나 보다. 아까 질문했던 '멋짐'에 관한 이야기로 돌아가면, 나는 취리히를 '40대 이상을 위한 베를린'에 비유하곤 한다. 유흥이나 저녁의 즐거움, 주말의 휴식 등 원하는 모든 것을 갖추고 있다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 아, 취리히에 안 온 지 좀 됐나 보다. 아까 질문했던 '멋짐'에 관한 이야기로 돌아가면, 나는 취리히를 '40대 이상을 위한 베를린'에 비유하곤 한다. 유흥이나 저녁의 즐거움, 주말의 휴식 등 원하는 모든 것을 갖추고 있다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "하지만 베를린과 달리 전 세계로 연결되는 공항이 있고, 베를린 특유의 자전거 이용자들의 험악함도 없다. 더 행복한 도시다. 사람들의 성향도 더 밝으니 꼭 다시 방문해 보라. 그리고 이곳은 세계에서 가장 오래된 신문사 중 하나가 여전히 혁신을 거듭하고 흥미로운 시도를 이어나가는 미디어 도시이기도 하다.",
+        "rich_text": [
+          {
+            "text": "하지만 베를린과 달리 전 세계로 연결되는 공항이 있고, 베를린 특유의 자전거 이용자들의 험악함도 없다. 더 행복한 도시다. 사람들의 성향도 더 밝으니 꼭 다시 방문해 보라. 그리고 이곳은 세계에서 가장 오래된 신문사 중 하나가 여전히 혁신을 거듭하고 흥미로운 시도를 이어나가는 미디어 도시이기도 하다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 흥미롭다. 많은 사람에게 직관에 어긋나는 이야기일 수 있겠다. 내가 생각하는 취리히는 전 세계에서 가장 물가가 비싼 도시 중 하나이기도 하다.",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 흥미롭다. 많은 사람에게 직관에 어긋나는 이야기일 수 있겠다. 내가 생각하는 취리히는 전 세계에서 가장 물가가 비싼 도시 중 하나이기도 하다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 비싸긴 하지만, 그만한 지불 가치(value for money)가 있다. 일종의 지적 자유주의가 존재한다고 할까. 대서양 건너편(미국) 미디어에서는 차마 출판하지 못할 내용도 이곳 신문들은 지면에 실으며, 누구도 억지로 막아서지 않는 건강하고 제대로 된 토론이 이루어진다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 비싸긴 하지만, 그만한 지불 가치(value for money)가 있다. 일종의 지적 자유주의가 존재한다고 할까. 대서양 건너편(미국) 미디어에서는 차마 출판하지 못할 내용도 이곳 신문들은 지면에 실으며, 누구도 억지로 막아서지 않는 건강하고 제대로 된 토론이 이루어진다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "오늘 방송에서 저널리즘과 인쇄 매체에 대해 이야기하고 있는데, 이곳에는 진정한 생동감이 있다. 우리 길 모퉁이만 돌아도 신문사 두 곳이 있다. 두푸어슈트라세 끝자락에는 세계에서 가장 오래된 신문 중 하나인 NZZ(Neue Zürcher Zeitung)가 있고, 타블로이드지 <블릭(Blick)>을 발행하는 링기어(Ringier) 출판 그룹 본사도 가까이 있다. 매우 부유한 도시이자 작은 나라인 스위스에서 이런 혁신이 일어나는 것은 어쩌면 당연한 일일지도 모른다. 물론 스위스답게 아주 조용하고 차분하게 진행되지만 말이다.",
+        "rich_text": [
+          {
+            "text": "오늘 방송에서 저널리즘과 인쇄 매체에 대해 이야기하고 있는데, 이곳에는 진정한 생동감이 있다. 우리 길 모퉁이만 돌아도 신문사 두 곳이 있다. 두푸어슈트라세 끝자락에는 세계에서 가장 오래된 신문 중 하나인 NZZ(Neue Zürcher Zeitung)가 있고, 타블로이드지 <블릭(Blick)>을 발행하는 링기어(Ringier) 출판 그룹 본사도 가까이 있다. 매우 부유한 도시이자 작은 나라인 스위스에서 이런 혁신이 일어나는 것은 어쩌면 당연한 일일지도 모른다. 물론 스위스답게 아주 조용하고 차분하게 진행되지만 말이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 좋은 지적이다. 주제를 조금 바꿔보겠다. 당신과 모노클은 격찬 외에도 많은 냉소나 헐뜯음(snark)을 받아왔다. 하지만 저널리스트들이 당신의 미디어 모델이 가진 독창성을 과연 제대로 이해하고 평가하고 있는지 의문이다. 21세기형 '지속 가능한 인쇄 플러스를 결합한 미디어 모델'의 최초 사례인데, 이에 대해 얘기하는 사람이 많지 않다.",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 좋은 지적이다. 주제를 조금 바꿔보겠다. 당신과 모노클은 격찬 외에도 많은 냉소나 헐뜯음(snark)을 받아왔다. 하지만 저널리스트들이 당신의 미디어 모델이 가진 독창성을 과연 제대로 이해하고 평가하고 있는지 의문이다. 21세기형 '지속 가능한 인쇄 플러스를 결합한 미디어 모델'의 최초 사례인데, 이에 대해 얘기하는 사람이 많지 않다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 글쎄, 사람들이 더 이상 인쇄 매체에 대해 이야기하지 않기 때문일 수도 있다. 이런 팟캐스트에서 다루는 경우를 제외하고는 말이다. 또는 미디어 담론의 중심이 다른 곳으로 이동했기 때문일 수도 있다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 글쎄, 사람들이 더 이상 인쇄 매체에 대해 이야기하지 않기 때문일 수도 있다. 이런 팟캐스트에서 다루는 경우를 제외하고는 말이다. 또는 미디어 담론의 중심이 다른 곳으로 이동했기 때문일 수도 있다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "전 세계를 둘러보면 종이 지면을 통해 나오는 놀라운 것들이 여전히 많고, 신규 매체들이 많이 등장하는 지역들이 있다. 이웃 나라인 프랑스만 해도 기차역이나 공항 매점에 갈 때마다 내가 보지 못했던 새로운 매체가 늘 나와 있는 것을 보고 감탄하곤 한다.",
+        "rich_text": [
+          {
+            "text": "전 세계를 둘러보면 종이 지면을 통해 나오는 놀라운 것들이 여전히 많고, 신규 매체들이 많이 등장하는 지역들이 있다. 이웃 나라인 프랑스만 해도 기차역이나 공항 매점에 갈 때마다 내가 보지 못했던 새로운 매체가 늘 나와 있는 것을 보고 감탄하곤 한다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "반면 최근 북미를 크게 둘러보고 왔는데, 알다시피 수많은 교통 거점에서 매점이나 키오스크가 완전히 사라졌더라. 존재하더라도 잡지는 9개 남짓뿐이고 그중 신간은 하나도 없었다. 우리 이야기로 돌아가면, 요즘 잡지에 대해 논하는 칼럼 자체가 거의 없다 보니 우리 모델에 대한 논의도 적은 것 같다.",
+        "rich_text": [
+          {
+            "text": "반면 최근 북미를 크게 둘러보고 왔는데, 알다시피 수많은 교통 거점에서 매점이나 키오스크가 완전히 사라졌더라. 존재하더라도 잡지는 9개 남짓뿐이고 그중 신간은 하나도 없었다. 우리 이야기로 돌아가면, 요즘 잡지에 대해 논하는 칼럼 자체가 거의 없다 보니 우리 모델에 대한 논의도 적은 것 같다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 그럼에도 놀랍고 아쉬운 점은, 아무도 당신들이 해낸 일에서 아무것도 배우지 않는 것 같다는 사실이다.",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 그럼에도 놀랍고 아쉬운 점은, 아무도 당신들이 해낸 일에서 아무것도 배우지 않는 것 같다는 사실이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 전부 그렇다고 볼 수는 없다. 우리를 모방하며 많은 것을 따라 하는 꼴불견 매체들도 몇몇 있으니까. 굳이 이름을 대지 않아도 스스로 잘 알고 있을 것이다. 기업체 등에서 모노클을 가져와서 \"우리 연례 보고서를 이렇게 만들어 줄 수 있나요?\"라고 하거나, <콘펙트(Konfekt)> 잡지를 가져와서 \"폴란드어로 이런 잡지를 만들어 줄 수 있나요?\"라는 요청을 한다는 소식을 들었다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 전부 그렇다고 볼 수는 없다. 우리를 모방하며 많은 것을 따라 하는 꼴불견 매체들도 몇몇 있으니까. 굳이 이름을 대지 않아도 스스로 잘 알고 있을 것이다. 기업체 등에서 모노클을 가져와서 \"우리 연례 보고서를 이렇게 만들어 줄 수 있나요?\"라고 하거나, <콘펙트(Konfekt)> 잡지를 가져와서 \"폴란드어로 이런 잡지를 만들어 줄 수 있나요?\"라는 요청을 한다는 소식을 들었다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "그러니 모방은 일어나고 있다. 다만 당신이 말하고자 하는 바는 우리 비즈니스 모델 전체와 작동 방식일 것이다. 말했듯, 인쇄 매체는 우리 비즈니스의 절대적인 핵심이며 우리는 이를 굳이 숨기거나 사과하지 않는다. 이 점이 매우 다르다.",
+        "rich_text": [
+          {
+            "text": "그러니 모방은 일어나고 있다. 다만 당신이 말하고자 하는 바는 우리 비즈니스 모델 전체와 작동 방식일 것이다. 말했듯, 인쇄 매체는 우리 비즈니스의 절대적인 핵심이며 우리는 이를 굳이 숨기거나 사과하지 않는다. 이 점이 매우 다르다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "수많은 기존 레거시 미디어들이 광고주나 파트너십 미팅에 들어가서 \"우리는 디지털 퍼스트이지만, 여전히 인쇄 사업도 유지하고 있습니다\"라고 말한다. 우리는 완전히 반대다. \"우리는 모든 형태에서 매우 탄탄하고 성장하는 인쇄 사업을 보유하고 있습니다.\"",
+        "rich_text": [
+          {
+            "text": "수많은 기존 레거시 미디어들이 광고주나 파트너십 미팅에 들어가서 \"우리는 디지털 퍼스트이지만, 여전히 인쇄 사업도 유지하고 있습니다\"라고 말한다. 우리는 완전히 반대다. \"우리는 모든 형태에서 매우 탄탄하고 성장하는 인쇄 사업을 보유하고 있습니다.\"",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "본지, 신문, 서적, 특별판, 문고판 등—우리는 그 어느 때보다 더 많은 종이를 구매하고 있다. 흥미로운 점은 정부, 명품 브랜드, 항공사 등 우리의 파트너들, 심지어 특정 국가의 AI 담당 부처조차도 인쇄 매체의 지면을 원한다는 사실이다. 정말 놀라운 일이다.",
+        "rich_text": [
+          {
+            "text": "본지, 신문, 서적, 특별판, 문고판 등—우리는 그 어느 때보다 더 많은 종이를 구매하고 있다. 흥미로운 점은 정부, 명품 브랜드, 항공사 등 우리의 파트너들, 심지어 특정 국가의 AI 담당 부처조차도 인쇄 매체의 지면을 원한다는 사실이다. 정말 놀라운 일이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "이는 부분적으로 자신감에서 비롯된다고 생각한다. 우리는 우리가 하는 일을 믿고 있으며, 시장이나 회의실을 둘러보며 다른 디지털 제품을 이야기하지 않는다. 우리는 우리 비즈니스의 수익을 이끄는 가장 핵심적인 것에 대해 이야기한다.",
+        "rich_text": [
+          {
+            "text": "이는 부분적으로 자신감에서 비롯된다고 생각한다. 우리는 우리가 하는 일을 믿고 있으며, 시장이나 회의실을 둘러보며 다른 디지털 제품을 이야기하지 않는다. 우리는 우리 비즈니스의 수익을 이끄는 가장 핵심적인 것에 대해 이야기한다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 비전통적인 출판사들—정부든, 학계든, 기업이든—조차 인쇄물이 브랜드에 미치는 힘에 대해 이해하고 있는 반면, 디지털에서는 여전히 그 힘이 부족해 보인다.",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 비전통적인 출판사들—정부든, 학계든, 기업이든—조차 인쇄물이 브랜드에 미치는 힘에 대해 이해하고 있는 반면, 디지털에서는 여전히 그 힘이 부족해 보인다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 맞다. 때로는 우리도 고개를 갸웃거린다. 글로벌 공학 선도 기업과 미팅을 할 때, 우리가 영화, 팟캐스트 아이디어, 이벤트, 디지털 파트너십 등 모노클 생태계 내의 다양한 제안을 가져가도, 그들은 잡지 실물을 집어 들거나 우리가 만든 인쇄 파생물을 보며 이렇게 말한다. \"아니요, 우리가 원하는 건 바로 이겁니다. 디지털 아이디어도 좋지만, 우리는 지면에 담기는 이 느낌이 좋고 이것이야말로 진정한 혁신이라고 느낍니다.\"",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 맞다. 때로는 우리도 고개를 갸웃거린다. 글로벌 공학 선도 기업과 미팅을 할 때, 우리가 영화, 팟캐스트 아이디어, 이벤트, 디지털 파트너십 등 모노클 생태계 내의 다양한 제안을 가져가도, 그들은 잡지 실물을 집어 들거나 우리가 만든 인쇄 파생물을 보며 이렇게 말한다. \"아니요, 우리가 원하는 건 바로 이겁니다. 디지털 아이디어도 좋지만, 우리는 지면에 담기는 이 느낌이 좋고 이것이야말로 진정한 혁신이라고 느낍니다.\"",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "미팅 후 차에 타면서 \"와, 대단하다\" 하고 놀라곤 한다. 삼림 벌목을 줄이고 지속 가능성을 추구하는 글로벌 기술 기업조차 결국 인쇄된 글자로 돌아오는 것이다.",
+        "rich_text": [
+          {
+            "text": "미팅 후 차에 타면서 \"와, 대단하다\" 하고 놀라곤 한다. 삼림 벌목을 줄이고 지속 가능성을 추구하는 글로벌 기술 기업조차 결국 인쇄된 글자로 돌아오는 것이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "경영진의 체면치레인지도 모르겠다. 분기 이사회 미팅에 참석해 다른 C-레벨 임원들과 발표할 때, 마케팅 담당자로서 모노클과 협업한 실물 인쇄물 10권을 사람들에게 직접 남겨두고 올 수 있다면 엄청난 장점이 되니까 말이다. 다른 모든 사람들은 똑같은 화면으로 발표하고 있을 테니 말이다.",
+        "rich_text": [
+          {
+            "text": "경영진의 체면치레인지도 모르겠다. 분기 이사회 미팅에 참석해 다른 C-레벨 임원들과 발표할 때, 마케팅 담당자로서 모노클과 협업한 실물 인쇄물 10권을 사람들에게 직접 남겨두고 올 수 있다면 엄청난 장점이 되니까 말이다. 다른 모든 사람들은 똑같은 화면으로 발표하고 있을 테니 말이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "디지털 일반에는 일종의 '상품화(소모품화)'가 수반된다. 반면 인쇄 매체는 당신이 계속해서 돋보일 수 있게 만들어 준다.",
+        "rich_text": [
+          {
+            "text": "디지털 일반에는 일종의 '상품화(소모품화)'가 수반된다. 반면 인쇄 매체는 당신이 계속해서 돋보일 수 있게 만들어 준다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "\"요즘은 잡지에 대해 논하는 칼럼 지면 자체가 그리 많지 않다.\"",
+        "rich_text": [
+          {
+            "text": "\"요즘은 잡지에 대해 논하는 칼럼 지면 자체가 그리 많지 않다.\"",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 모노클 잡지 자체에 대해 몇 가지 관점으로 이야기해 보자. 모노클을 한 번도 들어본 적 없는 사람을 만났다고 가정해 보자. 손에 잡지가 없다면, 모노클이라는 잡지를 어떻게 설명하겠는가?",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 모노클 잡지 자체에 대해 몇 가지 관점으로 이야기해 보자. 모노클을 한 번도 들어본 적 없는 사람을 만났다고 가정해 보자. 손에 잡지가 없다면, 모노클이라는 잡지를 어떻게 설명하겠는가?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 물성(physical nature)부터 이야기할 것 같다. '책 같은(bookish)' 느낌이라고 말이다. \"당신이 아는 일반적인 잡지를 생각하지 마라. 포맷 면에서 훨씬 더 책 같고 무게감과 볼륨감이 있는 매체를 떠올려 보라. 당신에게 도전 과제를 던지고 놀라움을 주며, 전 세계를 안내하는 매체다.\"",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 물성(physical nature)부터 이야기할 것 같다. '책 같은(bookish)' 느낌이라고 말이다. \"당신이 아는 일반적인 잡지를 생각하지 마라. 포맷 면에서 훨씬 더 책 같고 무게감과 볼륨감이 있는 매체를 떠올려 보라. 당신에게 도전 과제를 던지고 놀라움을 주며, 전 세계를 안내하는 매체다.\"",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "2005년, 2006년 구상 단계를 거쳐 2007년 창간할 때, 우리는 '국제 정세, 비즈니스, 문화, 디자인에 대한 글로벌 브리핑'이라고 설명했고, 지금도 그 표현을 쓴다. 그것이 우리의 정체성이다.",
+        "rich_text": [
+          {
+            "text": "2005년, 2006년 구상 단계를 거쳐 2007년 창간할 때, 우리는 '국제 정세, 비즈니스, 문화, 디자인에 대한 글로벌 브리핑'이라고 설명했고, 지금도 그 표현을 쓴다. 그것이 우리의 정체성이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "그리고 이것은 라디오, 출판 사업으로 확장되었다. 그러나 핵심 제품으로 돌아가면, 이것은 글로벌 브리핑이자 매일의 동반자다. 한 달 내내 함께 살아가는 매체이며, 바라건대 평생을 함께하길 바란다. 17년 동안 우리와 함께해 온 독자들이 \"이 모노클 수집본들을 어떻게 해야 하죠?\"라고 물어오곤 하니까.",
+        "rich_text": [
+          {
+            "text": "그리고 이것은 라디오, 출판 사업으로 확장되었다. 그러나 핵심 제품으로 돌아가면, 이것은 글로벌 브리핑이자 매일의 동반자다. 한 달 내내 함께 살아가는 매체이며, 바라건대 평생을 함께하길 바란다. 17년 동안 우리와 함께해 온 독자들이 \"이 모노클 수집본들을 어떻게 해야 하죠?\"라고 물어오곤 하니까.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "이사를 가거나 집 크기를 줄일 때 이 많은 잡지를 다 옮기기는 힘들지만 그렇다고 쓰레기통에 버리고 싶어 하지도 않으니, 수거 전문 기관이라도 만들어야 할 지경이다. 그래서 단순한 브리핑을 넘어 일상의 동반자가 되었다고 생각한다.",
+        "rich_text": [
+          {
+            "text": "이사를 가거나 집 크기를 줄일 때 이 많은 잡지를 다 옮기기는 힘들지만 그렇다고 쓰레기통에 버리고 싶어 하지도 않으니, 수거 전문 기관이라도 만들어야 할 지경이다. 그래서 단순한 브리핑을 넘어 일상의 동반자가 되었다고 생각한다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 기본적으로 서가(bookshelf)를 부활시키고 있는 셈이다.",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 기본적으로 서가(bookshelf)를 부활시키고 있는 셈이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 맞다. 그래서 스웨덴 브랜드 스트링(String)과 함께 소형 책장 사업도 진행했다. 침대 옆에 둘 수 있는 2년 치 구독분을 보관할 수 있는 캡슐 컬렉션 책장이다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 맞다. 그래서 스웨덴 브랜드 스트링(String)과 함께 소형 책장 사업도 진행했다. 침대 옆에 둘 수 있는 2년 치 구독분을 보관할 수 있는 캡슐 컬렉션 책장이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 모노클 창간 전 이야기로 돌아가서, 이 아이디어는 언제 처음 떠올랐나?",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 모노클 창간 전 이야기로 돌아가서, 이 아이디어는 언제 처음 떠올랐나?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: <월페이퍼*> 이전 시절로 거슬러 올라간다. 독일의 <슈테른(Stern)>, <디 보헤(Die Woche)>, 그리고 <배니티 페어(Vanity Fair)> 등 여러 매체에 글을 쓰던 시절이었다. 나는 셀로판 투명 비닐 폴더를 가지고 다녔다. 멋져 보이는 뉴스 페이지, 좋은 Q&A 페이지, <더 슈피겔(Der Spiegel)> 같은 곳에서 본 훌륭한 르포 기사를 오려내어 비닐 사이에 끼워 넣으며 나만의 잡지를 조합하는 놀이를 하곤 했다. 그 폴더들이 아직도 어딘가 아카이브에 보관되어 있다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " <월페이퍼*> 이전 시절로 거슬러 올라간다. 독일의 <슈테른(Stern)>, <디 보헤(Die Woche)>, 그리고 <배니티 페어(Vanity Fair)> 등 여러 매체에 글을 쓰던 시절이었다. 나는 셀로판 투명 비닐 폴더를 가지고 다녔다. 멋져 보이는 뉴스 페이지, 좋은 Q&A 페이지, <더 슈피겔(Der Spiegel)> 같은 곳에서 본 훌륭한 르포 기사를 오려내어 비닐 사이에 끼워 넣으며 나만의 잡지를 조합하는 놀이를 하곤 했다. 그 폴더들이 아직도 어딘가 아카이브에 보관되어 있다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "90년대 초반, 그러니까 <월페이퍼*>를 창간하기 3년 전쯤이었다. 뉴스 요소가 있고, 글로벌하며, 비즈니스적인 측면을 갖추고, 세상의 최전선과 패션의 맨 앞줄에 서는 매체를 만들고 싶다는 생각이 늘 있었다.",
+        "rich_text": [
+          {
+            "text": "90년대 초반, 그러니까 <월페이퍼*>를 창간하기 3년 전쯤이었다. 뉴스 요소가 있고, 글로벌하며, 비즈니스적인 측면을 갖추고, 세상의 최전선과 패션의 맨 앞줄에 서는 매체를 만들고 싶다는 생각이 늘 있었다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "오랫동안 구상했지만 그사이 <월페이퍼*>가 먼저 진행되었을 뿐이다. 오늘날의 <모노클>이야말로 내가 항상 만들고 싶었던 바로 그 잡지다.",
+        "rich_text": [
+          {
+            "text": "오랫동안 구상했지만 그사이 <월페이퍼*>가 먼저 진행되었을 뿐이다. 오늘날의 <모노클>이야말로 내가 항상 만들고 싶었던 바로 그 잡지다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 모노클의 아이디어가 <월페이퍼*>보다 앞섰다는 이야기는 처음 듣는다.",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 모노클의 아이디어가 <월페이퍼*>보다 앞섰다는 이야기는 처음 듣는다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 그렇다. 언젠가 이런 잡지를 하고 싶다고 생각했지만, 내가 부편집장이나 편집장이 되어 발행인을 설득할지, 아니면 직접 발행인이자 미디어 소유주가 되어 만들게 될지는 몰랐다. 고용주가 되기보다는 피고용인이 될 거라 생각했었다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 그렇다. 언젠가 이런 잡지를 하고 싶다고 생각했지만, 내가 부편집장이나 편집장이 되어 발행인을 설득할지, 아니면 직접 발행인이자 미디어 소유주가 되어 만들게 될지는 몰랐다. 고용주가 되기보다는 피고용인이 될 거라 생각했었다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 창간 당시 당신이 그리던 비전은 얼마나 완성되어 있었나? 창간 사설에서 인쇄, 웹, 방송 요소를 갖춘 완전한 미디어 브랜드가 되겠다고 했고, 지국 개설, 무상 배포 금지, 연예인 가십과 조잡한 제작 가치로부터의 안식처가 되겠다는 10가지 공약을 내걸었던데.",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 창간 당시 당신이 그리던 비전은 얼마나 완성되어 있었나? 창간 사설에서 인쇄, 웹, 방송 요소를 갖춘 완전한 미디어 브랜드가 되겠다고 했고, 지국 개설, 무상 배포 금지, 연예인 가십과 조잡한 제작 가치로부터의 안식처가 되겠다는 10가지 공약을 내걸었던데.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 그 글을 다시 읽어보면 흥미롭다. 그것은 우리가 지금까지도 지키고 있는 선언문(manifesto)이기 때문이다. 배급사나 광고주들과 대화할 때 제시했던 피칭의 일부였고, 우리는 여전히 그 약속을 이행하고 있다. 연예인이 지면을 장식하는 일은 거의 없으며, 전 세계에 지국을 열고 우리 이름이 적힌 문이 있는 사무실에 직원을 두는 원칙을 고수한다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 그 글을 다시 읽어보면 흥미롭다. 그것은 우리가 지금까지도 지키고 있는 선언문(manifesto)이기 때문이다. 배급사나 광고주들과 대화할 때 제시했던 피칭의 일부였고, 우리는 여전히 그 약속을 이행하고 있다. 연예인이 지면을 장식하는 일은 거의 없으며, 전 세계에 지국을 열고 우리 이름이 적힌 문이 있는 사무실에 직원을 두는 원칙을 고수한다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "테두리 영역에서는 확장이 있었다. 라디오 방송을 운영 중이고, 텔레비전은 생각만큼 많이 하지는 못했지만 경과를 지켜봐 달라. 다시 돌아올지도 모른다.",
+        "rich_text": [
+          {
+            "text": "테두리 영역에서는 확장이 있었다. 라디오 방송을 운영 중이고, 텔레비전은 생각만큼 많이 하지는 못했지만 경과를 지켜봐 달라. 다시 돌아올지도 모른다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "지면을 만들 때나 이벤트를 열 때나 최선을 다해 최고를 전달하겠다는 진정성은 변함이 없다. 가장 결정적인 기준은 여전히 9월호나 12월/1월호의 품질이다.",
+        "rich_text": [
+          {
+            "text": "지면을 만들 때나 이벤트를 열 때나 최선을 다해 최고를 전달하겠다는 진정성은 변함이 없다. 가장 결정적인 기준은 여전히 9월호나 12월/1월호의 품질이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 그것이 여전히 본질적인 기준인 셈이다.",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 그것이 여전히 본질적인 기준인 셈이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 절대적이다. 규율을 만들고 집중력을 유지하게 하며, 우리의 미션을 직시하게 한다. 뉴스레터 비즈니스도 중요해지고 있지만, 결국 일년에 10번 나오는 핵심 잡지가 본질이다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 절대적이다. 규율을 만들고 집중력을 유지하게 하며, 우리의 미션을 직시하게 한다. 뉴스레터 비즈니스도 중요해지고 있지만, 결국 일년에 10번 나오는 핵심 잡지가 본질이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 모노클을 해체해 보면 서체, 사진, 일러스트, 내용, 문장 등 개별 요소는 전문적이지만 아주 독보적이지는 않을 수 있다. 하지만 잡지 전체는 독보적이다. 인쇄 그래픽 디자인이라기보다 일종의 '산업 디자인(제품 디자인)'에 가깝다는 의견에 대해 어떻게 생각하는가?",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 모노클을 해체해 보면 서체, 사진, 일러스트, 내용, 문장 등 개별 요소는 전문적이지만 아주 독보적이지는 않을 수 있다. 하지만 잡지 전체는 독보적이다. 인쇄 그래픽 디자인이라기보다 일종의 '산업 디자인(제품 디자인)'에 가깝다는 의견에 대해 어떻게 생각하는가?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 어느 정도 동의한다. <월페이퍼*>에서 <모노클>로 넘어오기까지 5년의 휴식기가 있었다. 그 기간 동안 우리는 브랜딩 및 디자인 에이전시를 키우고 다른 편집 제품들을 작업했다. 에어버스 항공기 기체를 도색하거나 리테일 프로젝트, 패키징 작업을 진행했는데, 이 모든 과정이 상판이나 날개가 달린 환경을 만드는 산업 디자인이자 그래픽 디자인 작업이었다. 그 5년의 세월이 브랜드 코드와 성공적인 론칭의 조건에 대해 깊이 고민할 수 있게 해준 소중한 자산이 되었다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 어느 정도 동의한다. <월페이퍼*>에서 <모노클>로 넘어오기까지 5년의 휴식기가 있었다. 그 기간 동안 우리는 브랜딩 및 디자인 에이전시를 키우고 다른 편집 제품들을 작업했다. 에어버스 항공기 기체를 도색하거나 리테일 프로젝트, 패키징 작업을 진행했는데, 이 모든 과정이 상판이나 날개가 달린 환경을 만드는 산업 디자인이자 그래픽 디자인 작업이었다. 그 5년의 세월이 브랜드 코드와 성공적인 론칭의 조건에 대해 깊이 고민할 수 있게 해준 소중한 자산이 되었다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 사용하는 어휘도 흥미롭다. '팟캐스트' 대신 '라디오', '비디오' 대신 '텔레비전'이라는 용어를 고집하는데 의도적인 것인가?",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 사용하는 어휘도 흥미롭다. '팟캐스트' 대신 '라디오', '비디오' 대신 '텔레비전'이라는 용어를 고집하는데 의도적인 것인가?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 의도적이기도 하고, 게으르기도 하며, 내가 1970년대에 자란 아이이기 때문이기도 하다. 편집국에서 사람들이 흔히 빠지는 언어의 함정에 빠지지 않으려 노력한다. 말하는 톤과 코드에 진정성과 의도를 담고자 한다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 의도적이기도 하고, 게으르기도 하며, 내가 1970년대에 자란 아이이기 때문이기도 하다. 편집국에서 사람들이 흔히 빠지는 언어의 함정에 빠지지 않으려 노력한다. 말하는 톤과 코드에 진정성과 의도를 담고자 한다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "팟캐스트를 매우 일찍 시작한 인쇄 브랜드 중 하나였지만, 런던 방송국 근처 스튜디오에서 쇼를 만들다 \"이것을 24시간 일주일 내내 길 위에서 진행하면 어떨까?\" 하고 생각하여 라디오로 확장하게 되었다. 로맨티시즘도 일부 작용했겠지만, 2007년 당시 디지털 사진의 도입으로 인쇄 매체의 필름 느낌이 사라지고 피부 표현이 조잡해지던 시기에, 나의 고유한 언어와 필름 촬영 방식을 고수함으로써 제대로 된 위치를 정립하고자 했다.",
+        "rich_text": [
+          {
+            "text": "팟캐스트를 매우 일찍 시작한 인쇄 브랜드 중 하나였지만, 런던 방송국 근처 스튜디오에서 쇼를 만들다 \"이것을 24시간 일주일 내내 길 위에서 진행하면 어떨까?\" 하고 생각하여 라디오로 확장하게 되었다. 로맨티시즘도 일부 작용했겠지만, 2007년 당시 디지털 사진의 도입으로 인쇄 매체의 필름 느낌이 사라지고 피부 표현이 조잡해지던 시기에, 나의 고유한 언어와 필름 촬영 방식을 고수함으로써 제대로 된 위치를 정립하고자 했다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "\"우리는 아마 팟캐스트 분야에 가장 먼저 뛰어든 레거시 인쇄 브랜드 중 하나였을 것이다.\"",
+        "rich_text": [
+          {
+            "text": "\"우리는 아마 팟캐스트 분야에 가장 먼저 뛰어든 레거시 인쇄 브랜드 중 하나였을 것이다.\"",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 모든 것이 '콘텐츠'라는 밋밋한 단어로 통칭되는 시대에 '지국(Bureaux)' 같은 고유한 어휘를 사용하는 것은 강력한 힘을 가진다.",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 모든 것이 '콘텐츠'라는 밋밋한 단어로 통칭되는 시대에 '지국(Bureaux)' 같은 고유한 어휘를 사용하는 것은 강력한 힘을 가진다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 컨설팅 업체와의 회의에서 나온 단어가 아니다. 우리 모두가 믿는 바다. 오랜 기간 함께 일해 온 팀원들이 방콕, 홍콩, 애시빌 등 전 세계 독자들과 함께하는 밤을 기획하고 취재하며 공유하는 사명감이다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 컨설팅 업체와의 회의에서 나온 단어가 아니다. 우리 모두가 믿는 바다. 오랜 기간 함께 일해 온 팀원들이 방콕, 홍콩, 애시빌 등 전 세계 독자들과 함께하는 밤을 기획하고 취재하며 공유하는 사명감이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 무분별한 규모 확장에 집착하는 기조와 달리 독자와의 밀착된 관계와 친밀감을 유지하는 전략을 취하고 있는데, 이에 대해 어떻게 보고 있나?",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 무분별한 규모 확장에 집착하는 기조와 달리 독자와의 밀착된 관계와 친밀감을 유지하는 전략을 취하고 있는데, 이에 대해 어떻게 보고 있나?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 지난 3년간 사모펀드나 미디어 그룹으로부터 거대 자본을 통해 외형을 급격히 확장하자는 제안을 많이 받았다. 하지만 속도감 있는 무분별한 확장은 위험을 동반한다. 우리는 가업 형태의 독립 출판사로서 우리가 감당할 수 있는 깊이와 규모를 알고 있으며, 지난 10년간 트렌드만 쫓다 길가에 사라져간 수많은 매체들의 전철을 밟지 않고 우리만의 방식으로 생존해 있다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 지난 3년간 사모펀드나 미디어 그룹으로부터 거대 자본을 통해 외형을 급격히 확장하자는 제안을 많이 받았다. 하지만 속도감 있는 무분별한 확장은 위험을 동반한다. 우리는 가업 형태의 독립 출판사로서 우리가 감당할 수 있는 깊이와 규모를 알고 있으며, 지난 10년간 트렌드만 쫓다 길가에 사라져간 수많은 매체들의 전철을 밟지 않고 우리만의 방식으로 생존해 있다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 젊은 세대 사이에서도 무조건적인 규모 확장이 창의성의 적이라는 인식이 퍼지고 있다.",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 젊은 세대 사이에서도 무조건적인 규모 확장이 창의성의 적이라는 인식이 퍼지고 있다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 구석에서 팔짱 끼고 안 움직이려는 브랜드가 되려는 것은 아니지만, 독자들도 브랜드와의 친밀한 소통과 '나만의 브랜드'라는 느낌을 원한다. 미국 등 주요 시장에서 여전히 더 성장할 기회가 많지만, 우리만의 조건으로 일을 해나갈 수 있다는 점이 중요하다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 구석에서 팔짱 끼고 안 움직이려는 브랜드가 되려는 것은 아니지만, 독자들도 브랜드와의 친밀한 소통과 '나만의 브랜드'라는 느낌을 원한다. 미국 등 주요 시장에서 여전히 더 성장할 기회가 많지만, 우리만의 조건으로 일을 해나갈 수 있다는 점이 중요하다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 어릴 적 앵커 피터 제닝스(Peter Jennings)에게 매료되었다고 들었다. 그에게서 어떤 영향을 받았나?",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 어릴 적 앵커 피터 제닝스(Peter Jennings)에게 매료되었다고 들었다. 그에게서 어떤 영향을 받았나?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 1970년대 캐나다에서 자라며 밤 11시 뉴스 방송의 이끌림과 국경을 넘어 글로벌 특파원으로 활약하던 피터 제닝스의 모습에 매료되었다. 저널리즘을 꿈꾸게 되었고, 80년대 후반 뉴욕에서 그를 직접 만났을 때 \"캐나다에 머물지 말고 세상 밖으로 나가 위험을 무릅쓰고 경험하라\"는 조언을 받았다. 그 가르침이 내 삶의 방향을 결정지었다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 1970년대 캐나다에서 자라며 밤 11시 뉴스 방송의 이끌림과 국경을 넘어 글로벌 특파원으로 활약하던 피터 제닝스의 모습에 매료되었다. 저널리즘을 꿈꾸게 되었고, 80년대 후반 뉴욕에서 그를 직접 만났을 때 \"캐나다에 머물지 말고 세상 밖으로 나가 위험을 무릅쓰고 경험하라\"는 조언을 받았다. 그 가르침이 내 삶의 방향을 결정지었다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 실제로 당신의 커리어가 피터 제닝스와 비슷하게 전개되기도 했다. 해외 특파원으로 일했고 아프가니스탄에서 총상을 입기도 했다. 삶과 자극을 준 인물들에 대한 일종의 로맨티시즘이 엿보이는데 정말 특별하다. 제닝스는 9살 때 이미 라디오 방송을 시작했다고 하는데, 당신은 9살 때 무엇을 하고 있었나?",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 실제로 당신의 커리어가 피터 제닝스와 비슷하게 전개되기도 했다. 해외 특파원으로 일했고 아프가니스탄에서 총상을 입기도 했다. 삶과 자극을 준 인물들에 대한 일종의 로맨티시즘이 엿보이는데 정말 특별하다. 제닝스는 9살 때 이미 라디오 방송을 시작했다고 하는데, 당신은 9살 때 무엇을 하고 있었나?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 9살 때 캐나다 국방부에 편지를 쓰고 있었던가? 그와 비슷했다. 라디오 방송에 출연하긴 했다. 커리어라 할 수는 없지만, CBC 라디오에 출연해 캐나다의 방위력이 미국에 너무 의존하고 있다는 불만을 토로했던 기억이 난다. 국방부 장관에게 전투기 선정 방식이 잘못되었다고 편지를 썼는데 그게 CBC 라디오까지 연결되었다. 9살이나 10살쯤이었는데 아주 어릴 때 첫 전국 라디오 방송을 진행한 셈이다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 9살 때 캐나다 국방부에 편지를 쓰고 있었던가? 그와 비슷했다. 라디오 방송에 출연하긴 했다. 커리어라 할 수는 없지만, CBC 라디오에 출연해 캐나다의 방위력이 미국에 너무 의존하고 있다는 불만을 토로했던 기억이 난다. 국방부 장관에게 전투기 선정 방식이 잘못되었다고 편지를 썼는데 그게 CBC 라디오까지 연결되었다. 9살이나 10살쯤이었는데 아주 어릴 때 첫 전국 라디오 방송을 진행한 셈이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "피터 제닝스를 다시 만난 이야기도 빼놓을 수 없다. 80년대 후반 뉴욕에서 제닝스가 진행하는 뉴스를 참관한 뒤 그와 이야기를 나누었고, 그가 내 호텔까지 차를 태워주었다. 제닝스의 리무진 안에서 그에게 조언을 구하자 그는 \"세상 밖으로 나가라. 위험을 무릅쓰고 경험해라. 저널리스트의 역량은 경험과 만난 사람들에 의해 결정된다\"고 말해주었다. 그 조언은 평생의 자산이 되었다.",
+        "rich_text": [
+          {
+            "text": "피터 제닝스를 다시 만난 이야기도 빼놓을 수 없다. 80년대 후반 뉴욕에서 제닝스가 진행하는 뉴스를 참관한 뒤 그와 이야기를 나누었고, 그가 내 호텔까지 차를 태워주었다. 제닝스의 리무진 안에서 그에게 조언을 구하자 그는 \"세상 밖으로 나가라. 위험을 무릅쓰고 경험해라. 저널리스트의 역량은 경험과 만난 사람들에 의해 결정된다\"고 말해주었다. 그 조언은 평생의 자산이 되었다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 그리고 당신은 그 조언을 그대로 실행에 옮겼다.",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 그리고 당신은 그 조언을 그대로 실행에 옮겼다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 그렇다. 그를 진심으로 존경했다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 그렇다. 그를 진심으로 존경했다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 그렇다면 오늘날 당신이 존경하거나 매료된 인물은 누구인가?",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 그렇다면 오늘날 당신이 존경하거나 매료된 인물은 누구인가?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 방송 분야나 미디어 전체에서 딱 한 명에게 완전히 매료되었다고 말하긴 어렵다. 하지만 저널리즘 분야에서 존경하고 함께 시간을 보내고 싶은 매력적인 인물들은 여전히 많다. 지난 5주 동안 집에 겨우 나흘 머물렀을 정도로 출장 일정이 빡빡해서 지금 당장 명확하게 떠올리기 힘들지만 말이다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 방송 분야나 미디어 전체에서 딱 한 명에게 완전히 매료되었다고 말하긴 어렵다. 하지만 저널리즘 분야에서 존경하고 함께 시간을 보내고 싶은 매력적인 인물들은 여전히 많다. 지난 5주 동안 집에 겨우 나흘 머물렀을 정도로 출장 일정이 빡빡해서 지금 당장 명확하게 떠올리기 힘들지만 말이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "\"미디어 업계의 길가에는 무리하게 규모를 키우려다 사라진 수많은 매체의 시체가 즐비하다.\"",
+        "rich_text": [
+          {
+            "text": "\"미디어 업계의 길가에는 무리하게 규모를 키우려다 사라진 수많은 매체의 시체가 즐비하다.\"",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 스스로를 창업가/엔터프리너와 잡지 제작자/편집장 중 어느 쪽에 더 가깝다고 보는가?",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 스스로를 창업가/엔터프리너와 잡지 제작자/편집장 중 어느 쪽에 더 가깝다고 보는가?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 그냥 '저널리스트'다. 입국 서류의 직업란에도 회장이나 CEO 대신 늘 '저널리스트'라고 적는다. 현장을 목격하고, 흡수하고, 해석해서 전달하는 것. 그게 내 진짜 정체성이다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 그냥 '저널리스트'다. 입국 서류의 직업란에도 회장이나 CEO 대신 늘 '저널리스트'라고 적는다. 현장을 목격하고, 흡수하고, 해석해서 전달하는 것. 그게 내 진짜 정체성이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 저널리즘의 멋진 점은 호기심을 마음껏 발휘할 수 있다는 점이다.",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 저널리즘의 멋진 점은 호기심을 마음껏 발휘할 수 있다는 점이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 동의한다. 특히 당신만큼 호기심이 많고 저널리즘의 가치를 믿어주는 편집자와 발행인을 만나는 것은 큰 행운이다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 동의한다. 특히 당신만큼 호기심이 많고 저널리즘의 가치를 믿어주는 편집자와 발행인을 만나는 것은 큰 행운이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 연간 250일이나 출장을 다니면 잡지 제작에 쏟는 시간이 줄어들지 않나?",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 연간 250일이나 출장을 다니면 잡지 제작에 쏟는 시간이 줄어들지 않나?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 팬데믹 이후에는 런던보다 취리히 본사에 더 머무르며 데일리 편집장 자리를 앤드루 턱(Andrew Tuck)에게 넘기고 나는 총괄 에디터 및 CEO 역할에 집중하게 되었다. 하지만 전 세계 지국과 현장을 직접 순회하며 사안을 연결하고 기획을 지시하는 것이 잡지의 퀄리티를 유지하는 데 매우 결정적인 역할을 한다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 팬데믹 이후에는 런던보다 취리히 본사에 더 머무르며 데일리 편집장 자리를 앤드루 턱(Andrew Tuck)에게 넘기고 나는 총괄 에디터 및 CEO 역할에 집중하게 되었다. 하지만 전 세계 지국과 현장을 직접 순회하며 사안을 연결하고 기획을 지시하는 것이 잡지의 퀄리티를 유지하는 데 매우 결정적인 역할을 한다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "다만 마감일 편집국에 다 같이 모여 인쇄소로 잡지를 넘긴 후, 팀원들과 와인 한 잔을 나누며 축배를 들지 못하는 것은 늘 아쉽다. 그것이 뉴스룸의 진짜 마법이자 힘인데 말이다.",
+        "rich_text": [
+          {
+            "text": "다만 마감일 편집국에 다 같이 모여 인쇄소로 잡지를 넘긴 후, 팀원들과 와인 한 잔을 나누며 축배를 들지 못하는 것은 늘 아쉽다. 그것이 뉴스룸의 진짜 마법이자 힘인데 말이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 인쇄본 제작에서 절대 타협하거나 위임하지 않는 부분은 무엇인가?",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 인쇄본 제작에서 절대 타협하거나 위임하지 않는 부분은 무엇인가?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 커버 이미지와 커버 문구(Coverlines) 선택이다. 그리고 완성된 이슈 전체의 흐름을 벽에 붙여놓고 처음부터 끝까지 점검하는 작업은 절대 남에게 넘기지 않는다. 실수나 오류가 생기더라도 최종적으로 확인하는 눈이 되어주는 것이 저널리스트로서 내 의무다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 커버 이미지와 커버 문구(Coverlines) 선택이다. 그리고 완성된 이슈 전체의 흐름을 벽에 붙여놓고 처음부터 끝까지 점검하는 작업은 절대 남에게 넘기지 않는다. 실수나 오류가 생기더라도 최종적으로 확인하는 눈이 되어주는 것이 저널리스트로서 내 의무다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 창업자로서 가지는 권위와 아우라가 브랜드에 미치는 영향도 상당하다.",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 창업자로서 가지는 권위와 아우라가 브랜드에 미치는 영향도 상당하다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 독립 출판사이기 때문에 모든 성공도, 모든 실수도 온전히 우리 자신의 몫이다. 매일이 줄타기 같지만 그렇기에 확신을 가지고 신속하게 나아갈 수 있다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 독립 출판사이기 때문에 모든 성공도, 모든 실수도 온전히 우리 자신의 몫이다. 매일이 줄타기 같지만 그렇기에 확신을 가지고 신속하게 나아갈 수 있다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "\"우리는 거대 재벌 그룹에 속해 있지 않다. 모든 성공도, 모든 실수도 온전히 우리의 것이다.\"",
+        "rich_text": [
+          {
+            "text": "\"우리는 거대 재벌 그룹에 속해 있지 않다. 모든 성공도, 모든 실수도 온전히 우리의 것이다.\"",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 모노클이 미국 독자들에게 주는 특별한 영향력이 있다. 미국 중심적이지 않은 시각을 제시한다는 점이다.",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 모노클이 미국 독자들에게 주는 특별한 영향력이 있다. 미국 중심적이지 않은 시각을 제시한다는 점이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 미국은 우리에게 가장 큰 시장이다. 특정 정치적 진영에 편향되지 않고 상식과 실용주의에 기반해 균형 잡힌 시각을 제공하는 것이 모노클의 정체성이다. 정치적 아젠다 없이 실용적이고 상식적인 시각을 전달하려 노력한다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 미국은 우리에게 가장 큰 시장이다. 특정 정치적 진영에 편향되지 않고 상식과 실용주의에 기반해 균형 잡힌 시각을 제공하는 것이 모노클의 정체성이다. 정치적 아젠다 없이 실용적이고 상식적인 시각을 전달하려 노력한다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 창의성과 창의적 인재들이 물가가 비싼 뉴욕 같은 도시를 떠나는 현상에 대해서는 어떻게 보나?",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 창의성과 창의적 인재들이 물가가 비싼 뉴욕 같은 도시를 떠나는 현상에 대해서는 어떻게 보나?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 도시가 반드시 저렴할 필요는 없다. 런던이나 함부르크도 결코 저렴한 도시가 아니었다. 젊은 창작자들에게 중요한 것은 비용보다 최고의 환경에서 최고의 인재들과 함께 배우고 성장하는 것이다. 집에서만 일하려 하지 말고 세상 밖으로 나와 사람들과 부딪치며 배워야 한다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 도시가 반드시 저렴할 필요는 없다. 런던이나 함부르크도 결코 저렴한 도시가 아니었다. 젊은 창작자들에게 중요한 것은 비용보다 최고의 환경에서 최고의 인재들과 함께 배우고 성장하는 것이다. 집에서만 일하려 하지 말고 세상 밖으로 나와 사람들과 부딪치며 배워야 한다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 모노클을 '가업(Family business)'이라고 표현하는 이유는 무엇인가?",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 모노클을 '가업(Family business)'이라고 표현하는 이유는 무엇인가?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 사모펀드 자본 없이 내 지분 70%와 내 어머니, 그리고 뜻을 함께하는 몇몇 개인 투자자(Family office)의 자금으로 운영되기 때문이다. 게다가 90년대 <월페이퍼*> 시절부터 인쇄와 디자인을 함께 고민해 온 핵심 팀원들이 지금까지 함께하고 있다. 이들이야말로 내 진짜 가족이다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 사모펀드 자본 없이 내 지분 70%와 내 어머니, 그리고 뜻을 함께하는 몇몇 개인 투자자(Family office)의 자금으로 운영되기 때문이다. 게다가 90년대 <월페이퍼*> 시절부터 인쇄와 디자인을 함께 고민해 온 핵심 팀원들이 지금까지 함께하고 있다. 이들이야말로 내 진짜 가족이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 팀원들에게 지분이 나누어져 있나?",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 팀원들에게 지분이 나누어져 있나?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 보상과 보너스로 최선을 다해 대우하지만 지분은 주주 가문들이 소유하고 있다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 보상과 보너스로 최선을 다해 대우하지만 지분은 주주 가문들이 소유하고 있다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조지 젠드론: 만약 사고로 자리를 비우게 된다면 승계 작업은 어떻게 되나?",
+        "rich_text": [
+          {
+            "text": "조지 젠드론:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 만약 사고로 자리를 비우게 된다면 승계 작업은 어떻게 되나?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "타일러 브륄레: 내가 <월페이퍼*>를 떠난 뒤에도 그 매체가 잘 유지되었듯, 좋은 브랜드는 명확한 디자인 그리드, 서체, 정체성, 프레임워크를 가지고 있다. 모노클 역시 최고의 에디터들과 튼튼한 시스템이 구축되어 있어 내가 없어도 흔들림 없이 잘 나아갈 것이다.",
+        "rich_text": [
+          {
+            "text": "타일러 브륄레:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 내가 <월페이퍼*>를 떠난 뒤에도 그 매체가 잘 유지되었듯, 좋은 브랜드는 명확한 디자인 그리드, 서체, 정체성, 프레임워크를 가지고 있다. 모노클 역시 최고의 에디터들과 튼튼한 시스템이 구축되어 있어 내가 없어도 흔들림 없이 잘 나아갈 것이다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      }
+    ],
+    "lang": "ko",
+    "createdTime": "2026-10-08T02:02:00.000Z",
+    "description": "디지털 전환의 광풍 속에서도 종이 매체와 저널리즘의 본질을 고수하며 독보적인 브랜드 생태계를 일군 <모노클> 창립자 타일러 브륄레의 인터뷰."
+  },
+  {
     "slug": "who-is-alex-zono",
     "title": "Alex Zono는 누구이며, 그는 왜 러닝에 푹 빠졌을까?",
     "category": "Sports",
