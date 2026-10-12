@@ -81,7 +81,7 @@ await check('Every published post has valid required fields, blocks, and a gener
   assert.ok(Array.isArray(posts) && posts.length > 0, 'posts.json contains published posts');
   const slugs = new Set();
   for (const post of posts) {
-    for (const field of ['title', 'from', 'source', 'url', 'slug']) {
+    for (const field of ['title', 'from', 'source', 'url', 'slug', 'description']) {
       assert.equal(typeof post[field], 'string');
       assert.ok(post[field].trim(), `${post.slug || post.title} is missing ${field}`);
     }
@@ -93,6 +93,8 @@ await check('Every published post has valid required fields, blocks, and a gener
     slugs.add(post.slug);
     assert.ok(['http:', 'https:'].includes(new URL(post.url).protocol), `${post.slug} Source URL must be HTTP(S)`);
     assert.ok(Array.isArray(post.body), `${post.slug} body must be a block array`);
+    assert.ok(!Object.hasOwn(post, 'thumbnail'), `${post.slug} must not use the retired Thumbnail field`);
+    assert.ok(post.body.length > 0, `${post.slug} article body must not be empty`);
     for (const block of post.body) {
       assert.ok(supportedBlocks.has(block.type), `${post.slug} has unsupported block ${block.type}`);
       if (block.type === 'video' || block.type === 'embed') {

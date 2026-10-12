@@ -16,13 +16,12 @@ The Source Spread database has been created in the connected Notion workspace. I
 | Date | Date — original/source date shown on the site | Yes |
 | Sort Date | Date — controls newest-first order; initially matches Date | Yes |
 | Category | Select (`Design`, `Fashion`, `Tech`, `Sports`, `Culture`) | Yes |
-| Thumbnail | URL or Files & media | No |
 | Source URL | URL | Yes |
 | Published | Checkbox | Yes |
-| Description | Rich text | No; generated from the opening when empty |
-| Slug | Rich text | No; generated from Title when empty |
+| Description | Rich text | Yes; generated from the opening when empty |
+| Slug | Rich text | Yes; generated from Title when empty |
 
-Write article content in the page body. Paragraphs start flush left without indentation and get about one line of space between them; line breaks inside a paragraph stay visible. The site keeps inline bold/italic/underline/strikethrough/code, text colors, links, headings, quotes, bulleted and numbered lists, checklists, callouts, bookmarks, YouTube video embeds, equations, dividers, and images. Empty paragraphs remain as extra spacing. Only rows with `Published` checked are exported. An unpublished `[TEST] Sample article` is in the database as a field and body example; replace it with an actual article before publishing. Share the data source with the Notion integration used for the API token.
+All remaining metadata and the article body are required before publication. `Published` is the on/off switch: leave it unchecked while drafting, then check it when the completed article should go live. Write article content in the page body. Paragraphs start flush left without indentation and get about one line of space between them; line breaks inside a paragraph stay visible. The site keeps inline bold/italic/underline/strikethrough/code, text colors, links, headings, quotes, bulleted and numbered lists, checklists, callouts, bookmarks, YouTube video embeds, equations, dividers, and images. Empty paragraphs remain as extra spacing. Only rows with `Published` checked are exported. An unpublished `[TEST] Sample article` is in the database as a field and body example; replace it with an actual article before publishing. Share the data source with the Notion integration used for the API token.
 
 ### Article layout
 
@@ -40,7 +39,7 @@ The canonical content rules and automated/manual QA checklist are in [docs/SITE_
 
 Create an internal Notion integration with edit access to this data source, then add its token as the repository Actions secret `NOTION_TOKEN`. The data source ID is already configured in the sync script; it can be overridden with the `NOTION_DATA_SOURCE_ID` environment variable if the database is moved. Open **Actions → Sync Notion → Run workflow** to sync. Changed content is proposed as a PR; the workflow runs Site QA against that exact content and merges it only when the required check passes. A failed check leaves the PR open and the live site unchanged.
 
-The site reads `posts.json`. Each published article has a two-sentence `Description` used for search and social previews. Existing descriptions can be edited in Notion; if left blank, sync makes a two-sentence description from the opening paragraphs and saves it back to Notion. A sync also creates static pages for each published post so link preview crawlers receive that article's title, description, canonical URL, and thumbnail without running JavaScript. Uploaded Notion images are copied into `assets/notion/` so expiring Notion file URLs are not used by the public site. Each downloaded image must be at most 15 MB.
+The site reads `posts.json`. Each published article has a two-sentence `Description` used for search and social previews. Existing descriptions can be edited in Notion; if left blank, sync makes a two-sentence description from the opening paragraphs and saves it back to Notion. A sync also creates static pages for each published post so link preview crawlers receive that article's title, description, and canonical URL without running JavaScript. Uploaded Notion images in the article body are copied into `assets/notion/` so expiring Notion file URLs are not used by the public site. Each downloaded image must be at most 15 MB.
 
 ## Near-real-time sync
 
