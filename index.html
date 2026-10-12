@@ -151,7 +151,7 @@
      장식이라 일부러 옅게 뒀고, 크기는 본문과 같은 14px 로 둔다(작게까지 줄이면 그냥 안 보인다). */
   .foot { padding: 56px 16px 28px; text-align: right; color: #b5b5b5; }
 
-  /* ===== 글 상세: 본문은 오른쪽 칸, 이름: 발언 문단은 왼쪽 칸과 같은 줄 ===== */
+  /* ===== 글 상세: PC는 화자와 대사를 같은 줄, 모바일은 화자 위·대사 아래 ===== */
   @font-face { font-family: 'iA Quattro'; font-weight: 400; font-display: swap; src: url('https://cdn.jsdelivr.net/gh/iaolo/iA-Fonts@master/iA%20Writer%20Quattro/Webfonts/iAWriterQuattroS-Regular.woff2') format('woff2'); }
   .article { max-width: 1040px; margin: 0 auto; padding: 40px 16px 160px; font: 16px/1.5 'iA Quattro', 'Pretendard', sans-serif; }
   .article .head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 40px 64px; margin-bottom: 120px; }
@@ -195,8 +195,10 @@
     .article .head { grid-template-columns: minmax(0, 1fr); margin-bottom: 64px; }
     .article .head.no-lede { margin-bottom: 32px; }
     .article h1 { font-size: 20px; line-height: 1.35; }
-    /* 모든 대화에서 발화자 칸을 같은 폭으로 고정해 본문 시작 위치를 맞춘다. */
-    .article-content { grid-template-columns: clamp(5rem, 24vw, 7rem) minmax(0, 1fr); column-gap: 12px; }
+    /* 좁은 화면에서는 화자를 위에 두고 대사를 본문 폭으로 읽게 한다. */
+    .article-content { grid-template-columns: minmax(0, 1fr); }
+    .article-content > .dialogue { grid-template-columns: minmax(0, 1fr); row-gap: 0; align-items: start; }
+    .article .dialogue-speaker { text-align: left; font-size: .86em; margin-bottom: .15em; }
   }
 
   /* ===== 잡지식 양끝맞춤 (2026-10-01 정식 채택) =====
