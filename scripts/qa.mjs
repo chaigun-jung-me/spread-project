@@ -163,6 +163,7 @@ try {
   const desktop = await page.evaluate(() => ({
     width: document.documentElement.clientWidth,
     scrollWidth: document.documentElement.scrollWidth,
+    rightEdge: Math.max(...[...document.querySelectorAll('body *')].map(element => element.getBoundingClientRect().right)),
     dateDisplay: getComputedStyle(document.querySelector('.list td.date')).display,
     mobileDateDisplay: getComputedStyle(document.querySelector('.mobile-date')).display,
     titleWhiteSpace: getComputedStyle(document.querySelector('.list td.title > .t')).whiteSpace,
@@ -170,7 +171,8 @@ try {
     fineHover: matchMedia('(hover: hover) and (pointer: fine)').matches,
     sourceWhiteSpace: getComputedStyle(document.querySelector('.list td.src a')).whiteSpace,
   }));
-  assert.equal(desktop.scrollWidth, desktop.width, 'desktop should not scroll horizontally');
+  assert.ok(desktop.scrollWidth <= desktop.width, 'desktop should not scroll horizontally');
+  assert.ok(desktop.rightEdge <= desktop.width + 1, 'desktop content extends beyond the viewport');
   assert.notEqual(desktop.dateDisplay, 'none');
   assert.equal(desktop.mobileDateDisplay, 'none');
   assert.equal(desktop.titleWhiteSpace, 'nowrap');
@@ -198,6 +200,7 @@ try {
       return {
         width: document.documentElement.clientWidth,
         scrollWidth: document.documentElement.scrollWidth,
+        rightEdge: Math.max(...[...document.querySelectorAll('body *')].map(element => element.getBoundingClientRect().right)),
         dateVisible: !!date && getComputedStyle(date).display !== 'none' && !!date.textContent.trim(),
         dateHeaderHidden: getComputedStyle(document.querySelector('.list th.date')).display === 'none',
         titleOneLine: getComputedStyle(title).whiteSpace === 'nowrap',
@@ -205,7 +208,8 @@ try {
         pointerMode: matchMedia('(hover: hover) and (pointer: fine)').matches,
       };
     });
-    assert.equal(mobile.scrollWidth, width, `${width}px mobile layout overflows horizontally`);
+    assert.ok(mobile.scrollWidth <= width, `${width}px mobile layout overflows horizontally`);
+    assert.ok(mobile.rightEdge <= width + 1, `${width}px mobile content extends beyond the viewport`);
     assert.ok(mobile.dateVisible, `${width}px mobile layout hides the article date`);
     assert.ok(mobile.dateHeaderHidden, `${width}px mobile layout shows a redundant Date heading`);
     assert.ok(mobile.titleOneLine, `${width}px mobile title wraps`);
