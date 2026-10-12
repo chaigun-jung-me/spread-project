@@ -161,7 +161,7 @@ try {
   await page.locator('.list tbody tr[data-slug]').first().waitFor({ state: 'visible' });
   await page.evaluate(() => document.fonts?.ready);
   const desktop = await page.evaluate(() => ({
-    width: innerWidth,
+    width: document.documentElement.clientWidth,
     scrollWidth: document.documentElement.scrollWidth,
     dateDisplay: getComputedStyle(document.querySelector('.list td.date')).display,
     mobileDateDisplay: getComputedStyle(document.querySelector('.mobile-date')).display,
@@ -196,7 +196,7 @@ try {
       const date = document.querySelector('.mobile-date');
       const category = document.querySelector('.list td.cat');
       return {
-        width: innerWidth,
+        width: document.documentElement.clientWidth,
         scrollWidth: document.documentElement.scrollWidth,
         dateVisible: !!date && getComputedStyle(date).display !== 'none' && !!date.textContent.trim(),
         dateHeaderHidden: getComputedStyle(document.querySelector('.list th.date')).display === 'none',
