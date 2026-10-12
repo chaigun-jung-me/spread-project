@@ -69,9 +69,9 @@ await check('Homepage JavaScript parses and the required visual rules are presen
   mustMatch(/\.list td\.title\s*>\s*\.mobile-date\s*\{[^}]*display:\s*block/s, 'mobile date must remain visible');
   mustMatch(/\.list th\.date,[\s\S]*?\.list td\.date\s*\{\s*display:\s*none/s, 'mobile Date column must be hidden');
   mustMatch(/@media\s*\(hover:\s*hover\)\s*and\s*\(pointer:\s*fine\)\s*\{[^}]*title-roll/s, 'title animation must be limited to real hover devices');
-  mustMatch(/grid-template-columns:\s*clamp\(5rem,\s*24vw,\s*7rem\)\s+minmax\(0,\s*1fr\)/, 'mobile dialogue speaker column must have a shared fixed width');
+  mustMatch(/@media\s*\(max-width:\s*760px\)[\s\S]*?\.article-content\s*\{\s*grid-template-columns:\s*minmax\(0,\s*1fr\)\s*;\s*\}[\s\S]*?\.article-content\s*>\s*\.dialogue\s*\{\s*grid-template-columns:\s*minmax\(0,\s*1fr\)/, 'mobile dialogues must use a single column without a fixed speaker rail');
   mustMatch(/\.article \.notion-video\s*\{[^}]*aspect-ratio:\s*16\s*\/\s*9/s, 'video must preserve its aspect ratio');
-  mustMatch(/\.article \.dialogue-speaker\s*\{[^}]*text-align:\s*right/s, 'dialogue speaker must be right aligned');
+  mustMatch(/\.article \.dialogue-speaker\s*\{[^}]*text-align:\s*right/s, 'desktop dialogue speaker must be right aligned');
   mustMatch(/\.article \.dialogue-text\s*\{[^}]*text-indent:\s*0/s, 'dialogue text must not be indented');
   mustMatch(/<link rel="apple-touch-icon"/, 'iPhone home screen icon must be configured');
   mustMatch(/<link rel="manifest"/, 'web app manifest must be configured');
@@ -241,13 +241,22 @@ try {
 
   await mobilePage.goto(`${baseUrl}/posts/${encodeURIComponent(fixture.slug)}`, { waitUntil: 'domcontentloaded' });
   await mobilePage.locator('.dialogue-text').first().waitFor({ state: 'visible' });
-  const dialogueLayout = await mobilePage.locator('.dialogue-text').evaluateAll(elements => ({
-    starts: elements.map(element => Math.round(element.getBoundingClientRect().left)),
-    speakers: [...document.querySelectorAll('.dialogue-speaker')].map(element => element.textContent.trim()),
+  const dialogueLayout = await mobilePage.locator('.dialogue').evaluateAll(elements => elements.map(element => {
+    const speaker = element.querySelector('.dialogue-speaker');
+    const text = element.querySelector('.dialogue-text');
+    return {
+      speaker: speaker.textContent.trim(),
+      speakerTop: speaker.getBoundingClientRect().top,
+      textTop: text.getBoundingClientRect().top,
+      textLeft: Math.round(text.getBoundingClientRect().left),
+      contentLeft: Math.round(document.querySelector('.article-content').getBoundingClientRect().left),
+      columns: getComputedStyle(element).gridTemplateColumns,
+    };
   }));
-  assert.ok(dialogueLayout.starts.length > 1);
-  assert.equal(new Set(dialogueLayout.starts).size, 1, 'mobile dialogue text starts at different horizontal positions');
-  assert.ok(dialogueLayout.speakers.every(speaker => !speaker.endsWith(':')), 'speaker command colon leaked into article text');
+  assert.ok(dialogueLayout.length > 1);
+  assert.ok(dialogueLayout.every(row => row.speakerTop < row.textTop), 'mobile speaker must appear above its dialogue');
+  assert.ok(dialogueLayout.every(row => row.textLeft === row.contentLeft), 'mobile dialogue must use the full content column');
+  assert.ok(dialogueLayout.every(row => !row.speaker.endsWith(':')), 'speaker command colon leaked into article text');
   passed += 1;
   process.stdout.write('✓ Mobile dialogue names share one column and the command colon is hidden\n');
 
