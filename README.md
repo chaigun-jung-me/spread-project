@@ -38,7 +38,7 @@ The canonical content rules and automated/manual QA checklist are in [docs/SITE_
 
 ## Manual sync
 
-Create an internal Notion integration with edit access to this data source, then add its token as the repository Actions secret `NOTION_TOKEN`. The data source ID is already configured in the sync script; it can be overridden with the `NOTION_DATA_SOURCE_ID` environment variable if the database is moved. Then open **Actions → Sync Notion → Run workflow** and choose the branch to update. The workflow commits changed content to that branch; when run on the production branch, the connected Vercel project deploys the update.
+Create an internal Notion integration with edit access to this data source, then add its token as the repository Actions secret `NOTION_TOKEN`. The data source ID is already configured in the sync script; it can be overridden with the `NOTION_DATA_SOURCE_ID` environment variable if the database is moved. Open **Actions → Sync Notion → Run workflow** to sync. Changed content is proposed as a PR; the workflow runs Site QA against that exact content and merges it only when the required check passes. A failed check leaves the PR open and the live site unchanged.
 
 The site reads `posts.json`. Each published article has a two-sentence `Description` used for search and social previews. Existing descriptions can be edited in Notion; if left blank, sync makes a two-sentence description from the opening paragraphs and saves it back to Notion. A sync also creates static pages for each published post so link preview crawlers receive that article's title, description, canonical URL, and thumbnail without running JavaScript. Uploaded Notion images are copied into `assets/notion/` so expiring Notion file URLs are not used by the public site. Each downloaded image must be at most 15 MB.
 
@@ -49,7 +49,7 @@ The manual GitHub Actions button remains available. To also sync automatically a
 1. Create a fine-grained GitHub token for `chaigun-jung-me/spread-project` with **Actions: write** permission. Add it to Vercel Production environment variables as `GITHUB_DISPATCH_TOKEN`.
 2. In Vercel Production, set `NOTION_WEBHOOK_VERIFICATION_TOKEN` after creating the Notion webhook as described below. The function logs the initial one-time verification token so it can be copied from Vercel function logs. Store it in Vercel, redeploy, then paste that same value into Notion's verification dialog.
 3. In the Notion integration's **Webhooks** settings, create a subscription pointing to `https://source-spread.kr/api/notion-webhook`. Subscribe to `page.created`, `page.content_updated`, `page.properties_updated`, `page.deleted`, `page.undeleted`, `page.moved`, and `data_source.content_updated`. The integration should only be shared with the Source Spread database so unrelated pages do not trigger builds.
-4. Verify the webhook in Notion. Edits then dispatch the existing sync workflow on `main`; its generated commit triggers the connected Vercel deployment. The endpoint verifies Notion's HMAC signature before dispatching.
+4. Verify the webhook in Notion. Edits then dispatch the sync workflow on `main`; changed content is published through a PR only after Site QA passes. The endpoint verifies Notion's HMAC signature before dispatching.
 
 Notion groups frequent page edits and typically delivers the event within about a minute, with documented delivery taking up to five minutes. GitHub Actions and Vercel deployment add time after that, so this is near-real-time rather than instantaneous. The manual sync action remains a fallback.
 

@@ -5,6 +5,8 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
+  actions: write
 
 concurrency:
   group: notion-content-sync-${{ github.ref }}
@@ -22,27 +24,15 @@ jobs:
         with:
           node-version: 24
 
-      - name: Install pnpm and dependencies
-        run: |
-          npm install --global pnpm@11.19.0
-          pnpm install --frozen-lockfile
-
-      - name: Install Chromium
-        run: pnpm exec playwright install --with-deps chromium
-
       - name: Sync published Notion posts
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_DATA_SOURCE_ID: ${{ secrets.NOTION_DATA_SOURCE_ID }}
         run: node scripts/sync-notion.mjs
 
-      - name: Run site QA before publishing
-        run: pnpm qa
-
-      - name: Commit generated site
+      - name: Create a QA-gated content update
         env:
-          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          NOTION_DATA_SOURCE_ID: ${{ secrets.NOTION_DATA_SOURCE_ID }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -51,26 +41,38 @@ jobs:
             echo "No changes to publish."
             exit 0
           fi
+
+          sync_branch="notion-sync-${GITHUB_RUN_ID}"
+          git switch -c "$sync_branch"
           git commit -m "chore: sync published posts from Notion"
+          git push origin "$sync_branch"
 
-          for attempt in 1 2 3; do
-            if git push; then
-              exit 0
-            fi
+          pr_url=$(gh pr create \
+            --base main \
+            --head "$sync_branch" \
+            --title "chore: sync published posts from Notion" \
+            --body "Automated Notion sync. This update will publish only after the required Site QA check passes.")
 
-            if [ "$attempt" -eq 3 ]; then
-              echo "Push failed after 3 attempts."
-              exit 1
-            fi
-
-            echo "Remote main advanced; refreshing and regenerating before retry $((attempt + 1))."
-            git fetch origin main
-            git reset --hard origin/main
-            node scripts/sync-notion.mjs
-            git add index.html posts.json posts assets
-            if git diff --cached --quiet; then
-              echo "Remote already contains all published posts."
-              exit 0
-            fi
-            git commit -m "chore: sync published posts from Notion"
+          gh workflow run site-qa.yml --ref "$sync_branch"
+          qa_run_id=""
+          for attempt in $(seq 1 30); do
+            qa_run_id=$(gh run list \
+              --workflow site-qa.yml \
+              --branch "$sync_branch" \
+              --limit 10 \
+              --json databaseId,event \
+              --jq '[.[] | select(.event == "workflow_dispatch")][0].databaseId // empty')
+            if [ -n "$qa_run_id" ]; then break; fi
+            sleep 2
           done
+          if [ -z "$qa_run_id" ]; then
+            echo "Could not find the Site QA run for $sync_branch. Leaving the PR open for inspection."
+            exit 1
+          fi
+
+          if ! gh run watch "$qa_run_id" --exit-status; then
+            echo "Site QA failed. Leaving $pr_url open and unpublished."
+            exit 1
+          fi
+
+          gh pr merge "$pr_url" --merge
