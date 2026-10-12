@@ -189,11 +189,10 @@ for (const page of published) {
   let parsedSource;
   try { parsedSource = new URL(sourceUrl); } catch { throw new Error(`Source URL is invalid on “${title}”.`); }
   if (!['http:', 'https:'].includes(parsedSource.protocol)) throw new Error(`Source URL must use HTTP or HTTPS on “${title}”.`);
-  const slug = slugify(valueText(page, 'Slug') || title) || page.id.replaceAll('-', '');
+  const existingSlug = valueText(page, 'Slug').trim();
+  const slug = slugify(existingSlug || title) || page.id.replaceAll('-', '');
   if (slugs.has(slug)) throw new Error(`Duplicate slug: ${slug}`);
   slugs.add(slug);
-  const rawThumb = valueUrl(page, 'Thumbnail');
-  const thumbnail = rawThumb ? await localImage(rawThumb, page.id, 'thumbnail') : '';
   const rawBlocks = await fetchBlocks(page.id);
   const body = [];
   let imageCount = 0;
@@ -205,18 +204,27 @@ for (const page of published) {
   const post = {
     slug, title, category, date, sortDate,
     from, source,
-    url: sourceUrl, thumbnail, body, lang: 'ko', createdTime: page.created_time || '',
+    url: sourceUrl, body, lang: 'ko', createdTime: page.created_time || '',
     description: valueText(page, 'Description').trim(),
   };
-  if (!post.description) {
-    post.description = autoDescription(post);
+  if (!post.description) post.description = autoDescription(post);
+  if (!body.length) throw new Error(`Published page “${title}” is missing its article body.`);
+
+  const generatedProperties = {};
+  if (!valueText(page, 'Description').trim()) {
+    generatedProperties.Description = { rich_text: [{ text: { content: post.description } }] };
+  }
+  if (!existingSlug) {
+    generatedProperties.Slug = { rich_text: [{ text: { content: slug } }] };
+  }
+  if (Object.keys(generatedProperties).length) {
     try {
       await notion(`pages/${page.id}`, {
         method: 'PATCH',
-        body: JSON.stringify({ properties: { Description: { rich_text: [{ text: { content: post.description } }] } } }),
+        body: JSON.stringify({ properties: generatedProperties }),
       });
     } catch (error) {
-      console.warn(`Could not save the generated Description to Notion for “${title}”: ${error.message}`);
+      throw new Error(`Could not save the required generated fields to Notion for “${title}”: ${error.message}`);
     }
   }
   posts.push(post);
@@ -241,7 +249,6 @@ for (const post of posts) {
     .replace('property="og:title" content="source spread"', `property="og:title" content="${plain(title)}"`)
     .replace(/property="og:description" content="[^"]*"/, `property="og:description" content="${plain(description)}"`)
     .replace('href="https://source-spread.kr/">', `href="${canonical}">`);
-  if (post.thumbnail) html = html.replace('</head>', `<meta property="og:image" content="https://source-spread.kr${post.thumbnail}">\n</head>`);
   const directory = path.join(generatedPosts, post.slug);
   await mkdir(directory, { recursive: true });
   await writeFile(path.join(directory, 'index.html'), html);

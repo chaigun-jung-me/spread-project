@@ -431,7 +431,6 @@ function articleView(slug) {
     return html;
   };
   const blocks = p.body || [];
-  const thumb = p.thumbnail ? `<div class=\"article-row\"><figure><img src=\"${escapeHtml(p.thumbnail)}\" alt=\"${escapeHtml(p.title)}\" loading=\"lazy\"></figure></div>` : '';
   return `
     ${topBar({ post: p.category })}
     <main class=\"article\">
@@ -446,7 +445,7 @@ function articleView(slug) {
           </dl>
         </div>
       </div>
-      <div class=\"article-content\" lang=\"${escapeHtml(lang)}\">${thumb}${renderBlocks(blocks)}</div>
+      <div class=\"article-content\" lang=\"${escapeHtml(lang)}\">${renderBlocks(blocks)}</div>
     </main>`;
 }
 
@@ -499,11 +498,6 @@ function updateMeta(post) {
   document.querySelector('meta[property="og:type"]').content = post ? 'article' : 'website';
   const canonical = document.querySelector('link[rel="canonical"]');
   canonical.href = `https://source-spread.kr${post ? `/posts/${encodeURIComponent(post.slug)}` : category ? catHref(category) : '/'}`;
-  let ogImage = document.querySelector('meta[property="og:image"]');
-  if (post && post.thumbnail) {
-    if (!ogImage) { ogImage = document.createElement('meta'); ogImage.setAttribute('property', 'og:image'); document.head.appendChild(ogImage); }
-    ogImage.content = post.thumbnail;
-  } else if (ogImage) ogImage.remove();
 }
 
 // 폭이 바뀌면 넘침도 바뀐다. 글꼴이 늦게 와도 폭이 변하니 그때도 다시 잰다.
