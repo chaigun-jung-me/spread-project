@@ -72,6 +72,7 @@ await check('Homepage JavaScript parses and the required visual rules are presen
   mustMatch(/@media\s*\(max-width:\s*760px\)[\s\S]*?\.article-content\s*\{\s*grid-template-columns:\s*minmax\(0,\s*1fr\)\s*;\s*\}[\s\S]*?\.article-content\s*>\s*\.dialogue\s*\{\s*grid-template-columns:\s*minmax\(0,\s*1fr\)/, 'mobile dialogues must use a single column without a fixed speaker rail');
   mustMatch(/\.article \.notion-video\s*\{[^}]*aspect-ratio:\s*16\s*\/\s*9/s, 'video must preserve its aspect ratio');
   mustMatch(/\.article \.dialogue-speaker\s*\{[^}]*text-align:\s*right/s, 'desktop dialogue speaker must be right aligned');
+  mustMatch(/@media\s*\(max-width:\s*760px\)[\s\S]*?\.article \.dialogue-speaker\s*\{[^}]*font-weight:\s*700/s, 'mobile dialogue speaker must be bold');
   mustMatch(/\.article \.dialogue-text\s*\{[^}]*text-indent:\s*0/s, 'dialogue text must not be indented');
   mustMatch(/<link rel="apple-touch-icon"/, 'iPhone home screen icon must be configured');
   mustMatch(/<link rel="manifest"/, 'web app manifest must be configured');
@@ -248,6 +249,7 @@ try {
       speaker: speaker.textContent.trim(),
       speakerTop: speaker.getBoundingClientRect().top,
       textTop: text.getBoundingClientRect().top,
+      speakerWeight: getComputedStyle(speaker).fontWeight,
       textLeft: Math.round(text.getBoundingClientRect().left),
       contentLeft: Math.round(document.querySelector('.article-content').getBoundingClientRect().left),
       columns: getComputedStyle(element).gridTemplateColumns,
@@ -255,6 +257,7 @@ try {
   }));
   assert.ok(dialogueLayout.length > 1);
   assert.ok(dialogueLayout.every(row => row.speakerTop < row.textTop), 'mobile speaker must appear above its dialogue');
+  assert.ok(dialogueLayout.every(row => Number(row.speakerWeight) >= 700), 'mobile speaker must be bold');
   assert.ok(dialogueLayout.every(row => row.textLeft === row.contentLeft), 'mobile dialogue must use the full content column');
   assert.ok(dialogueLayout.every(row => !row.speaker.endsWith(':')), 'speaker command colon leaked into article text');
   passed += 1;
