@@ -189,6 +189,26 @@ try {
   passed += 1;
   process.stdout.write('✓ Desktop hover animates an overflowing title\n');
 
+  const pagingPage = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+  await pagingPage.route('**/posts.json', route => route.fulfill({
+    contentType: 'application/json',
+    body: JSON.stringify(Array.from({ length: 26 }, (_, index) => ({
+      slug: `paging-${index + 1}`, title: `Paging article ${index + 1}`, category: 'Culture',
+      date: '2026-01-01', sortDate: '2026-01-01', from: 'QA', source: 'QA', url: 'https://example.com',
+    }))),
+  }));
+  await pagingPage.goto(baseUrl, { waitUntil: 'domcontentloaded' });
+  await pagingPage.locator('.list tbody tr[data-slug]').first().waitFor({ state: 'visible' });
+  assert.equal(await pagingPage.locator('.list tbody tr[data-slug]').count(), 12, 'homepage initially shows 12 posts');
+  const loadMore = pagingPage.getByRole('button', { name: 'Read more…' });
+  await loadMore.click();
+  assert.equal(await pagingPage.locator('.list tbody tr[data-slug]').count(), 24, 'first click adds 12 posts');
+  await pagingPage.getByRole('button', { name: 'Read more…' }).click();
+  assert.equal(await pagingPage.locator('.list tbody tr[data-slug]').count(), 26, 'second click shows the remaining posts');
+  assert.equal(await pagingPage.getByRole('button', { name: 'Read more…' }).count(), 0, 'load-more button disappears when all posts are visible');
+  passed += 1;
+  process.stdout.write('✓ Read more shows 12 posts at a time and hides after the last page\n');
+
   const mobileContext = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
   const mobilePage = await mobileContext.newPage();
   mobilePage.on('pageerror', error => pageErrors.push(error.message));
@@ -227,6 +247,7 @@ try {
   await sportsLink.click();
   await mobilePage.locator('.list tbody tr[data-slug]').first().waitFor({ state: 'visible' });
   assert.ok((await mobilePage.locator('.list tbody tr[data-slug] .cat').allTextContents()).every(text => text === 'Sports'));
+  assert.equal(await mobilePage.getByRole('button', { name: 'Read more…' }).count(), 0, 'category with 12 or fewer posts should not show Read more');
   assert.equal(new URL(mobilePage.url()).hash, '', 'category navigation should not use a hash route');
   passed += 1;
   process.stdout.write('✓ Category navigation uses a clean path and filters its posts\n');

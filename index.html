@@ -75,6 +75,9 @@
   .list td.src a { display: block; max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-decoration: underline; text-underline-offset: 3px; }
   .list .mobile-date { display: none; }
   .list .empty td { color: var(--muted); }
+  .load-more-wrap { display: flex; justify-content: center; padding: 32px 16px 0; }
+  .load-more { border: 0; padding: 8px 12px; background: transparent; color: var(--fg); font: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+  .load-more:hover, .load-more:focus-visible { color: var(--muted); }
   .list td.title { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: clip; }
   .list td.title > .t { display: inline-block; white-space: nowrap; }
   .list td.title.flow > .t { will-change: transform; }
@@ -239,6 +242,7 @@ let posts = [];
 const categories = ['Design', 'Fashion', 'Tech', 'Sports', 'Culture'];
 let sort = { key: null, dir: 'asc' };      // 처음엔 적어 둔 순서 그대로, 머리글을 누르면 정렬
 let filter = null;                          // /category/tech 경로에서 읽음
+let shownPostCount = 12;
 
 const categorySlug = c => c.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const catHref = c => c ? `/category/${categorySlug(c)}` : '/';
@@ -298,7 +302,8 @@ function listView() {
     return `<th class="${cls}" data-sort="${key}" tabindex="0">${label}${arrow}</th>`;
   };
   // 제목은 span 으로 한 번 더 감싼다 — 좁은 화면에서 넘칠 때 이 span 만 흐른다.
-  const rows = visiblePosts().map(p => `
+  const matchingPosts = visiblePosts();
+  const rows = matchingPosts.slice(0, shownPostCount).map(p => `
     <tr tabindex="0" data-slug="${escapeHtml(p.slug)}">
       <td class="title" lang="${escapeHtml(p.lang || 'ko')}"><span class="t">${escapeHtml(p.title)}</span><span class="mobile-date">${escapeHtml(displayDate(p.date))}</span></td>
       <td class="from">${escapeHtml(p.from)}</td>
@@ -311,7 +316,8 @@ function listView() {
     <table class="list">
       <thead><tr>${th('title', 'Title', 'title')}${th('from', 'From', 'from')}${th('source', 'Source', 'src')}${th('date', 'Date', 'date')}${th('category', 'Category', 'cat')}</tr></thead>
       <tbody>${rows || '<tr class="empty"><td colspan="5">—</td></tr>'}</tbody>
-    </table>`;
+    </table>
+    ${shownPostCount < matchingPosts.length ? '<div class="load-more-wrap"><button class="load-more" type="button">Read more…</button></div>' : ''}`;
 }
 
 function articleView(slug) {
@@ -515,6 +521,10 @@ function toggleSort(key) {
   app.querySelector(`th[data-sort="${key}"]`).focus({ preventScroll: true });
 }
 app.addEventListener('click', e => {
+  if (e.target.closest('button.load-more')) {
+    shownPostCount += 12;
+    return render(true);
+  }
   const th = e.target.closest('th[data-sort]');
   if (th) return toggleSort(th.dataset.sort);
   // 줄 어디를 눌러도 글로 이동, 단 글자를 드래그 중이면 무시
