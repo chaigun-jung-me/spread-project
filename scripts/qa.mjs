@@ -21,6 +21,7 @@ const fixture = {
   date: '2000-01-01', sortDate: '1900-01-01', from: 'QA', source: 'QA fixture',
   url: 'https://example.com/source', description: 'QA fixture description. Used only in automated checks.', lang: 'en',
   body: [
+    { type: 'paragraph', text: 'A regular paragraph must fill the mobile article column.', rich_text: [{ text: 'A regular paragraph must fill the mobile article column.', annotations: {} }] },
     { type: 'paragraph', text: 'GQ: A question for the interviewee.', rich_text: [{ text: 'GQ: A question for the interviewee.', annotations: {} }] },
     { type: 'divider', text: '', rich_text: [] },
     { type: 'paragraph', text: 'James Jebbia: A longer speaker name should not move this dialogue.', rich_text: [{ text: 'James Jebbia: A longer speaker name should not move this dialogue.', annotations: {} }] },
@@ -69,10 +70,10 @@ await check('Homepage JavaScript parses and the required visual rules are presen
   mustMatch(/\.list td\.title\s*>\s*\.mobile-date\s*\{[^}]*display:\s*block/s, 'mobile date must remain visible');
   mustMatch(/\.list th\.date,[\s\S]*?\.list td\.date\s*\{\s*display:\s*none/s, 'mobile Date column must be hidden');
   mustMatch(/@media\s*\(hover:\s*hover\)\s*and\s*\(pointer:\s*fine\)\s*\{[^}]*title-roll/s, 'title animation must be limited to real hover devices');
-  mustMatch(/@media\s*\(max-width:\s*760px\)[\s\S]*?\.article-content\s*\{\s*grid-template-columns:\s*minmax\(0,\s*1fr\)\s*;\s*\}[\s\S]*?\.article-content\s*>\s*\.dialogue\s*\{\s*grid-template-columns:\s*minmax\(0,\s*1fr\)/, 'mobile dialogues must use a single column without a fixed speaker rail');
+  mustMatch(/@media\s*\(max-width:\s*1024px\)[\s\S]*?\.article-content\s*\{\s*grid-template-columns:\s*minmax\(0,\s*1fr\)\s*;\s*\}[\s\S]*?\.article-content\s*>\s*\.article-row\s*\{\s*grid-column:\s*1\s*;\s*\}[\s\S]*?\.article-content\s*>\s*\.dialogue\s*\{\s*grid-template-columns:\s*minmax\(0,\s*1fr\)/, 'narrow-window articles and dialogues must use a single full-width column');
   mustMatch(/\.article \.notion-video\s*\{[^}]*aspect-ratio:\s*16\s*\/\s*9/s, 'video must preserve its aspect ratio');
   mustMatch(/\.article \.dialogue-speaker\s*\{[^}]*text-align:\s*right/s, 'desktop dialogue speaker must be right aligned');
-  mustMatch(/@media\s*\(max-width:\s*760px\)[\s\S]*?\.article \.dialogue-speaker\s*\{[^}]*font-weight:\s*700/s, 'mobile dialogue speaker must be bold');
+  mustMatch(/@media\s*\(max-width:\s*1024px\)[\s\S]*?\.article \.dialogue-speaker\s*\{[^}]*font-weight:\s*700/s, 'narrow-window dialogue speaker must be bold');
   mustMatch(/\.article \.dialogue-text\s*\{[^}]*text-indent:\s*0/s, 'dialogue text must not be indented');
   mustMatch(/<link rel="apple-touch-icon"/, 'iPhone home screen icon must be configured');
   mustMatch(/<link rel="manifest"/, 'web app manifest must be configured');
@@ -283,6 +284,25 @@ try {
   assert.ok(dialogueLayout.every(row => !row.speaker.endsWith(':')), 'speaker command colon leaked into article text');
   passed += 1;
   process.stdout.write('✓ Mobile dialogue names share one column and the command colon is hidden\n');
+
+  for (const width of [640, 768, 900, 1024]) {
+    await mobilePage.setViewportSize({ width, height: 900 });
+    const layout = await mobilePage.evaluate(() => {
+      const element = document.querySelector('.dialogue');
+      const speaker = element.querySelector('.dialogue-speaker').getBoundingClientRect();
+      const text = element.querySelector('.dialogue-text').getBoundingClientRect();
+      const content = document.querySelector('.article-content').getBoundingClientRect();
+      const paragraph = document.querySelector('.article-row').getBoundingClientRect();
+      return { speakerBottom: speaker.bottom, textTop: text.top, textLeft: text.left, contentLeft: content.left, textWidth: text.width, contentWidth: content.width, paragraphLeft: paragraph.left, paragraphWidth: paragraph.width };
+    });
+    assert.ok(layout.speakerBottom <= layout.textTop + 1, `${width}px dialogue must stack speaker above text`);
+    assert.ok(Math.abs(layout.textLeft - layout.contentLeft) <= 1, `${width}px dialogue text must start at the full content column`);
+    assert.ok(layout.textWidth >= layout.contentWidth - 1, `${width}px dialogue text column is too narrow: ${JSON.stringify(layout)}`);
+    assert.ok(Math.abs(layout.paragraphLeft - layout.contentLeft) <= 1, `${width}px article paragraph must start at the full content column`);
+    assert.ok(layout.paragraphWidth >= layout.contentWidth - 1, `${width}px article paragraph column is too narrow: ${JSON.stringify(layout)}`);
+  }
+  passed += 1;
+  process.stdout.write('✓ Dialogue layout stays readable at 640/768/900/1024px\n');
 
   await mobilePage.goto(`${baseUrl}/posts/${encodeURIComponent(fixture.slug)}`, { waitUntil: 'domcontentloaded' });
   await mobilePage.locator('.notion-divider').first().waitFor({ state: 'visible' });

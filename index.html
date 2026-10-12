@@ -193,15 +193,18 @@
   .article-content > .dialogue { grid-column: 1 / -1; display: grid; grid-template-columns: inherit; column-gap: inherit; align-items: baseline; margin-bottom: 1em; }
   .article .dialogue-speaker { color: var(--fg); font-weight: 600; text-align: right; }
   .article .dialogue-text { min-width: 0; margin: 0; text-indent: 0; }
+  /* 작은 브라우저 창과 태블릿에서는 2단 대화의 본문 칸이 지나치게 좁아진다. */
+  @media (max-width: 1024px) {
+    .article-content { grid-template-columns: minmax(0, 1fr); }
+    .article-content > .article-row { grid-column: 1; }
+    .article-content > .dialogue { grid-template-columns: minmax(0, 1fr); row-gap: 0; align-items: start; }
+    .article .dialogue-speaker { text-align: left; font-size: .86em; font-weight: 700; margin-bottom: .15em; }
+  }
   @media (max-width: 760px) {
     .article { padding: 24px 16px 120px; font-size: 15px; }
     .article .head { grid-template-columns: minmax(0, 1fr); margin-bottom: 64px; }
     .article .head.no-lede { margin-bottom: 32px; }
     .article h1 { font-size: 20px; line-height: 1.35; }
-    /* 좁은 화면에서는 화자를 위에 두고 대사를 본문 폭으로 읽게 한다. */
-    .article-content { grid-template-columns: minmax(0, 1fr); }
-    .article-content > .dialogue { grid-template-columns: minmax(0, 1fr); row-gap: 0; align-items: start; }
-    .article .dialogue-speaker { text-align: left; font-size: .86em; font-weight: 700; margin-bottom: .15em; }
   }
 
   /* ===== 잡지식 양끝맞춤 (2026-10-01 정식 채택) =====
