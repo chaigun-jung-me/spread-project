@@ -195,7 +195,8 @@
     .article .head { grid-template-columns: minmax(0, 1fr); margin-bottom: 64px; }
     .article .head.no-lede { margin-bottom: 32px; }
     .article h1 { font-size: 20px; line-height: 1.35; }
-    .article-content { grid-template-columns: max-content minmax(0, 1fr); column-gap: 12px; }
+    /* 모든 대화에서 발화자 칸을 같은 폭으로 고정해 본문 시작 위치를 맞춘다. */
+    .article-content { grid-template-columns: clamp(5rem, 24vw, 7rem) minmax(0, 1fr); column-gap: 12px; }
   }
 
   /* ===== 잡지식 양끝맞춤 (2026-10-01 정식 채택) =====
@@ -229,7 +230,8 @@
 <div id="app"></div>
 <footer class="foot">from source we spread</footer>
 
-<script>
+<script type="module">
+import { parseDialogue, youtubeEmbedUrl } from '/scripts/article-format.mjs';
 /* ===== 상태 ===== */
 let posts = [];
 const categories = ['Design', 'Fashion', 'Tech', 'Sports', 'Culture'];
@@ -325,25 +327,6 @@ function articleView(slug) {
       return ['http:', 'https:', 'mailto:'].includes(url.protocol) ? url.href : '';
     } catch { return ''; }
   };
-  const youtubeEmbedUrl = value => {
-    const href = safeLink(value);
-    if (!href) return '';
-    try {
-      const url = new URL(href);
-      const host = url.hostname.toLowerCase().replace(/^www\./, '');
-      let id = '';
-      if (host === 'youtu.be') id = url.pathname.split('/').filter(Boolean)[0] || '';
-      else if (['youtube.com', 'm.youtube.com', 'youtube-nocookie.com'].includes(host)) {
-        id = url.searchParams.get('v') || url.pathname.match(/^\/(?:embed|shorts|live)\/([^/?]+)/)?.[1] || '';
-      }
-      if (!/^[A-Za-z0-9_-]{6,}$/.test(id)) return '';
-      const timestamp = url.searchParams.get('start') || url.searchParams.get('t') || '';
-      const numericStart = /^\d+$/.test(timestamp) ? Number(timestamp) : 0;
-      const parts = timestamp.match(/^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?$/);
-      const parsedStart = numericStart || (parts && timestamp ? Number(parts[1] || 0) * 3600 + Number(parts[2] || 0) * 60 + Number(parts[3] || 0) : 0);
-      return `https://www.youtube-nocookie.com/embed/${id}${parsedStart > 0 ? `?start=${parsedStart}` : ''}`;
-    } catch { return ''; }
-  };
   const renderRichText = (runs, fallback = '') => {
     if (!Array.isArray(runs) || !runs.length) return escapeHtml(fallback).replace(/\r\n|\r|\n/g, '<br>');
     return runs.map(run => {
@@ -372,10 +355,8 @@ function articleView(slug) {
   const splitDialogue = block => {
     if (block.type !== 'paragraph') return null;
     const text = String(block.text || '');
-    const match = text.match(/^([^\s:\n][^:\n]{0,39}):[ \t]*(\S[\s\S]*)$/u);
-    if (!match) return null;
-    const colonIndex = text.indexOf(':');
-    const bodyStart = colonIndex + 1 + (text.slice(colonIndex + 1).match(/^[ \t]*/) || [''])[0].length;
+    const parsed = parseDialogue(text);
+    if (!parsed) return null;
     const sliceRuns = (start, end) => {
       let offset = 0;
       const result = [];
@@ -389,9 +370,9 @@ function articleView(slug) {
       return result;
     };
     return {
-      speaker: text.slice(0, colonIndex).trim(),
-      text: match[2].trim(),
-      textRuns: sliceRuns(bodyStart, text.length),
+      speaker: parsed.speaker,
+      text: parsed.text,
+      textRuns: sliceRuns(parsed.bodyStart, text.length),
     };
   };
   const renderBlock = block => {

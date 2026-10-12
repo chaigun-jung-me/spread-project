@@ -26,6 +26,8 @@ Write article content in the page body. Paragraphs start flush left without inde
 
 ### Article layout
 
+The canonical content rules and automated/manual QA checklist are in [docs/SITE_RULES_AND_QA.md](docs/SITE_RULES_AND_QA.md). Every pull request and Notion sync must pass the automated site QA before it can be published.
+
 - The site does not add gray `01`, `02` section numbers. All regular text, headings, and paragraphs go in the second column.
 - Use a Notion **Divider** only when you want extra blank space between paragraphs. It never adds a number or other marker.
 - For interview dialogue, put each turn in its own paragraph as `Name: dialogue`, for example `GQ: What inspired the first designs?` followed by `James Jebbia: The people around the store inspired us.` A numeric label also works, such as `00: Opening line.` The site places the speaker label right-aligned in the first column and dialogue in the second column on the same line. The colon is an input marker and is not shown on the site; the label is black.
