@@ -14,7 +14,7 @@
 | From | 필수. 원문을 게시한 매체나 출처 이름 |
 | Source | 필수. 원문 글의 제목 |
 | Source URL | 필수. 원문 주소 (`http` 또는 `https`) |
-| Category | 필수. `Design`, `Fashion`, `Tech`, `Sports`, `Culture` 중 하나 |
+| Category | 필수. `Design`, `Fashion`, `Tech`, `Sports`, `Culture`, `Music` 중 하나 |
 | Date | 필수. 원문이 게시된 날짜 |
 | Sort Date | 필수. 홈페이지 최신순 정렬에 사용할 날짜 |
 | Description | 필수. 비워두면 싱크가 본문에서 두 문장으로 생성해 저장 |

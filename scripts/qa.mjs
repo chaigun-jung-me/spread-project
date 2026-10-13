@@ -8,7 +8,7 @@ import { chromium } from 'playwright';
 import { parseDialogue, youtubeEmbedUrl } from './article-format.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const categories = new Set(['Design', 'Fashion', 'Tech', 'Sports', 'Culture']);
+const categories = new Set(['Design', 'Fashion', 'Tech', 'Sports', 'Culture', 'Music']);
 const supportedBlocks = new Set([
   'paragraph', 'heading_1', 'heading_2', 'heading_3', 'quote', 'bulleted_list_item',
   'numbered_list_item', 'code', 'to_do', 'callout', 'bookmark', 'video', 'embed',
@@ -252,6 +252,26 @@ try {
   assert.equal(new URL(mobilePage.url()).hash, '', 'category navigation should not use a hash route');
   passed += 1;
   process.stdout.write('✓ Category navigation uses a clean path and filters its posts\n');
+
+  const musicPage = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+  await musicPage.route('**/posts.json', route => route.fulfill({
+    contentType: 'application/json',
+    body: JSON.stringify([
+      { slug: 'music-fixture', title: 'Music fixture', category: 'Music', date: '2026-01-01', sortDate: '2026-01-01', from: 'QA', source: 'QA', url: 'https://example.com' },
+      { slug: 'culture-fixture', title: 'Culture fixture', category: 'Culture', date: '2026-01-01', sortDate: '2026-01-01', from: 'QA', source: 'QA', url: 'https://example.com' },
+    ]),
+  }));
+  await musicPage.goto(baseUrl, { waitUntil: 'domcontentloaded' });
+  const musicLink = musicPage.locator('nav a[href="/category/music"]');
+  assert.equal(await musicLink.count(), 1, 'Music category route exists');
+  await musicLink.click();
+  await musicPage.locator('.list tbody tr[data-slug]').first().waitFor({ state: 'visible' });
+  assert.deepEqual(await musicPage.locator('.list tbody tr[data-slug] .cat').allTextContents(), ['Music']);
+  assert.equal(new URL(musicPage.url()).pathname, '/category/music');
+  assert.equal(new URL(musicPage.url()).hash, '', 'Music navigation should not use a hash route');
+  await musicPage.close();
+  passed += 1;
+  process.stdout.write('✓ Music category uses /category/music and filters its posts\n');
 
   await mobilePage.goto(baseUrl, { waitUntil: 'domcontentloaded' });
   const firstRow = mobilePage.locator('.list tbody tr[data-slug]').first();
