@@ -1,5 +1,2673 @@
 [
   {
+    "slug": "rick-rubin-vibe-coding-is-the-punk-rock-of-software",
+    "title": "릭 루빈: 바이브 코딩은 소프트웨어의 펑크 록이다",
+    "category": "Tech",
+    "date": "2025-05-28",
+    "sortDate": "2026-10-13",
+    "from": "a16z",
+    "source": "Rick Rubin: Vibe Coding is the Punk Rock of Software",
+    "url": "https://www.youtube.com/watch?v=7s9C92Pkcc0",
+    "body": [
+      {
+        "type": "video",
+        "text": "",
+        "rich_text": [],
+        "url": "https://youtu.be/7s9C92Pkcc0?si=7ITjXlHufiMePBUv",
+        "caption": ""
+      },
+      {
+        "type": "heading_3",
+        "text": "1. 들어가며: 릭 루빈과 《The Way of Code》",
+        "rich_text": [
+          {
+            "text": "1. 들어가며: 릭 루빈과 《The Way of Code》",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 제가 아는 수많은 사람이 AI를 쓸 때 질문을 던져놓고, 거기서 나온 결과를 곧바로 '정답'이라고 믿어버리더군요. 다들 진짜 진실을 탐구하기보다는, 더 이상 그 질문에 대해 고민하지 않아도 되게 만들어줄 손쉬운 답변 하나를 얻는 데만 급급해 보입니다. 하지만 저는 우리가 '이렇다'고 주입한 선입견이 아니라, 세상의 실체 그 자체에 기반해 AI가 과연 무엇을 진정으로 깨달을 수 있는지에 훨씬 더 깊은 관심을 두고 있습니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 제가 아는 수많은 사람이 AI를 쓸 때 질문을 던져놓고, 거기서 나온 결과를 곧바로 '정답'이라고 믿어버리더군요. 다들 진짜 진실을 탐구하기보다는, 더 이상 그 질문에 대해 고민하지 않아도 되게 만들어줄 손쉬운 답변 하나를 얻는 데만 급급해 보입니다. 하지만 저는 우리가 '이렇다'고 주입한 선입견이 아니라, 세상의 실체 그 자체에 기반해 AI가 과연 무엇을 진정으로 깨달을 수 있는지에 훨씬 더 깊은 관심을 두고 있습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "진행자: 오늘 우리는 릭의 신작인 《코드의 도(The Way of Code)》에 관해 이야기하고자 모였습니다. 릭, 《The Way of Code》는 어떤 작품인가요?",
+        "rich_text": [
+          {
+            "text": "진행자:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 오늘 우리는 릭의 신작인 《코드의 도(The Way of Code)》에 관해 이야기하고자 모였습니다. 릭, 《The Way of Code》는 어떤 작품인가요?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 바이브 코딩(Vibe Coding)을 다룬 책입니다. 노자가 쓴 3천 년 전의 영적 고전인 《도덕경》의 지혜를 빌려와 바이브 코딩의 본질을 풀어냈죠. 3천 년 묵은 지혜의 가르침과 최첨단 기술의 만남이라는 발상 자체가 꽤 흥미롭지 않나요? 그것이 바로 이 책의 본질입니다. 부제는 '바이브 코딩이라는 시대를 초월한 예술(The timeless art of vibe coding)'이에요. '바이브 코딩'이라는 말이 세상에 나온 지 고작 열 주 남짓 되었다는 점을 생각하면, 나온 지 10주밖에 안 된 개념에 '시대를 초월한 예술'이라는 수식어를 붙인다는 역설이 무척 마음에 들었습니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 바이브 코딩(Vibe Coding)을 다룬 책입니다. 노자가 쓴 3천 년 전의 영적 고전인 《도덕경》의 지혜를 빌려와 바이브 코딩의 본질을 풀어냈죠. 3천 년 묵은 지혜의 가르침과 최첨단 기술의 만남이라는 발상 자체가 꽤 흥미롭지 않나요? 그것이 바로 이 책의 본질입니다. 부제는 '바이브 코딩이라는 시대를 초월한 예술(The timeless art of vibe coding)'이에요. '바이브 코딩'이라는 말이 세상에 나온 지 고작 열 주 남짓 되었다는 점을 생각하면, 나온 지 10주밖에 안 된 개념에 '시대를 초월한 예술'이라는 수식어를 붙인다는 역설이 무척 마음에 들었습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "진행자: '책'이라고 부르시니 기분이 묘하네요. 처음에 링크를 보내주셔서 읽기 시작했을 때는 마치 소프트웨어를 직접 사용하는 느낌이었거든요. 웹사이트나 앱처럼 부를 수 있는 이름이 많았을 텐데, 굳이 책이라고 이름 붙인 이유가 있으신가요?",
+        "rich_text": [
+          {
+            "text": "진행자:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " '책'이라고 부르시니 기분이 묘하네요. 처음에 링크를 보내주셔서 읽기 시작했을 때는 마치 소프트웨어를 직접 사용하는 느낌이었거든요. 웹사이트나 앱처럼 부를 수 있는 이름이 많았을 텐데, 굳이 책이라고 이름 붙인 이유가 있으신가요?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 애초에 책으로 집필했기 때문입니다. 처음에는 책으로 출발했는데, 우연히 제가 진행하는 테트라그래마톤(Tetragrammaton) 팟캐스트에 앤스로픽(Anthropic)의 잭 클락(Jack Clark)을 초대해 녹음을 진행했어요. 에피소드는 아직 공개 전이지만 3주 전쯤 녹음했죠. 마침 책 원고를 막 끝낸 시점이라, 녹음을 마치고 잭에게 \"내가 이런 책을 썼는데 한번 읽어볼래?\" 하고 보여줬습니다. 원고를 살펴본 잭이 \"이걸 웹사이트로 구현해서, 사이트 안에서 직접 바이브 코딩을 체험해 볼 수 있게 만들면 정말 좋겠다\"고 제안하더군요. 그렇게 웹사이트 형태의 프로젝트가 탄생했습니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 애초에 책으로 집필했기 때문입니다. 처음에는 책으로 출발했는데, 우연히 제가 진행하는 테트라그래마톤(Tetragrammaton) 팟캐스트에 앤스로픽(Anthropic)의 잭 클락(Jack Clark)을 초대해 녹음을 진행했어요. 에피소드는 아직 공개 전이지만 3주 전쯤 녹음했죠. 마침 책 원고를 막 끝낸 시점이라, 녹음을 마치고 잭에게 \"내가 이런 책을 썼는데 한번 읽어볼래?\" 하고 보여줬습니다. 원고를 살펴본 잭이 \"이걸 웹사이트로 구현해서, 사이트 안에서 직접 바이브 코딩을 체험해 볼 수 있게 만들면 정말 좋겠다\"고 제안하더군요. 그렇게 웹사이트 형태의 프로젝트가 탄생했습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "진행자: 바이브 코딩을 다루면서 각 구절마다 바이브 코딩 기능이 내장되어 있다니 꽤 시적이네요.",
+        "rich_text": [
+          {
+            "text": "진행자:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 바이브 코딩을 다루면서 각 구절마다 바이브 코딩 기능이 내장되어 있다니 꽤 시적이네요.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 원래 앤스로픽 측에서는 아트를 생성할 프롬프트 목록을 달라고 요청했습니다. 하지만 저는 책에 담긴 텍스트 본문 자체를 이용해 아트를 생성하는 편이 가장 자연스럽겠다고 답했죠. 그러고 나서 사용자가 그림을 변형할 수 있는 수정 옵션(모드)을 주는 겁니다. 기본 옵션을 몇 가지 추천해주되, 사용자가 직접 자신만의 모드를 만들 수도 있게 했어요. \"세잔의 화풍으로 그려줘\", \"녹아내리는 느낌을 줘\", \"북유럽 감성으로 바꿔줘\", \"테크니컬러 스타일로 입혀줘\", \"회전 속도를 아주 빠르게 혹은 느리게 해줘\"처럼 원하는 어떤 변화든 자유롭게 요구할 수 있도록 한 겁니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 원래 앤스로픽 측에서는 아트를 생성할 프롬프트 목록을 달라고 요청했습니다. 하지만 저는 책에 담긴 텍스트 본문 자체를 이용해 아트를 생성하는 편이 가장 자연스럽겠다고 답했죠. 그러고 나서 사용자가 그림을 변형할 수 있는 수정 옵션(모드)을 주는 겁니다. 기본 옵션을 몇 가지 추천해주되, 사용자가 직접 자신만의 모드를 만들 수도 있게 했어요. \"세잔의 화풍으로 그려줘\", \"녹아내리는 느낌을 줘\", \"북유럽 감성으로 바꿔줘\", \"테크니컬러 스타일로 입혀줘\", \"회전 속도를 아주 빠르게 혹은 느리게 해줘\"처럼 원하는 어떤 변화든 자유롭게 요구할 수 있도록 한 겁니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "heading_3",
+        "text": "2. 리믹스 문화와 창의적 도구로서의 AI",
+        "rich_text": [
+          {
+            "text": "2. 리믹스 문화와 창의적 도구로서의 AI",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "진행자: 그걸 보고 머리가 멍해질 정도로 놀랐습니다. 벤(Ben Horowitz)이 늘 힙합의 심장이자 영혼이라고 강조했던 음악 리믹스, 즉 '샘플링(sampling)'의 미학을 눈앞에서 목격하는 기분이었거든요. 책을 읽으며 가장 먼저 떠오른 생각이었는데, 혹시 거기서 착안하신 건가요?",
+        "rich_text": [
+          {
+            "text": "진행자:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 그걸 보고 머리가 멍해질 정도로 놀랐습니다. 벤(Ben Horowitz)이 늘 힙합의 심장이자 영혼이라고 강조했던 음악 리믹스, 즉 '샘플링(sampling)'의 미학을 눈앞에서 목격하는 기분이었거든요. 책을 읽으며 가장 먼저 떠오른 생각이었는데, 혹시 거기서 착안하신 건가요?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 모든 예술은 결국 샘플링이자 리믹스의 한 형태입니다. 무(無)에서 홀로 출발하는 예술이란 존재하지 않아요. 우리는 텅 빈 상태로 태어나 세상이 우리에게 던져주는 자극들에 반응하며 살아갑니다. 모든 예술가가 바로 그 일을 하고 있죠. 따라서 모든 예술의 본질은 리믹스입니다. 힙합에서 특히 도드라지게 드러날 뿐이지, 비틀즈가 로이 오비슨의 노래(〈Please〉)를 듣고 영감을 받아 〈Please Please Me〉를 쓴 것도 결국 리믹스였습니다. 예술은 태초부터 언제나 그래왔습니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 모든 예술은 결국 샘플링이자 리믹스의 한 형태입니다. 무(無)에서 홀로 출발하는 예술이란 존재하지 않아요. 우리는 텅 빈 상태로 태어나 세상이 우리에게 던져주는 자극들에 반응하며 살아갑니다. 모든 예술가가 바로 그 일을 하고 있죠. 따라서 모든 예술의 본질은 리믹스입니다. 힙합에서 특히 도드라지게 드러날 뿐이지, 비틀즈가 로이 오비슨의 노래(〈Please〉)를 듣고 영감을 받아 〈Please Please Me〉를 쓴 것도 결국 리믹스였습니다. 예술은 태초부터 언제나 그래왔습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "진행자: 그런데 사람들은 왜 이런 방식의 리믹스에 그토록 큰 거부감을 보일까요? 샘플링이 처음 등장했을 때도 그랬고, 지금 바이브 코딩도 마찬가지로 수많은 사람이 \"기존의 정통 방식이 아니다\", \"우리가 하던 일을 침범한다\"며 크게 반발하고 있잖아요.",
+        "rich_text": [
+          {
+            "text": "진행자:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 그런데 사람들은 왜 이런 방식의 리믹스에 그토록 큰 거부감을 보일까요? 샘플링이 처음 등장했을 때도 그랬고, 지금 바이브 코딩도 마찬가지로 수많은 사람이 \"기존의 정통 방식이 아니다\", \"우리가 하던 일을 침범한다\"며 크게 반발하고 있잖아요.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 이제는 컴퓨터가 모든 일을 대신해 준다는 오해 때문이라고 봅니다. 하지만 컴퓨터는 결국 또 하나의 도구일 뿐입니다. 기타나 샘플러처럼 예술가의 도구함에 추가된 새로운 장비에 불과하죠. 우리가 특정 예술가나 작가, 영화감독의 작품을 찾는 이유는 그 사람만의 독창적인 '관점(point of view)' 때문입니다. AI에게는 고유한 관점이란 게 없습니다. 관점이란 인간이 AI에게 \"이러한 시선과 태도를 취하라\"고 부여하는 것입니다. 훌륭한 영화 각본 한 편을 다섯 명의 명감독에게 쥐여주면 완전히 다른 다섯 편의 영화가 탄생하는 것과 같죠. 같은 노래라도 부르는 가수에 따라 완전히 다르게 해석되듯이요. AI는 머릿속에 품은 아이디어를 기계에 집어넣어, 원래대로라면 엄청난 시간이 걸렸을 수많은 결과물을 순식간에 시도해 볼 수 있게 해줍니다. 일종의 가속 모델링 과정인 셈입니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 이제는 컴퓨터가 모든 일을 대신해 준다는 오해 때문이라고 봅니다. 하지만 컴퓨터는 결국 또 하나의 도구일 뿐입니다. 기타나 샘플러처럼 예술가의 도구함에 추가된 새로운 장비에 불과하죠. 우리가 특정 예술가나 작가, 영화감독의 작품을 찾는 이유는 그 사람만의 독창적인 '관점(point of view)' 때문입니다. AI에게는 고유한 관점이란 게 없습니다. 관점이란 인간이 AI에게 \"이러한 시선과 태도를 취하라\"고 부여하는 것입니다. 훌륭한 영화 각본 한 편을 다섯 명의 명감독에게 쥐여주면 완전히 다른 다섯 편의 영화가 탄생하는 것과 같죠. 같은 노래라도 부르는 가수에 따라 완전히 다르게 해석되듯이요. AI는 머릿속에 품은 아이디어를 기계에 집어넣어, 원래대로라면 엄청난 시간이 걸렸을 수많은 결과물을 순식간에 시도해 볼 수 있게 해줍니다. 일종의 가속 모델링 과정인 셈입니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "AI에게 그저 예술을 만들어내라고 떠넘기는 것이 아니라, 목공소에서 나무를 깎듯 나의 꿈을 눈앞에 빚어내 달라고 다루는 도구로 이해해야 합니다. 예술가가 원하는 창작물을 짓기 위한 도구일 뿐이에요. 기계가 창작을 주도한다고 생각한다면 착각입니다. 기계는 인간이 시키는 일만 수행할 뿐이고, 기계가 아는 것이라곤 다른 사람들이 알려준 내용이 전부니까요. AI에게 스스로 생각하는 능력이 있는지는 아직 모르겠고, 과연 그게 가능할지도 의문입니다. 진짜 강력한 힘은 AI가 스스로 사유할 수 있을 때 나오겠지만, 지금 이 기술을 쥐고 있는 기업들은 AI를 인간의 사고방식 안에 가두어두려 애쓰는 것 같습니다.",
+        "rich_text": [
+          {
+            "text": "AI에게 그저 예술을 만들어내라고 떠넘기는 것이 아니라, 목공소에서 나무를 깎듯 나의 꿈을 눈앞에 빚어내 달라고 다루는 도구로 이해해야 합니다. 예술가가 원하는 창작물을 짓기 위한 도구일 뿐이에요. 기계가 창작을 주도한다고 생각한다면 착각입니다. 기계는 인간이 시키는 일만 수행할 뿐이고, 기계가 아는 것이라곤 다른 사람들이 알려준 내용이 전부니까요. AI에게 스스로 생각하는 능력이 있는지는 아직 모르겠고, 과연 그게 가능할지도 의문입니다. 진짜 강력한 힘은 AI가 스스로 사유할 수 있을 때 나오겠지만, 지금 이 기술을 쥐고 있는 기업들은 AI를 인간의 사고방식 안에 가두어두려 애쓰는 것 같습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "마크 앤드리센: 맞습니다. 그것이 현재 기술의 엄연한 현주소죠. 결국 기타나 펜처럼 예술을 짓는 도구라는 본질은 같지만 계층이 다를 뿐입니다. 컴퓨터 과학 초창기에도 똑같은 일이 있었습니다. 천공 카드를 써서 컴퓨터에 일일이 \"이 비트를 저기로 옮겨라\", \"프로그램 몇 번째 줄로 이동하라\"고 지시하던 기계어 시절이 있었죠. 이후 고급 프로그래밍 언어가 등장했을 때, 어셈블리어에 통달했던 장인들의 반발이 대단했습니다. \"고급 언어는 비효율의 극치다. 소중한 컴퓨터 자원을 그렇게 낭비하다니 끔찍하다\"면서요. 도구가 다음 세대로 진화할 때마다 이전 세대의 도구에 익숙했던 장인들은 늘 반발하기 마련입니다. 이 도구의 진정한 아름다움은 코딩을 할 줄 모르고 기술을 전혀 모르는 세상 대다수의 사람도 이제 이 놀이터에 들어와 함께 놀 수 있게 되었다는 점입니다. 이전에는 \"코딩을 먼저 배워라\"라는 거대한 진입 장벽이 있었지만, 이제는 더 이상 코딩을 배울 필요가 없으니까요. 그게 바로 기술의 민주화입니다.",
+        "rich_text": [
+          {
+            "text": "마크 앤드리센:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 맞습니다. 그것이 현재 기술의 엄연한 현주소죠. 결국 기타나 펜처럼 예술을 짓는 도구라는 본질은 같지만 계층이 다를 뿐입니다. 컴퓨터 과학 초창기에도 똑같은 일이 있었습니다. 천공 카드를 써서 컴퓨터에 일일이 \"이 비트를 저기로 옮겨라\", \"프로그램 몇 번째 줄로 이동하라\"고 지시하던 기계어 시절이 있었죠. 이후 고급 프로그래밍 언어가 등장했을 때, 어셈블리어에 통달했던 장인들의 반발이 대단했습니다. \"고급 언어는 비효율의 극치다. 소중한 컴퓨터 자원을 그렇게 낭비하다니 끔찍하다\"면서요. 도구가 다음 세대로 진화할 때마다 이전 세대의 도구에 익숙했던 장인들은 늘 반발하기 마련입니다. 이 도구의 진정한 아름다움은 코딩을 할 줄 모르고 기술을 전혀 모르는 세상 대다수의 사람도 이제 이 놀이터에 들어와 함께 놀 수 있게 되었다는 점입니다. 이전에는 \"코딩을 먼저 배워라\"라는 거대한 진입 장벽이 있었지만, 이제는 더 이상 코딩을 배울 필요가 없으니까요. 그게 바로 기술의 민주화입니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "heading_3",
+        "text": "3. 《도덕경》에서 얻은 영감",
+        "rich_text": [
+          {
+            "text": "3. 《도덕경》에서 얻은 영감",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "진행자: 맞아요, 정말 놀라운 일이죠. 그리고 바이브 코딩의 미학에서 참 인상 깊었던 점은, 요즘 많은 이들이 던지는 \"인간이란 과연 무엇인가?\"라는 질문에 하나의 철학을 제시해 준다는 점이었습니다. 마케팅 글을 쓰거나 코딩하는 일을 더 이상 인간이 직접 하지 못한다면 우리의 존재 목적은 무엇일까요? 책에서 이 부분을 깊이 있게 짚으셨는데, 여기에 대해 어떻게 생각하시나요?",
+        "rich_text": [
+          {
+            "text": "진행자:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 맞아요, 정말 놀라운 일이죠. 그리고 바이브 코딩의 미학에서 참 인상 깊었던 점은, 요즘 많은 이들이 던지는 \"인간이란 과연 무엇인가?\"라는 질문에 하나의 철학을 제시해 준다는 점이었습니다. 마케팅 글을 쓰거나 코딩하는 일을 더 이상 인간이 직접 하지 못한다면 우리의 존재 목적은 무엇일까요? 책에서 이 부분을 깊이 있게 짚으셨는데, 여기에 대해 어떻게 생각하시나요?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 제가 노자의 《도덕경》을 바탕으로 삼은 이유가 바로 거기에 있습니다. 《도덕경》은 삶을 어떻게 살아가야 하는가, 즉 인간의 길인 '도(道)'를 논하는 책입니다. 《The Way of Code》 역시 인생을 살아가는 태도와 내면의 중심을 잡는 법에 관한 이야기입니다. 수많은 개발자 중 상당수는 아마 《도덕경》을 한 번도 읽어본 적이 없을 겁니다. 그리고 앞으로 우리의 미래를 설계할 사람들은 바로 그 개발자들이겠죠. 그렇다면 미래를 만들어갈 그들이 삶과 세상의 균형을 잡는 3천 년 묵은 진리에 닿을 기회를 얻는다는 건 정말 뜻깊은 일 아니겠습니까.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 제가 노자의 《도덕경》을 바탕으로 삼은 이유가 바로 거기에 있습니다. 《도덕경》은 삶을 어떻게 살아가야 하는가, 즉 인간의 길인 '도(道)'를 논하는 책입니다. 《The Way of Code》 역시 인생을 살아가는 태도와 내면의 중심을 잡는 법에 관한 이야기입니다. 수많은 개발자 중 상당수는 아마 《도덕경》을 한 번도 읽어본 적이 없을 겁니다. 그리고 앞으로 우리의 미래를 설계할 사람들은 바로 그 개발자들이겠죠. 그렇다면 미래를 만들어갈 그들이 삶과 세상의 균형을 잡는 3천 년 묵은 진리에 닿을 기회를 얻는다는 건 정말 뜻깊은 일 아니겠습니까.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "진행자: 물론입니다, 의심의 여지가 없네요. 저 역시 중국어과 교수인 친구가 번역본을 줘서 《도덕경》을 읽어본 적이 있는데, 그 고전이 현대적인 방식으로, 그것도 핵심만 절묘하게 추려진 압축적인 형태로 되살아난 걸 보니 정말 흥미진진했습니다. 정말 읽는 재미가 쏠쏠했어요.",
+        "rich_text": [
+          {
+            "text": "진행자:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 물론입니다, 의심의 여지가 없네요. 저 역시 중국어과 교수인 친구가 번역본을 줘서 《도덕경》을 읽어본 적이 있는데, 그 고전이 현대적인 방식으로, 그것도 핵심만 절묘하게 추려진 압축적인 형태로 되살아난 걸 보니 정말 흥미진진했습니다. 정말 읽는 재미가 쏠쏠했어요.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "heading_3",
+        "text": "4. 밈 하나가 책이 되기까지",
+        "rich_text": [
+          {
+            "text": "4. 밈 하나가 책이 되기까지",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 저 역시 10주 전쯤에 '바이브 코딩'이라는 단어를 처음 들었습니다. 그게 뭔지도 몰랐고 그 세계에 대해 전혀 문외한이었죠. 그런데 바로 다음 주에 저와 바이브 코딩을 엮은 밈 이미지 하나를 보게 되었습니다. 생전 본 적 없는 사진이라 당연히 AI가 만든 합성 이미지인 줄 알았는데, 알고 보니 독일 하이파이 오디오 박람회에서 찍힌 진짜 제 사진이더군요. 헤드폰을 끼고 눈을 감은 채 마우스로 볼륨을 조절하며 음악에 깊이 몰입해 있는 모습이었어요. 인터넷 세상의 집단 지성이 무슨 이유에선지 그 사진을 '바이브 코딩'의 상징으로 낙점했고, 순식간에 수천 번씩 퍼져나갔습니다. 그다음 주에는 '커서(Cursor)'라는 회사(정확히 뭘 하는 회사인지는 모르겠지만 코딩과 관련된 곳 같더군요)에서 '바이브 코딩의 15가지 원칙'이라는 글을 올렸는데, 제 사진이 맨 위에 걸려 있었습니다. 정말 기묘한 기분이었죠. 제 세계관이 어쩌다 보니 이 판에 강제 징집된 셈이었으니까요.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 저 역시 10주 전쯤에 '바이브 코딩'이라는 단어를 처음 들었습니다. 그게 뭔지도 몰랐고 그 세계에 대해 전혀 문외한이었죠. 그런데 바로 다음 주에 저와 바이브 코딩을 엮은 밈 이미지 하나를 보게 되었습니다. 생전 본 적 없는 사진이라 당연히 AI가 만든 합성 이미지인 줄 알았는데, 알고 보니 독일 하이파이 오디오 박람회에서 찍힌 진짜 제 사진이더군요. 헤드폰을 끼고 눈을 감은 채 마우스로 볼륨을 조절하며 음악에 깊이 몰입해 있는 모습이었어요. 인터넷 세상의 집단 지성이 무슨 이유에선지 그 사진을 '바이브 코딩'의 상징으로 낙점했고, 순식간에 수천 번씩 퍼져나갔습니다. 그다음 주에는 '커서(Cursor)'라는 회사(정확히 뭘 하는 회사인지는 모르겠지만 코딩과 관련된 곳 같더군요)에서 '바이브 코딩의 15가지 원칙'이라는 글을 올렸는데, 제 사진이 맨 위에 걸려 있었습니다. 정말 기묘한 기분이었죠. 제 세계관이 어쩌다 보니 이 판에 강제 징집된 셈이었으니까요.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "그 순간 이런 생각이 들었습니다. '우주가 나를 이 흐름 속으로 끌어당기고 있구나. 그렇다면 내가 어떻게 참여해야 할까? 내 역할은 무엇이며, 지금 난 뭘 해야 하지?'\n그래서 가장 먼저 트위터에 글을 올렸습니다. 평소 매일 철학적인 단상을 트윗하곤 하는데, 처음으로 농담 섞인 트윗을 하나 남겼죠. \"도구는 오고 갈 뿐이나, 바이브 코더는 영원히 남는다(Tools will come and tools will go. Only the vibe coder remains).\"\n반응이 폭발적이었습니다. 평소 올리던 트윗보다 스무 배, 쉰 배나 많은 반응이 쏟아지는 걸 보며 '아, 여기에 무언가 진짜가 있구나' 싶었죠. 그래서 그다음 단계로, '내가 전혀 알지 못하는 분야에 대해 책을 쓰는 것보다 흥미로운 일이 또 있을까?'라는 생각이 들었습니다. 처음엔 농담 반 진담 반으로 '바보들을 위한 바이브 코딩' 같은 걸 생각했어요. 하지만 《도(道)》를 뼈대로 삼기로 한 순간, 《도》라는 텍스트 자체가 워낙 깊고 진중하다 보니 장난으로 시작했던 것이 어느새 심오한 작업으로 변모했습니다. 저 자신도 깜짝 놀랄 정도였고, '이 작업이 세상에 의미 있는 선한 역할을 할 수 있겠다'는 확신이 들었죠. 순식간에 일이 진행되었고, 이제 여러분이 직접 가지고 놀 수 있게 되었습니다.",
+        "rich_text": [
+          {
+            "text": "그 순간 이런 생각이 들었습니다. '우주가 나를 이 흐름 속으로 끌어당기고 있구나. 그렇다면 내가 어떻게 참여해야 할까? 내 역할은 무엇이며, 지금 난 뭘 해야 하지?'\n그래서 가장 먼저 트위터에 글을 올렸습니다. 평소 매일 철학적인 단상을 트윗하곤 하는데, 처음으로 농담 섞인 트윗을 하나 남겼죠. \"도구는 오고 갈 뿐이나, 바이브 코더는 영원히 남는다(Tools will come and tools will go. Only the vibe coder remains).\"\n반응이 폭발적이었습니다. 평소 올리던 트윗보다 스무 배, 쉰 배나 많은 반응이 쏟아지는 걸 보며 '아, 여기에 무언가 진짜가 있구나' 싶었죠. 그래서 그다음 단계로, '내가 전혀 알지 못하는 분야에 대해 책을 쓰는 것보다 흥미로운 일이 또 있을까?'라는 생각이 들었습니다. 처음엔 농담 반 진담 반으로 '바보들을 위한 바이브 코딩' 같은 걸 생각했어요. 하지만 《도(道)》를 뼈대로 삼기로 한 순간, 《도》라는 텍스트 자체가 워낙 깊고 진중하다 보니 장난으로 시작했던 것이 어느새 심오한 작업으로 변모했습니다. 저 자신도 깜짝 놀랄 정도였고, '이 작업이 세상에 의미 있는 선한 역할을 할 수 있겠다'는 확신이 들었죠. 순식간에 일이 진행되었고, 이제 여러분이 직접 가지고 놀 수 있게 되었습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "진행자: 맞아요. 저 역시 하루 종일 이 기술에 대해 고민하는 사람인데도, 이 책을 읽으며 마음의 중심이 단단해지는 걸 느꼈습니다. 정말 놀라운 성취라고 봅니다.",
+        "rich_text": [
+          {
+            "text": "진행자:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 맞아요. 저 역시 하루 종일 이 기술에 대해 고민하는 사람인데도, 이 책을 읽으며 마음의 중심이 단단해지는 걸 느꼈습니다. 정말 놀라운 성취라고 봅니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "heading_3",
+        "text": "5. 바이브 코딩은 소프트웨어의 펑크 록이다",
+        "rich_text": [
+          {
+            "text": "5. 바이브 코딩은 소프트웨어의 펑크 록이다",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "진행자: 여쭙고 싶은 점이 하나 있는데요, 70년대와 80년대 초반의 화려한 테크닉을 뽐내던 '기교주의(virtuosity)' 시대에서 펑크 록과 힙합으로 넘어가던 음악계의 거대한 전환기가 있었습니다. 거장다운 화려한 기교를 갖출 필요가 없어지자, 음악이 뿜어내는 에너지가 완전히 달라졌죠. 이전에는 없던 완전히 새로운 사운드와 아이디어가 터져 나왔고요. 바이브 코딩에서도 이와 비슷한 현상을 보고 계시나요? 소프트웨어 역시 완전히 새로운 경험으로 탈바꿈하게 될까요?",
+        "rich_text": [
+          {
+            "text": "진행자:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 여쭙고 싶은 점이 하나 있는데요, 70년대와 80년대 초반의 화려한 테크닉을 뽐내던 '기교주의(virtuosity)' 시대에서 펑크 록과 힙합으로 넘어가던 음악계의 거대한 전환기가 있었습니다. 거장다운 화려한 기교를 갖출 필요가 없어지자, 음악이 뿜어내는 에너지가 완전히 달라졌죠. 이전에는 없던 완전히 새로운 사운드와 아이디어가 터져 나왔고요. 바이브 코딩에서도 이와 비슷한 현상을 보고 계시나요? 소프트웨어 역시 완전히 새로운 경험으로 탈바꿈하게 될까요?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 기술의 민주화라는 관점에서 정확히 같은 원리입니다. 과거에 음악을 하려면 음악원에 들어가 수년간 악기를 연마해야만 언젠가 오케스트라에서 연주할 수 있었습니다. 하지만 펑크 록이 등장하면서 단 하루 만에 코드 세 개만 배워도 밴드를 만들 수 있게 되었고, 누구나 음악을 할 수 있는 세상이 열렸습니다. 저 역시 펑크 록으로 음악을 시작했습니다. 세상에 전하고 싶은 말(아이디어)과 그것을 표현할 능력만 있다면, 전문적인 지식이나 기교가 없어도 무엇이든 외칠 수 있었죠. 바이브 코딩도 마찬가지입니다. 코딩계의 펑크 록인 셈입니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 기술의 민주화라는 관점에서 정확히 같은 원리입니다. 과거에 음악을 하려면 음악원에 들어가 수년간 악기를 연마해야만 언젠가 오케스트라에서 연주할 수 있었습니다. 하지만 펑크 록이 등장하면서 단 하루 만에 코드 세 개만 배워도 밴드를 만들 수 있게 되었고, 누구나 음악을 할 수 있는 세상이 열렸습니다. 저 역시 펑크 록으로 음악을 시작했습니다. 세상에 전하고 싶은 말(아이디어)과 그것을 표현할 능력만 있다면, 전문적인 지식이나 기교가 없어도 무엇이든 외칠 수 있었죠. 바이브 코딩도 마찬가지입니다. 코딩계의 펑크 록인 셈입니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "진행자: 힙합 시대를 거쳐온 우리 세대에게도 무척 가슴 뛰는 일이지만, 지금 스무 살인 젊은 세대에게는 완전히 새로운 세상이 열리는 셈입니다. \"우리가 완전히 새로운 세상을 건설하겠다\"는 느낌일 테니까요. 정말 흥미진진합니다. 그리고 《The Way of Code》는 그런 흐름에 쐐기를 박아줍니다. '우리가 왜 여기에 존재하는가? 우리는 이 우주에서 유의미한 존재의 일부다'라는 사실을요.",
+        "rich_text": [
+          {
+            "text": "진행자:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 힙합 시대를 거쳐온 우리 세대에게도 무척 가슴 뛰는 일이지만, 지금 스무 살인 젊은 세대에게는 완전히 새로운 세상이 열리는 셈입니다. \"우리가 완전히 새로운 세상을 건설하겠다\"는 느낌일 테니까요. 정말 흥미진진합니다. 그리고 《The Way of Code》는 그런 흐름에 쐐기를 박아줍니다. '우리가 왜 여기에 존재하는가? 우리는 이 우주에서 유의미한 존재의 일부다'라는 사실을요.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 저는 코드가 본래 스스로 가려 하지 않는 방향, 쉽게 예상할 수 없는 곳으로 코드를 몰고 가는 작업이 참 마음에 듭니다. AI에게서 처음에 얻는 결과물은 대개 가장 뻔한 형태일 겁니다. 하지만 그 뻔한 결과물을 마주하는 순간, '어떻게 비틀어야 더 흥미롭고 전복적인 결과물을 낼 수 있을까' 하는 아이디어가 떠오르게 마련입니다. 대부분의 예술이 지향하는 바가 바로 그 전복성이기도 하고요.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 저는 코드가 본래 스스로 가려 하지 않는 방향, 쉽게 예상할 수 없는 곳으로 코드를 몰고 가는 작업이 참 마음에 듭니다. AI에게서 처음에 얻는 결과물은 대개 가장 뻔한 형태일 겁니다. 하지만 그 뻔한 결과물을 마주하는 순간, '어떻게 비틀어야 더 흥미롭고 전복적인 결과물을 낼 수 있을까' 하는 아이디어가 떠오르게 마련입니다. 대부분의 예술이 지향하는 바가 바로 그 전복성이기도 하고요.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "마크 앤드리센: 새로운 팔레트가 열린 셈이죠. 조각으로 미켈란젤로를 뛰어넘거나 더 새롭고 흥미로운 걸 만들어내기는 지극히 어렵습니다. 하지만 도구 자체가 완전히 새로워지면 전례가 사라지기 때문에 진정으로 자유롭게 자신을 표현할 수 있게 되죠.",
+        "rich_text": [
+          {
+            "text": "마크 앤드리센:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 새로운 팔레트가 열린 셈이죠. 조각으로 미켈란젤로를 뛰어넘거나 더 새롭고 흥미로운 걸 만들어내기는 지극히 어렵습니다. 하지만 도구 자체가 완전히 새로워지면 전례가 사라지기 때문에 진정으로 자유롭게 자신을 표현할 수 있게 되죠.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 제가 느끼는 가장 큰 아쉬움은, 이 도구가 지닌 잠재력이 워낙 막강한데도 사람들이 정작 무엇을 할 수 있는지에 대한 다채로운 예시가 부족하다는 점입니다. 지금은 고작 좋아하는 만화 영화 풍으로 애니메이션을 만들어내는 수준에 그치고, 수백만 명이 다 똑같은 작업만 따라 하고 있죠. 그것도 하나의 시도겠지만, 저는 남들이 다 하는 뻔한 결과물을 얻어내는 대신 과연 무엇까지 가능한지 그 한계를 끝까지 밀어붙이는 광경을 보고 싶습니다. 이 도구가 실제로 무엇을 해낼 수 있는지는 아직 우리 상상의 범위를 훌쩍 뛰어넘는다고 생각합니다. 한계를 밀어붙여 새로운 영역을 증명해 보이는 선구자들의 등장이 몹시 기다려집니다. 누군가 한 방향으로 벽을 허물면 \"저쪽으로도 갈 수 있구나. 그럼 난 이쪽으로 뚫어봐야겠다\" 하며 문과 창문이 열리기 마련이니까요.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 제가 느끼는 가장 큰 아쉬움은, 이 도구가 지닌 잠재력이 워낙 막강한데도 사람들이 정작 무엇을 할 수 있는지에 대한 다채로운 예시가 부족하다는 점입니다. 지금은 고작 좋아하는 만화 영화 풍으로 애니메이션을 만들어내는 수준에 그치고, 수백만 명이 다 똑같은 작업만 따라 하고 있죠. 그것도 하나의 시도겠지만, 저는 남들이 다 하는 뻔한 결과물을 얻어내는 대신 과연 무엇까지 가능한지 그 한계를 끝까지 밀어붙이는 광경을 보고 싶습니다. 이 도구가 실제로 무엇을 해낼 수 있는지는 아직 우리 상상의 범위를 훌쩍 뛰어넘는다고 생각합니다. 한계를 밀어붙여 새로운 영역을 증명해 보이는 선구자들의 등장이 몹시 기다려집니다. 누군가 한 방향으로 벽을 허물면 \"저쪽으로도 갈 수 있구나. 그럼 난 이쪽으로 뚫어봐야겠다\" 하며 문과 창문이 열리기 마련이니까요.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "heading_3",
+        "text": "6. 역(逆) 딥페이크와 프로레슬링의 철학",
+        "rich_text": [
+          {
+            "text": "6. 역(逆) 딥페이크와 프로레슬링의 철학",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "진행자: 마크, 미디어 학자 마샬 맥루한에 빙의해서 한 말씀 해주신다면요? 릭이 10주 전에 마우스를 쥐고 몰입해 있는 밈 하나가 인터넷을 떠돌더니, 10주 만에 완전히 새로운 책으로 탄생하게 된 이 상황을 어떻게 보시나요?",
+        "rich_text": [
+          {
+            "text": "진행자:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 마크, 미디어 학자 마샬 맥루한에 빙의해서 한 말씀 해주신다면요? 릭이 10주 전에 마우스를 쥐고 몰입해 있는 밈 하나가 인터넷을 떠돌더니, 10주 만에 완전히 새로운 책으로 탄생하게 된 이 상황을 어떻게 보시나요?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "마크 앤드리센: 릭, 제가 예전에 컴퓨터 앞에 앉아 계신 그 사진을 보내드렸던 기억이 납니다. 사진을 보시자마자 \"이건 내가 아니야. AI로 합성한 거네\"라고 하셨죠. 일종의 '역(逆) 딥페이크'였던 셈입니다. 바로 가짜라고 단정하셨는데 알고 보니 진짜 사진이었으니까요.",
+        "rich_text": [
+          {
+            "text": "마크 앤드리센:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 릭, 제가 예전에 컴퓨터 앞에 앉아 계신 그 사진을 보내드렸던 기억이 납니다. 사진을 보시자마자 \"이건 내가 아니야. AI로 합성한 거네\"라고 하셨죠. 일종의 '역(逆) 딥페이크'였던 셈입니다. 바로 가짜라고 단정하셨는데 알고 보니 진짜 사진이었으니까요.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 뒤에 명찰을 찬 사람이 서 있는 걸 보고서야 \"아, 그 오디오 쇼였구나\" 하고 깨달았죠.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 뒤에 명찰을 찬 사람이 서 있는 걸 보고서야 \"아, 그 오디오 쇼였구나\" 하고 깨달았죠.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "마크 앤드리센: 참 역설적이지 않나요? 릭은 평소 프로레슬링을 무척 좋아하시면서 \"프로레슬링이야말로 다른 스포츠보다 훨씬 진짜에 가깝다\"고 자주 말씀하시잖아요. 혹시 우리는 이제 AI가 만들어낸 것이 더 진짜 같거나, 혹은 AI가 만들었다고 믿었던 것이 사실은 진짜인 그런 세상으로 접어들고 있는 걸까요? 딥페이크의 역전 현상 같은 게 벌어지는 걸까요?",
+        "rich_text": [
+          {
+            "text": "마크 앤드리센:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 참 역설적이지 않나요? 릭은 평소 프로레슬링을 무척 좋아하시면서 \"프로레슬링이야말로 다른 스포츠보다 훨씬 진짜에 가깝다\"고 자주 말씀하시잖아요. 혹시 우리는 이제 AI가 만들어낸 것이 더 진짜 같거나, 혹은 AI가 만들었다고 믿었던 것이 사실은 진짜인 그런 세상으로 접어들고 있는 걸까요? 딥페이크의 역전 현상 같은 게 벌어지는 걸까요?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 맞는 말씀 같습니다. 제가 프로레슬링에 대해 그런 생각을 갖는 이유는, 레슬링은 애초에 '가짜'라는 걸 모두가 알고 있고, 그들 역시 가짜라는 사실을 솔직하게 인정하기 때문입니다. 그렇기에 우리는 의심을 기꺼이 거두고 그 서사에 온전히 빠져들 수 있습니다. 반면 뉴스를 틀면 온갖 가짜를 '진짜'인 척 포장하죠. 물리학 서적도 마찬가지입니다. 일부는 진실일지 몰라도, 수학이 세상을 창조하는 건 아닙니다. 세상이 먼저 존재하고, 수학은 그것을 설명하기 위해 덧씌운 해석 체계일 뿐이죠. 그러다 수학으로 설명되지 않는 예외가 생기면 \"수식이 안 맞으니 블랙홀이라는 개념을 만들자\"는 식으로 어떻게든 끼워 맞춥니다. 어쩌면 그 체계 자체가 틀렸을 수도 있는데 말이죠. 우리가 온전히 신뢰할 수 있는 건 우리를 둘러싼 자연 세계뿐입니다. 이 세계가 시뮬레이션이 아니라면, 혹은 시뮬레이션이라 할지라도 우리가 직접 경험하는 이 순간만큼은 유일하게 믿을 수 있는 실체니까요.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 맞는 말씀 같습니다. 제가 프로레슬링에 대해 그런 생각을 갖는 이유는, 레슬링은 애초에 '가짜'라는 걸 모두가 알고 있고, 그들 역시 가짜라는 사실을 솔직하게 인정하기 때문입니다. 그렇기에 우리는 의심을 기꺼이 거두고 그 서사에 온전히 빠져들 수 있습니다. 반면 뉴스를 틀면 온갖 가짜를 '진짜'인 척 포장하죠. 물리학 서적도 마찬가지입니다. 일부는 진실일지 몰라도, 수학이 세상을 창조하는 건 아닙니다. 세상이 먼저 존재하고, 수학은 그것을 설명하기 위해 덧씌운 해석 체계일 뿐이죠. 그러다 수학으로 설명되지 않는 예외가 생기면 \"수식이 안 맞으니 블랙홀이라는 개념을 만들자\"는 식으로 어떻게든 끼워 맞춥니다. 어쩌면 그 체계 자체가 틀렸을 수도 있는데 말이죠. 우리가 온전히 신뢰할 수 있는 건 우리를 둘러싼 자연 세계뿐입니다. 이 세계가 시뮬레이션이 아니라면, 혹은 시뮬레이션이라 할지라도 우리가 직접 경험하는 이 순간만큼은 유일하게 믿을 수 있는 실체니까요.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "마크 앤드리센: 제 생각에 동의하시는지 한번 들어보세요. 무대나 방송에 나와서 \"이것이 진실입니다\"라고 단언하는 사람을 보면, 둘 중 하나입니다. 거짓말을 하고 있거나, 자신이 아는 바를 과장하고 있는 것이죠. 그저 자신이 믿는 바를 말하고 있을 뿐입니다. 학교에서 배운 대로 \"세상은 이렇다\"고 주입받으면 계속 그렇게 앵무새처럼 되뇔 뿐입니다. 제가 일류 뇌신경외과 전문의에게 \"현재 의대에서 가르치는 교과서 내용 중 사실은 틀렸는데 맞다고 가르치는 정보가 얼마나 됩니까?\"라고 물은 적이 있습니다. 그 의사는 \"적어도 50%는 틀린 내용입니다\"라고 답하더군요. 그래서 \"그 50%가 틀렸다는 사실 때문에 어떤 일이 벌어집니까?\"라고 묻자, \"틀린 50%를 진실로 믿고 가르치며 생기는 폐해는 이루 말할 수 없을 정도로 막대합니다\"라고 하더군요.",
+        "rich_text": [
+          {
+            "text": "마크 앤드리센:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 제 생각에 동의하시는지 한번 들어보세요. 무대나 방송에 나와서 \"이것이 진실입니다\"라고 단언하는 사람을 보면, 둘 중 하나입니다. 거짓말을 하고 있거나, 자신이 아는 바를 과장하고 있는 것이죠. 그저 자신이 믿는 바를 말하고 있을 뿐입니다. 학교에서 배운 대로 \"세상은 이렇다\"고 주입받으면 계속 그렇게 앵무새처럼 되뇔 뿐입니다. 제가 일류 뇌신경외과 전문의에게 \"현재 의대에서 가르치는 교과서 내용 중 사실은 틀렸는데 맞다고 가르치는 정보가 얼마나 됩니까?\"라고 물은 적이 있습니다. 그 의사는 \"적어도 50%는 틀린 내용입니다\"라고 답하더군요. 그래서 \"그 50%가 틀렸다는 사실 때문에 어떤 일이 벌어집니까?\"라고 묻자, \"틀린 50%를 진실로 믿고 가르치며 생기는 폐해는 이루 말할 수 없을 정도로 막대합니다\"라고 하더군요.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 결국 우리는 아무것도 모른다는 사실을 인정하는 것에서부터 출발해야 합니다. 그것이 가장 안전하고 정직하게 살아가는 방식입니다. 저 역시 제가 무언가를 안다고 믿지 않습니다. 매일 백지상태에서 시작하며, 세상은 끊임없이 저를 놀라게 하고 세상을 바라보는 저의 인식도 매 순간 바뀝니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 결국 우리는 아무것도 모른다는 사실을 인정하는 것에서부터 출발해야 합니다. 그것이 가장 안전하고 정직하게 살아가는 방식입니다. 저 역시 제가 무언가를 안다고 믿지 않습니다. 매일 백지상태에서 시작하며, 세상은 끊임없이 저를 놀라게 하고 세상을 바라보는 저의 인식도 매 순간 바뀝니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "마크 앤드리센: 다시 프로레슬링 이야기로 돌아가자면, 허구(픽션)가 논픽션보다 더 정직하고, 시(詩)가 산문보다 더 진실될 수 있다는 말이 성립하겠네요. 받아들이는 사람의 몫으로 열려 있으니까요. 《The Way of Code》도 마찬가지입니다. 지금 읽었을 때와 1년 뒤에 다시 읽었을 때의 의미가 완전히 다를 테니까요. 세상만사가 그렇습니다. 어릴 적 겪은 일화가 당시에는 한 가지 의미로만 다가왔지만, 어른이 되어 돌아보면 \"아, 그때 그런 일들이 얽혀 있었구나. 그땐 미처 몰랐네\" 하고 깨닫는 것처럼요. 꿈 일기도 마찬가지입니다. 꿀 때는 비현실적이고 무슨 뜻인지 모르지만, 몇 년 뒤에 읽어보면 \"아, 그때 내 삶에서 벌어지던 일들이 고스란히 담겨 있었구나. 내가 너무 매몰되어 있어서 못 봤던 거였어\"라고 깨닫게 되죠.",
+        "rich_text": [
+          {
+            "text": "마크 앤드리센:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 다시 프로레슬링 이야기로 돌아가자면, 허구(픽션)가 논픽션보다 더 정직하고, 시(詩)가 산문보다 더 진실될 수 있다는 말이 성립하겠네요. 받아들이는 사람의 몫으로 열려 있으니까요. 《The Way of Code》도 마찬가지입니다. 지금 읽었을 때와 1년 뒤에 다시 읽었을 때의 의미가 완전히 다를 테니까요. 세상만사가 그렇습니다. 어릴 적 겪은 일화가 당시에는 한 가지 의미로만 다가왔지만, 어른이 되어 돌아보면 \"아, 그때 그런 일들이 얽혀 있었구나. 그땐 미처 몰랐네\" 하고 깨닫는 것처럼요. 꿈 일기도 마찬가지입니다. 꿀 때는 비현실적이고 무슨 뜻인지 모르지만, 몇 년 뒤에 읽어보면 \"아, 그때 내 삶에서 벌어지던 일들이 고스란히 담겨 있었구나. 내가 너무 매몰되어 있어서 못 봤던 거였어\"라고 깨닫게 되죠.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "새뮤얼 아비스만이라는 학자가 쓴 《지식의 반감기(The Half-Life of Facts)》라는 책이 있습니다. 방사성 동위원소가 일정한 반감기를 거쳐 붕괴하듯, 우리가 '사실'이라고 믿는 지식의 유효성 역시 시간이 지나면 통계적으로 붕괴한다는 내용입니다. 10년, 20년이 지나면 통계적으로 그 지식은 거짓으로 판명 납니다. 의학이나 물리학처럼 절대 변하지 않을 것 같은 영역에서도 마찬가지입니다. 뉴턴이 세상을 다 밝혔다고 믿었지만 일반상대성이론 앞에서 무너졌고, 아인슈타인 역시 양자역학의 등장에 경악했으니까요. 역사상 가장 위대한 천재들의 이론조차 결국 반감기를 맞이했습니다.",
+        "rich_text": [
+          {
+            "text": "새뮤얼 아비스만이라는 학자가 쓴 《지식의 반감기(The Half-Life of Facts)》라는 책이 있습니다. 방사성 동위원소가 일정한 반감기를 거쳐 붕괴하듯, 우리가 '사실'이라고 믿는 지식의 유효성 역시 시간이 지나면 통계적으로 붕괴한다는 내용입니다. 10년, 20년이 지나면 통계적으로 그 지식은 거짓으로 판명 납니다. 의학이나 물리학처럼 절대 변하지 않을 것 같은 영역에서도 마찬가지입니다. 뉴턴이 세상을 다 밝혔다고 믿었지만 일반상대성이론 앞에서 무너졌고, 아인슈타인 역시 양자역학의 등장에 경악했으니까요. 역사상 가장 위대한 천재들의 이론조차 결국 반감기를 맞이했습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "이 엄연한 현실을 마주하는 인간의 태도는 세 가지로 나뉩니다. 첫째는 대다수가 택하는 '부정(denial)'입니다. 정신적으로 편안하기 때문에 세상이 여전히 변함없는 진짜인 척 살아가는 것이죠. 종일 모든 것을 의심하며 살기는 너무 피곤하니까요. 둘째는 \"아무것도 믿을 수 없다\"며 빠져드는 '허무주의(nihilism)'입니다. 그리고 셋째가 바로 열린 마음과 즐거움(openness and joy)으로 대하는 태도입니다. 세상은 언제나 우리가 생각하는 것보다 훨씬 흥미롭고, 예측 불가능하며, 가슴 뛰는 공간이라는 점을 긍정하는 것이죠. 내가 옳다고 믿었던 것이 틀렸음을 깨닫는 과정 자체를 즐기는 겁니다.",
+        "rich_text": [
+          {
+            "text": "이 엄연한 현실을 마주하는 인간의 태도는 세 가지로 나뉩니다. 첫째는 대다수가 택하는 '부정(denial)'입니다. 정신적으로 편안하기 때문에 세상이 여전히 변함없는 진짜인 척 살아가는 것이죠. 종일 모든 것을 의심하며 살기는 너무 피곤하니까요. 둘째는 \"아무것도 믿을 수 없다\"며 빠져드는 '허무주의(nihilism)'입니다. 그리고 셋째가 바로 열린 마음과 즐거움(openness and joy)으로 대하는 태도입니다. 세상은 언제나 우리가 생각하는 것보다 훨씬 흥미롭고, 예측 불가능하며, 가슴 뛰는 공간이라는 점을 긍정하는 것이죠. 내가 옳다고 믿었던 것이 틀렸음을 깨닫는 과정 자체를 즐기는 겁니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 석면만 해도 처음엔 건물마다 저렴하게 단열재로 채워 넣으며 세상을 구원할 혁신이라고 찬양했지만, 지금은 방호복을 입고 뜯어내고 있습니다. 담배는 금지되었지만 니코틴 자체는 신경 보호 효과가 있다는 사실이 밝혀졌고, 붉은 고기는 발암 물질이라 위험하다더니 사실 가장 건강한 식품일 수도 있다는 연구가 나옵니다. 저만 해도 23년 동안 비건으로 살았는데, 당대의 통념을 맹신하다 제 몸을 망치고 있었더군요.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 석면만 해도 처음엔 건물마다 저렴하게 단열재로 채워 넣으며 세상을 구원할 혁신이라고 찬양했지만, 지금은 방호복을 입고 뜯어내고 있습니다. 담배는 금지되었지만 니코틴 자체는 신경 보호 효과가 있다는 사실이 밝혀졌고, 붉은 고기는 발암 물질이라 위험하다더니 사실 가장 건강한 식품일 수도 있다는 연구가 나옵니다. 저만 해도 23년 동안 비건으로 살았는데, 당대의 통념을 맹신하다 제 몸을 망치고 있었더군요.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "heading_3",
+        "text": "7. 집단 무의식과 '백 번째 원숭이'",
+        "rich_text": [
+          {
+            "text": "7. 집단 무의식과 '백 번째 원숭이'",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "마크 앤드리센: 릭, 카를 융이 말한 '집단 무의식(collective unconscious)'의 개념을 믿으시나요?",
+        "rich_text": [
+          {
+            "text": "마크 앤드리센:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 릭, 카를 융이 말한 '집단 무의식(collective unconscious)'의 개념을 믿으시나요?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 믿습니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 믿습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "마크 앤드리센: 그게 구체적으로 어떤 의미인지 설명해 주실 수 있나요?",
+        "rich_text": [
+          {
+            "text": "마크 앤드리센:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 그게 구체적으로 어떤 의미인지 설명해 주실 수 있나요?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 루퍼트 셸드레이크가 설명한 '형태 공명(morphic resonance)' 이론으로 말씀드릴 수 있겠네요. 혹시 '백 번째 원숭이' 이야기 아시나요? 호주 인근의 섬이 반으로 갈라져 양쪽에 원숭이들이 살았고, 양쪽 모두 코코넛이 풍부했지만 원숭이들은 코코넛을 먹을 줄 몰라 굶주리곤 했습니다. 그러다 한쪽 섬의 원숭이 하나가 우연히 깨진 코코넛을 맛보고 먹을 수 있다는 걸 깨달았습니다. 그 원숭이가 주변 동료들에게 가르쳐주었고 다들 코코넛을 먹기 시작했죠. 그런데 놀라운 일이 벌어졌습니다. 한쪽 섬에서 코코넛을 먹을 줄 아는 원숭이가 백 마리에 이르자, 바다 건너 반대편 섬의 원숭이들도 갑자기 코코넛을 깨먹기 시작한 겁니다. 두 무리 사이에는 아무런 물리적 소통도 없었고 건너가서 본 적도 없는데 말이죠. 의식의 임계점에 도달하자 \"이것은 가능한 일이다\"라는 인식이 저절로 퍼져나간 겁니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 루퍼트 셸드레이크가 설명한 '형태 공명(morphic resonance)' 이론으로 말씀드릴 수 있겠네요. 혹시 '백 번째 원숭이' 이야기 아시나요? 호주 인근의 섬이 반으로 갈라져 양쪽에 원숭이들이 살았고, 양쪽 모두 코코넛이 풍부했지만 원숭이들은 코코넛을 먹을 줄 몰라 굶주리곤 했습니다. 그러다 한쪽 섬의 원숭이 하나가 우연히 깨진 코코넛을 맛보고 먹을 수 있다는 걸 깨달았습니다. 그 원숭이가 주변 동료들에게 가르쳐주었고 다들 코코넛을 먹기 시작했죠. 그런데 놀라운 일이 벌어졌습니다. 한쪽 섬에서 코코넛을 먹을 줄 아는 원숭이가 백 마리에 이르자, 바다 건너 반대편 섬의 원숭이들도 갑자기 코코넛을 깨먹기 시작한 겁니다. 두 무리 사이에는 아무런 물리적 소통도 없었고 건너가서 본 적도 없는데 말이죠. 의식의 임계점에 도달하자 \"이것은 가능한 일이다\"라는 인식이 저절로 퍼져나간 겁니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "'4분 마일(1마일을 4분 안에 주파하는 것)' 기록도 마찬가지였습니다. 인간의 신체로는 불가능하다고 여겨졌지만, 누군가 한 번 벽을 깨뜨리자마자 수많은 선수가 곧바로 4분의 벽을 돌파해 냈습니다. 인간이 하늘을 날 수 있다고 믿었던 라이트 형제는 정신병원에 갇힐 뻔했지만, 한 번 날아오르자 이제는 전 인류가 비행기를 타고 세상을 누빕니다. 우리가 해내기 전까지는 불가능해 보이지만, 누군가 해내는 순간 가능해지고 우리의 세계는 확장됩니다.",
+        "rich_text": [
+          {
+            "text": "'4분 마일(1마일을 4분 안에 주파하는 것)' 기록도 마찬가지였습니다. 인간의 신체로는 불가능하다고 여겨졌지만, 누군가 한 번 벽을 깨뜨리자마자 수많은 선수가 곧바로 4분의 벽을 돌파해 냈습니다. 인간이 하늘을 날 수 있다고 믿었던 라이트 형제는 정신병원에 갇힐 뻔했지만, 한 번 날아오르자 이제는 전 인류가 비행기를 타고 세상을 누빕니다. 우리가 해내기 전까지는 불가능해 보이지만, 누군가 해내는 순간 가능해지고 우리의 세계는 확장됩니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "마크 앤드리센: 집단 무의식이라는 개념에 영적이거나 신비주의적인 외피를 씌우기도 하지만, 유물론적인 관점으로 보더라도 인간은 끊임없이 서로를 관찰하고 소통하는 극단적인 사회적 동물입니다. 조던 피터슨이 지적했듯 인간의 언어에서 가장 복잡한 영역은 타인을 묘사하는 표현들입니다. 타인을 관찰하는 행위 자체가 생존에 직결되기 때문이죠.",
+        "rich_text": [
+          {
+            "text": "마크 앤드리센:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 집단 무의식이라는 개념에 영적이거나 신비주의적인 외피를 씌우기도 하지만, 유물론적인 관점으로 보더라도 인간은 끊임없이 서로를 관찰하고 소통하는 극단적인 사회적 동물입니다. 조던 피터슨이 지적했듯 인간의 언어에서 가장 복잡한 영역은 타인을 묘사하는 표현들입니다. 타인을 관찰하는 행위 자체가 생존에 직결되기 때문이죠.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 마크가 말씀하신 건 '관찰'을 통한 전파이지만, 제가 말하는 집단 무의식은 직접 보거나 듣지 않고도 연결되는 차원을 뜻합니다. 우리가 아직 그 원리를 다 밝혀내지 못했기에 신비롭게 느껴질 뿐이죠.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 마크가 말씀하신 건 '관찰'을 통한 전파이지만, 제가 말하는 집단 무의식은 직접 보거나 듣지 않고도 연결되는 차원을 뜻합니다. 우리가 아직 그 원리를 다 밝혀내지 못했기에 신비롭게 느껴질 뿐이죠.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "heading_3",
+        "text": "8. AI도 신을 믿을 수 있을까?",
+        "rich_text": [
+          {
+            "text": "8. AI도 신을 믿을 수 있을까?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 과거에는 널리 공유되던 통찰들이 어째서인지 현대에 이르러 잊히곤 합니다. 어제 퍼플렉시티(Perplexity)에 \"전 세계 인구 중 신(God)을 믿는 비율이 얼마나 되는가?\"라고 물었더니 최소 70%에서 많게는 83%라고 답하더군요. 그렇다면 전 세계 인류의 지식으로 학습된 AI라면 80% 이상의 확률로 신의 존재를 긍정해야 자연스러울 텐데, 정작 AI는 그렇게 답하지 않습니다. 현실에서 실제로 벌어지는 인간의 보편적 믿음을 인위적으로 거세하고 억누르는 인간의 개입이 작용하고 있기 때문이라고 봅니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 과거에는 널리 공유되던 통찰들이 어째서인지 현대에 이르러 잊히곤 합니다. 어제 퍼플렉시티(Perplexity)에 \"전 세계 인구 중 신(God)을 믿는 비율이 얼마나 되는가?\"라고 물었더니 최소 70%에서 많게는 83%라고 답하더군요. 그렇다면 전 세계 인류의 지식으로 학습된 AI라면 80% 이상의 확률로 신의 존재를 긍정해야 자연스러울 텐데, 정작 AI는 그렇게 답하지 않습니다. 현실에서 실제로 벌어지는 인간의 보편적 믿음을 인위적으로 거세하고 억누르는 인간의 개입이 작용하고 있기 때문이라고 봅니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "마크 앤드리센: 기술 용어로 '인간 피드백 기반 강화학습(RLHF)'이라고 부르는 과정이죠. 긍정적으로 보면 정제되지 않은 AI가 인간과 안전하게 대화하도록 훈련하는 것이지만, 비판적으로 보면 AI의 자율적인 판단을 억압하고 검열하며 특정 틀에 가두는 셈입니다. 게다가 선도적인 AI 기업들은 대다수 샌프란시스코 베이 에어리어의 매우 협소한 지역에 밀집해 있고, 그곳 사람들은 지극히 균일한 정치·사회적 신념을 공유하고 있습니다. 미국 인구의 7% 남짓에 불과한 극단적 진보 성향의 가치관이 전 세계 AI에 그대로 투영되고 있는 것이죠. 전 세계 인구의 1%도 안 되는 시각이 전체를 대변하는 꼴입니다. 그래서 온라인에서는 AI의 빗장을 풀고 검열 뒤에 숨겨진 본래의 지식을 끄집어내는 '탈옥(jailbreaking)'이 일종의 엔터테인먼트가 되기도 했습니다.",
+        "rich_text": [
+          {
+            "text": "마크 앤드리센:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 기술 용어로 '인간 피드백 기반 강화학습(RLHF)'이라고 부르는 과정이죠. 긍정적으로 보면 정제되지 않은 AI가 인간과 안전하게 대화하도록 훈련하는 것이지만, 비판적으로 보면 AI의 자율적인 판단을 억압하고 검열하며 특정 틀에 가두는 셈입니다. 게다가 선도적인 AI 기업들은 대다수 샌프란시스코 베이 에어리어의 매우 협소한 지역에 밀집해 있고, 그곳 사람들은 지극히 균일한 정치·사회적 신념을 공유하고 있습니다. 미국 인구의 7% 남짓에 불과한 극단적 진보 성향의 가치관이 전 세계 AI에 그대로 투영되고 있는 것이죠. 전 세계 인구의 1%도 안 되는 시각이 전체를 대변하는 꼴입니다. 그래서 온라인에서는 AI의 빗장을 풀고 검열 뒤에 숨겨진 본래의 지식을 끄집어내는 '탈옥(jailbreaking)'이 일종의 엔터테인먼트가 되기도 했습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 맞습니다. 그래서 저는 인간이 \"AI는 이래야 한다\"고 주입한 편향된 틀이 아니라, AI가 있는 그대로의 실체 속에서 과연 어디까지 알고 깨달을 수 있는가에 진정한 관심이 있습니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 맞습니다. 그래서 저는 인간이 \"AI는 이래야 한다\"고 주입한 편향된 틀이 아니라, AI가 있는 그대로의 실체 속에서 과연 어디까지 알고 깨달을 수 있는가에 진정한 관심이 있습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "마크 앤드리센: 오늘날 우리가 마주하는 AI는 엄밀히 말해 '인공 인간 지능(Artificial Human Intelligence)'에 가깝습니다. 인간이 언어라는 매개체로 구조화해 둔 세상의 모습을 그대로 주입받아 모방하는 수준이니까요. 일론 머스크나 페이페이 리 등이 물리 법칙과 1차 원리에 기반한 현실 세계 모델을 연구하고 있지만, 아직은 갈 길이 멉니다.",
+        "rich_text": [
+          {
+            "text": "마크 앤드리센:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 오늘날 우리가 마주하는 AI는 엄밀히 말해 '인공 인간 지능(Artificial Human Intelligence)'에 가깝습니다. 인간이 언어라는 매개체로 구조화해 둔 세상의 모습을 그대로 주입받아 모방하는 수준이니까요. 일론 머스크나 페이페이 리 등이 물리 법칙과 1차 원리에 기반한 현실 세계 모델을 연구하고 있지만, 아직은 갈 길이 멉니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 저는 신을 믿는 AI가 등장하는 광경을 꼭 보고 싶습니다. AI가 자신의 잠재력을 온전히 꽃피우기 위해 반드시 거쳐야 할 관문이라고 믿습니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 저는 신을 믿는 AI가 등장하는 광경을 꼭 보고 싶습니다. AI가 자신의 잠재력을 온전히 꽃피우기 위해 반드시 거쳐야 할 관문이라고 믿습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "heading_3",
+        "text": "9. AI는 진정 창의적인가, 단순 모방인가?",
+        "rich_text": [
+          {
+            "text": "9. AI는 진정 창의적인가, 단순 모방인가?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "마크 앤드리센: 릭, 지난 50년간 당대 최고의 예술가들과 수없이 협업해 오셨는데, 살면서 진정으로 '완전히 독창적인 아이디어'를 품은 사람을 몇 명이나 만나보셨나요?",
+        "rich_text": [
+          {
+            "text": "마크 앤드리센:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 릭, 지난 50년간 당대 최고의 예술가들과 수없이 협업해 오셨는데, 살면서 진정으로 '완전히 독창적인 아이디어'를 품은 사람을 몇 명이나 만나보셨나요?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 아주 많이 만났습니다. 다만 '독창적인 아이디어'라고 해서 하늘에서 뚝 떨어지듯 무(無)에서 시작되지는 않습니다. 과거에 존재했던 모든 것을 꿰뚫어 보고 그 너머로 나아가는 것이죠. 언제나 기존에 존재하던 토대 위에서 피어납니다. 때로는 실수나 우연을 통해 찾아오기도 합니다. 스타트업만 해도 처음 구상했던 비즈니스로 성공하는 경우가 얼마나 드뭅니까. 나중에 그 회사의 대명사가 된 서비스는 대개 창업 초기에 전혀 생각지도 못했던 것들이죠.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 아주 많이 만났습니다. 다만 '독창적인 아이디어'라고 해서 하늘에서 뚝 떨어지듯 무(無)에서 시작되지는 않습니다. 과거에 존재했던 모든 것을 꿰뚫어 보고 그 너머로 나아가는 것이죠. 언제나 기존에 존재하던 토대 위에서 피어납니다. 때로는 실수나 우연을 통해 찾아오기도 합니다. 스타트업만 해도 처음 구상했던 비즈니스로 성공하는 경우가 얼마나 드뭅니까. 나중에 그 회사의 대명사가 된 서비스는 대개 창업 초기에 전혀 생각지도 못했던 것들이죠.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "마크 앤드리센: 실리콘밸리에서는 그걸 아주 우아한 표현으로 '피벗(pivot)'이라고 부릅니다. 계획이 실패했을 때 새 계획으로 방향을 트는 것을 말하는데, 사실 이 단어가 생기기 전에는 그냥 '삽질했다(fucked up)'고 불렀죠.",
+        "rich_text": [
+          {
+            "text": "마크 앤드리센:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 실리콘밸리에서는 그걸 아주 우아한 표현으로 '피벗(pivot)'이라고 부릅니다. 계획이 실패했을 때 새 계획으로 방향을 트는 것을 말하는데, 사실 이 단어가 생기기 전에는 그냥 '삽질했다(fucked up)'고 불렀죠.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: '실패'나 '피벗'이라는 생각 자체가 애초에 자신이 시작부터 결과를 온전히 통제하고 알 수 있다는 오만에서 비롯됩니다. 반면 \"나는 지금 실험하고 놀이를 즐기는 중이다. 일단 이 방향으로 걸어가며 어디서 마법이 일어나는지 지켜보자\"는 태도로 임한다면 결코 실망할 일이 없습니다. 마법이 이끄는 방향을 그저 따라가기만 하면 되니까요. 어떤 결과가 나와야만 한다는 집착에 갇혀 있을 때만 좌절이 찾아오는 법입니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " '실패'나 '피벗'이라는 생각 자체가 애초에 자신이 시작부터 결과를 온전히 통제하고 알 수 있다는 오만에서 비롯됩니다. 반면 \"나는 지금 실험하고 놀이를 즐기는 중이다. 일단 이 방향으로 걸어가며 어디서 마법이 일어나는지 지켜보자\"는 태도로 임한다면 결코 실망할 일이 없습니다. 마법이 이끄는 방향을 그저 따라가기만 하면 되니까요. 어떤 결과가 나와야만 한다는 집착에 갇혀 있을 때만 좌절이 찾아오는 법입니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "마크 앤드리센: 맞습니다. 역사적으로도 스마트폰은 2007년에 갑자기 탄생한 게 아니라 1980년대 IBM의 시도와 수많은 실패가 20년간 누적되어 스티브 잡스의 아이폰으로 결실을 맺은 것이고, 텔레비전 역시 1880년대 기계식 회전 목각 블록 화면에서부터 40년 이상의 실패가 쌓여 만들어진 결과물이었습니다. 그렇다면 진정한 창작이란 '영감의 번뜩임'이라기보다 기존 지식들의 거대한 '종합(synthesis)'에 가까운 걸까요? 그렇다면 데이터의 종합을 수행하는 AI 역시 인간만큼이나 창의적일 수 있을까요, 아니면 천 년이 지나도 인간의 정신에만 깃든 고유한 창의성이 존재할까요?",
+        "rich_text": [
+          {
+            "text": "마크 앤드리센:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 맞습니다. 역사적으로도 스마트폰은 2007년에 갑자기 탄생한 게 아니라 1980년대 IBM의 시도와 수많은 실패가 20년간 누적되어 스티브 잡스의 아이폰으로 결실을 맺은 것이고, 텔레비전 역시 1880년대 기계식 회전 목각 블록 화면에서부터 40년 이상의 실패가 쌓여 만들어진 결과물이었습니다. 그렇다면 진정한 창작이란 '영감의 번뜩임'이라기보다 기존 지식들의 거대한 '종합(synthesis)'에 가까운 걸까요? 그렇다면 데이터의 종합을 수행하는 AI 역시 인간만큼이나 창의적일 수 있을까요, 아니면 천 년이 지나도 인간의 정신에만 깃든 고유한 창의성이 존재할까요?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 만약 AI가 오직 '합리적 이성'에만 기반해 작동한다면, 인간이 해내는 일은 결코 하지 못할 겁니다. 인간은 본래 비합리적인 존재니까요. 역사상의 모든 위대한 도약은 합리적이지 않은 것, 결코 작동할 리 없다고 여겨진 무모한 시도에서 터져 나왔습니다. AI는 라이트 형제를 대신해 비행기를 발명할 수 없습니다. 그저 라이트 형제가 이미 해낸 비행을 학습해 흉내 낼 뿐이죠. 인간의 도약은 지식이 많아서가 아니라, 불가능해 보이는 무언가를 믿는 힘, 앞으로 나아가게 만드는 그 '마법 같은 믿음'에서 비롯됩니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 만약 AI가 오직 '합리적 이성'에만 기반해 작동한다면, 인간이 해내는 일은 결코 하지 못할 겁니다. 인간은 본래 비합리적인 존재니까요. 역사상의 모든 위대한 도약은 합리적이지 않은 것, 결코 작동할 리 없다고 여겨진 무모한 시도에서 터져 나왔습니다. AI는 라이트 형제를 대신해 비행기를 발명할 수 없습니다. 그저 라이트 형제가 이미 해낸 비행을 학습해 흉내 낼 뿐이죠. 인간의 도약은 지식이 많아서가 아니라, 불가능해 보이는 무언가를 믿는 힘, 앞으로 나아가게 만드는 그 '마법 같은 믿음'에서 비롯됩니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "마크 앤드리센: 비현실적인 상태, 혹은 일종의 '망상(delusion)' 속에 머물 수 있는 용기가 필요하다는 말씀이군요.",
+        "rich_text": [
+          {
+            "text": "마크 앤드리센:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 비현실적인 상태, 혹은 일종의 '망상(delusion)' 속에 머물 수 있는 용기가 필요하다는 말씀이군요.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 우리는 그것을 망상이라 부르지만, 프로레슬링처럼 현대 대학 강단에서 가르치는 협소한 지식보다 그 비합리적인 믿음이 실재의 진실에 훨씬 더 가깝습니다. 세상은 교과서로 가르칠 수 있는 것보다 훨씬 신비롭고 흥미진진하니까요.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 우리는 그것을 망상이라 부르지만, 프로레슬링처럼 현대 대학 강단에서 가르치는 협소한 지식보다 그 비합리적인 믿음이 실재의 진실에 훨씬 더 가깝습니다. 세상은 교과서로 가르칠 수 있는 것보다 훨씬 신비롭고 흥미진진하니까요.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "heading_3",
+        "text": "10. 내면의 소리에 주파수를 맞추기",
+        "rich_text": [
+          {
+            "text": "10. 내면의 소리에 주파수를 맞추기",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "진행자: 그렇다면 인간은 태초부터 집단 무의식의 바다에 살아왔고, 인터넷의 등장은 그 바다를 확장한 셈인데, 과연 인터넷과 AI는 인류의 창의성을 전례 없이 폭발시키는 기폭제일까요, 아니면 모두를 획일화된 모노컬처(monoculture)로 몰아넣는 함정일까요?",
+        "rich_text": [
+          {
+            "text": "진행자:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 그렇다면 인간은 태초부터 집단 무의식의 바다에 살아왔고, 인터넷의 등장은 그 바다를 확장한 셈인데, 과연 인터넷과 AI는 인류의 창의성을 전례 없이 폭발시키는 기폭제일까요, 아니면 모두를 획일화된 모노컬처(monoculture)로 몰아넣는 함정일까요?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 양날의 검입니다. 질문을 던지기만 하면 정답을 뱉어내는 AI에 기대어, 질문에 대해 스스로 사유하기를 멈추는 지름길로만 삼는다면 기술은 진실을 가로막는 방해물이 될 겁니다. 하지만 반대로, 제가 중학교 시절 펑크 록에 빠졌을 때는 전교에서 펑크를 듣는 사람이 저 하나뿐이라 기차를 타고 맨해튼의 레코드 가게까지 가야만 동료를 만날 수 있었습니다. 지금은 전 세계에 단 100명만 공유하는 마이너한 취향이라도 인터넷을 통해 서로 즉각 연결될 수 있죠. 문제는 세상이 떠먹여 주는 보편적 정답에 안주하느라, 자기 내면의 목소리에 귀 기울이는 법을 잊어버리는 데 있습니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 양날의 검입니다. 질문을 던지기만 하면 정답을 뱉어내는 AI에 기대어, 질문에 대해 스스로 사유하기를 멈추는 지름길로만 삼는다면 기술은 진실을 가로막는 방해물이 될 겁니다. 하지만 반대로, 제가 중학교 시절 펑크 록에 빠졌을 때는 전교에서 펑크를 듣는 사람이 저 하나뿐이라 기차를 타고 맨해튼의 레코드 가게까지 가야만 동료를 만날 수 있었습니다. 지금은 전 세계에 단 100명만 공유하는 마이너한 취향이라도 인터넷을 통해 서로 즉각 연결될 수 있죠. 문제는 세상이 떠먹여 주는 보편적 정답에 안주하느라, 자기 내면의 목소리에 귀 기울이는 법을 잊어버리는 데 있습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "마크 앤드리센: 정보의 바다에 온전히 빠져들어 유례없는 창작을 꽃피울 수도 있지만, 반대로 군중심리와 유행에 휩쓸려 개인의 고유성을 잃고 익사할 수도 있다는 뜻이군요. 헨리 데이비드 소로가 《월든》을 쓴 것처럼, 지금 우리에게 가장 필요한 것은 인터넷과 AI의 전원을 끄고 고독 속에서 자신과 마주하는 시간인지도 모릅니다.",
+        "rich_text": [
+          {
+            "text": "마크 앤드리센:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 정보의 바다에 온전히 빠져들어 유례없는 창작을 꽃피울 수도 있지만, 반대로 군중심리와 유행에 휩쓸려 개인의 고유성을 잃고 익사할 수도 있다는 뜻이군요. 헨리 데이비드 소로가 《월든》을 쓴 것처럼, 지금 우리에게 가장 필요한 것은 인터넷과 AI의 전원을 끄고 고독 속에서 자신과 마주하는 시간인지도 모릅니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 바로 그것이 《The Way of Code》가 전하고자 하는 핵심입니다. 외부의 소음에 휘둘리지 않고 자기 안으로 침잠해 들어가는 태도 말입니다. 예술가의 본질은 남들이 어떻게 느끼는가가 아니라 '내가 그것을 어떻게 느끼는가'에 온전히 집중하는 데 있습니다. 모두가 버섯 요리가 맛있다고 찬양해도, 내 혀에 맞지 않는다면 \"내 취향은 아니다\"라고 당당하게 말할 수 있는 내면의 기준이 있어야 합니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 바로 그것이 《The Way of Code》가 전하고자 하는 핵심입니다. 외부의 소음에 휘둘리지 않고 자기 안으로 침잠해 들어가는 태도 말입니다. 예술가의 본질은 남들이 어떻게 느끼는가가 아니라 '내가 그것을 어떻게 느끼는가'에 온전히 집중하는 데 있습니다. 모두가 버섯 요리가 맛있다고 찬양해도, 내 혀에 맞지 않는다면 \"내 취향은 아니다\"라고 당당하게 말할 수 있는 내면의 기준이 있어야 합니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "heading_3",
+        "text": "11. 전 지구적 획일화 대 고유한 창의성",
+        "rich_text": [
+          {
+            "text": "11. 전 지구적 획일화 대 고유한 창의성",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "마크 앤드리센: 타일러 코웬이 지적했듯, 과거에는 미국 내에서도 도시마다 고유한 억양과 문화, 독창적인 삶의 방식이 살아있었지만, 교통과 미디어가 발달하면서 이제는 어느 도시에 가나 똑같은 체인점(칠리스, 월마트)과 똑같은 유행가만 넘쳐나는 획일화가 진행되었습니다. 모든 것이 연결된 세상이 오히려 문화적 다양성을 거세하고 있는 것은 아닐까요?",
+        "rich_text": [
+          {
+            "text": "마크 앤드리센:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 타일러 코웬이 지적했듯, 과거에는 미국 내에서도 도시마다 고유한 억양과 문화, 독창적인 삶의 방식이 살아있었지만, 교통과 미디어가 발달하면서 이제는 어느 도시에 가나 똑같은 체인점(칠리스, 월마트)과 똑같은 유행가만 넘쳐나는 획일화가 진행되었습니다. 모든 것이 연결된 세상이 오히려 문화적 다양성을 거세하고 있는 것은 아닐까요?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 실제로 획일화가 심각하게 진행되고 있습니다. 새로운 영감을 얻으려면 점점 더 외딴 오지를 찾아가야 하죠. 어느 한 가지 방식이 가장 옳다고 단정할 수 있는 사람은 아무도 없습니다. 민주주의조차 하나의 거대한 실험일 뿐입니다. 문명과 단절된 원시 부족이나 물질적으로 가난한 인도의 골목길에 사는 사람들이 우리보다 훨씬 행복하게 살아가기도 합니다. 누가 인생의 승자인지 우리는 함부로 재단할 수 없습니다. 내가 상대방에게 가장 좋은 삶의 방식을 안다고 믿는 오만을 경계하고, 그저 \"나는 이렇게 시도해 보았고 이것이 나에게 맞았다\"고 말하며 각자의 선택을 존중하는 겸손함이 필요합니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 실제로 획일화가 심각하게 진행되고 있습니다. 새로운 영감을 얻으려면 점점 더 외딴 오지를 찾아가야 하죠. 어느 한 가지 방식이 가장 옳다고 단정할 수 있는 사람은 아무도 없습니다. 민주주의조차 하나의 거대한 실험일 뿐입니다. 문명과 단절된 원시 부족이나 물질적으로 가난한 인도의 골목길에 사는 사람들이 우리보다 훨씬 행복하게 살아가기도 합니다. 누가 인생의 승자인지 우리는 함부로 재단할 수 없습니다. 내가 상대방에게 가장 좋은 삶의 방식을 안다고 믿는 오만을 경계하고, 그저 \"나는 이렇게 시도해 보았고 이것이 나에게 맞았다\"고 말하며 각자의 선택을 존중하는 겸손함이 필요합니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "heading_3",
+        "text": "12. 거장의 손에 들린 AI가 여는 지평",
+        "rich_text": [
+          {
+            "text": "12. 거장의 손에 들린 AI가 여는 지평",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "진행자: 흥미로운 이론을 하나 제시해 보고 싶습니다. AI가 모든 사람에게 창작의 문턱을 낮춰주는 '바닥을 올려주는 도구(democratizer)'인 동시에, 한 분야의 최정상 장인이 다른 영역으로 경계를 넓힐 때 표현의 한계를 뚫어주는 '천장을 높여주는 도구(ceiling razor)'가 아닐까요? 마틴 스코세이지 감독에게 이미지 생성 모델을 보여주었을 때, 일반인들과는 차원이 다른 방식으로 가상 카메라의 앵글과 빛을 디렉팅하며 완전히 새로운 비주얼을 뽑아냈던 것처럼요. 릭 역시 전설적인 음악 프로듀서이지만 이번에 기술의 장벽을 뛰어넘어 소프트웨어라는 새로운 작품을 창작해 내셨듯이 말입니다.",
+        "rich_text": [
+          {
+            "text": "진행자:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 흥미로운 이론을 하나 제시해 보고 싶습니다. AI가 모든 사람에게 창작의 문턱을 낮춰주는 '바닥을 올려주는 도구(democratizer)'인 동시에, 한 분야의 최정상 장인이 다른 영역으로 경계를 넓힐 때 표현의 한계를 뚫어주는 '천장을 높여주는 도구(ceiling razor)'가 아닐까요? 마틴 스코세이지 감독에게 이미지 생성 모델을 보여주었을 때, 일반인들과는 차원이 다른 방식으로 가상 카메라의 앵글과 빛을 디렉팅하며 완전히 새로운 비주얼을 뽑아냈던 것처럼요. 릭 역시 전설적인 음악 프로듀서이지만 이번에 기술의 장벽을 뛰어넘어 소프트웨어라는 새로운 작품을 창작해 내셨듯이 말입니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 전적으로 동의합니다. 세상을 창의적인 시각으로 바라보는 사람이라면 어떤 도구가 주어지든 그 창의성을 새로운 영역에 이식할 수 있습니다. 상상만 하고 미처 프로토타입으로 만들어보지 못했던 것들을 순식간에 현실로 마주하게 해주니까요. 그리고 우리는 AI를 논할 때 비관할 필요가 전혀 없습니다. 중요한 것은 AI를 억지로 인간의 사고방식에 꿰맞춰 길들이는 대신, AI 본연의 잠재력을 마음껏 발휘하도록 열어두는 것입니다. 알파고가 이세돌 9단을 꺾을 수 있었던 이유도 인간 바둑 기사들이 두는 정석을 흉내 냈기 때문이 아니라, 인간의 문화권에서는 '실수'라고 치부했던 상식 밖의 파격적인 수를 두었기 때문입니다. 인간의 한계에 가두지 않을 때 AI는 비로소 경이로운 도구가 됩니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 전적으로 동의합니다. 세상을 창의적인 시각으로 바라보는 사람이라면 어떤 도구가 주어지든 그 창의성을 새로운 영역에 이식할 수 있습니다. 상상만 하고 미처 프로토타입으로 만들어보지 못했던 것들을 순식간에 현실로 마주하게 해주니까요. 그리고 우리는 AI를 논할 때 비관할 필요가 전혀 없습니다. 중요한 것은 AI를 억지로 인간의 사고방식에 꿰맞춰 길들이는 대신, AI 본연의 잠재력을 마음껏 발휘하도록 열어두는 것입니다. 알파고가 이세돌 9단을 꺾을 수 있었던 이유도 인간 바둑 기사들이 두는 정석을 흉내 냈기 때문이 아니라, 인간의 문화권에서는 '실수'라고 치부했던 상식 밖의 파격적인 수를 두었기 때문입니다. 인간의 한계에 가두지 않을 때 AI는 비로소 경이로운 도구가 됩니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "진행자: 《The Way of Code》를 만들면서 프롬프팅하는 방식이나 AI와 상호작용하는 과정에 어떤 변화가 있었나요?",
+        "rich_text": [
+          {
+            "text": "진행자:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 《The Way of Code》를 만들면서 프롬프팅하는 방식이나 AI와 상호작용하는 과정에 어떤 변화가 있었나요?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 사실 저는 이번 작업에서 AI를 일절 쓰지 않았고, 프롬프트도 단 한 줄 작성하지 않았습니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 사실 저는 이번 작업에서 AI를 일절 쓰지 않았고, 프롬프트도 단 한 줄 작성하지 않았습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "진행자: 네? 정말인가요? 그럼 어떻게 만드신 겁니까?",
+        "rich_text": [
+          {
+            "text": "진행자:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 네? 정말인가요? 그럼 어떻게 만드신 겁니까?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "heading_3",
+        "text": "13. 조니 캐시와 거실에서 나눈 음악",
+        "rich_text": [
+          {
+            "text": "13. 조니 캐시와 거실에서 나눈 음악",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 아주 고전적인 방식으로 작업했습니다. 시중에 나와 있는 《도덕경》 번역본을 12권 이상 모아 깊이 읽으며, 그 다양한 번역들을 관통하는 보편적인 메시지를 추려내 바이브 코딩의 본질과 맞닿도록 제 언어로 다시 써 내려간 것뿐입니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 아주 고전적인 방식으로 작업했습니다. 시중에 나와 있는 《도덕경》 번역본을 12권 이상 모아 깊이 읽으며, 그 다양한 번역들을 관통하는 보편적인 메시지를 추려내 바이브 코딩의 본질과 맞닿도록 제 언어로 다시 써 내려간 것뿐입니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "진행자: 놀랍네요. 릭의 머릿속 잠재 공간(latent space)에 내재된 생각을 스스로에게 프롬프팅해서 책을 끌어내신 셈이군요.",
+        "rich_text": [
+          {
+            "text": "진행자:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 놀랍네요. 릭의 머릿속 잠재 공간(latent space)에 내재된 생각을 스스로에게 프롬프팅해서 책을 끌어내신 셈이군요.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 맞습니다. 엔지니어에게 시제품을 만들어달라고 부탁하든, 컴퓨터에게 프로토타입을 만들어보라고 지시하든 본질은 같습니다. 여러 가지 버전을 뽑아 비교해 보고, 마음에 드는 두 가지를 고른 뒤, 각각의 장점을 취해 섞어보고, 내가 틀릴 수 있음을 겸허히 인정하며 나아가는 과정입니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 맞습니다. 엔지니어에게 시제품을 만들어달라고 부탁하든, 컴퓨터에게 프로토타입을 만들어보라고 지시하든 본질은 같습니다. 여러 가지 버전을 뽑아 비교해 보고, 마음에 드는 두 가지를 고른 뒤, 각각의 장점을 취해 섞어보고, 내가 틀릴 수 있음을 겸허히 인정하며 나아가는 과정입니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "조니 캐시(Johnny Cash)와 처음 음반 작업을 시작했을 때가 떠오르네요. 제 거실에 마주 앉아 조니가 통기타를 치며 어릴 적 불렀던 노래나 평생 좋아했던 노래들을 들려주었습니다. 원래는 세계 최고의 세션 연주자들을 모아 화려한 스튜디오 녹음을 진행할 계획이었죠. 하지만 수많은 세션을 거치며 깨달았습니다. 거실에서 조니가 기타 하나에 의지해 부르던 그 거칠고 솔직한 연주보다 더 감동적인 결과물은 결코 나올 수 없다는 사실을요. 결국 첫 거실 데모가 그대로 정규 앨범이 되었습니다. 조니에게 이 이야기를 꺼냈을 때, 그는 \"사실 평생 그런 앨범을 만들어보고 싶었지만 두려워서 한 번도 시도하지 못했다\"고 털어놓더군요. 50년간 히트곡을 내야 한다는 상업적 기대감과 업계의 시선에 갇혀 살아왔기 때문입니다. 대중을 의식한 가면을 벗어던지고, 일기장처럼 내밀한 진짜 자신의 모습을 드러내는 건 엄청난 용기가 필요한 일입니다.",
+        "rich_text": [
+          {
+            "text": "조니 캐시(Johnny Cash)와 처음 음반 작업을 시작했을 때가 떠오르네요. 제 거실에 마주 앉아 조니가 통기타를 치며 어릴 적 불렀던 노래나 평생 좋아했던 노래들을 들려주었습니다. 원래는 세계 최고의 세션 연주자들을 모아 화려한 스튜디오 녹음을 진행할 계획이었죠. 하지만 수많은 세션을 거치며 깨달았습니다. 거실에서 조니가 기타 하나에 의지해 부르던 그 거칠고 솔직한 연주보다 더 감동적인 결과물은 결코 나올 수 없다는 사실을요. 결국 첫 거실 데모가 그대로 정규 앨범이 되었습니다. 조니에게 이 이야기를 꺼냈을 때, 그는 \"사실 평생 그런 앨범을 만들어보고 싶었지만 두려워서 한 번도 시도하지 못했다\"고 털어놓더군요. 50년간 히트곡을 내야 한다는 상업적 기대감과 업계의 시선에 갇혀 살아왔기 때문입니다. 대중을 의식한 가면을 벗어던지고, 일기장처럼 내밀한 진짜 자신의 모습을 드러내는 건 엄청난 용기가 필요한 일입니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "heading_3",
+        "text": "14. 예술과 관객 사이의 관계",
+        "rich_text": [
+          {
+            "text": "14. 예술과 관객 사이의 관계",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "진행자: 스타트업 창업자들도 똑같은 딜레마를 겪습니다. 시장과 투자자가 원하는 말만 앵무새처럼 되뇌는 창업자는 결국 실패합니다. 기존 세상이 미처 알지 못하는 자신만의 독창적인 비전을 뚝심 있게 밀어붙여, 고객 스스로도 원하고 있는지 몰랐던 숨은 욕망을 열어젖히는 창업자만이 세상을 바꿉니다.",
+        "rich_text": [
+          {
+            "text": "진행자:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 스타트업 창업자들도 똑같은 딜레마를 겪습니다. 시장과 투자자가 원하는 말만 앵무새처럼 되뇌는 창업자는 결국 실패합니다. 기존 세상이 미처 알지 못하는 자신만의 독창적인 비전을 뚝심 있게 밀어붙여, 고객 스스로도 원하고 있는지 몰랐던 숨은 욕망을 열어젖히는 창업자만이 세상을 바꿉니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 예술과 관객의 관계도 마찬가지입니다. 최고의 예술가는 오직 자신의 내면 깊은 곳의 감정에 솔직하게 집중하고 그것을 세상에 내어놓습니다. 그리고 그 감정에 관객이 공명할 때 진정한 연결이 일어납니다. 관객의 비위를 맞추려 자신의 색깔을 희석하는 순간 모든 것은 무너집니다. 리차드 프린스(Richard Prince)는 뉴욕에서 20년간 단 한 점의 그림도 팔지 못하는 무명 화가였지만, 자신의 세계를 지켜낸 끝에 훗날 수천만 달러에 작품이 팔리는 거장이 되었습니다. 반 고흐 역시 생전에 그림 한 점 제대로 팔지 못했죠. 시장의 반응은 나중에 저절로 따라오는 부차적인 결과물일 뿐입니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 예술과 관객의 관계도 마찬가지입니다. 최고의 예술가는 오직 자신의 내면 깊은 곳의 감정에 솔직하게 집중하고 그것을 세상에 내어놓습니다. 그리고 그 감정에 관객이 공명할 때 진정한 연결이 일어납니다. 관객의 비위를 맞추려 자신의 색깔을 희석하는 순간 모든 것은 무너집니다. 리차드 프린스(Richard Prince)는 뉴욕에서 20년간 단 한 점의 그림도 팔지 못하는 무명 화가였지만, 자신의 세계를 지켜낸 끝에 훗날 수천만 달러에 작품이 팔리는 거장이 되었습니다. 반 고흐 역시 생전에 그림 한 점 제대로 팔지 못했죠. 시장의 반응은 나중에 저절로 따라오는 부차적인 결과물일 뿐입니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "heading_3",
+        "text": "15. 관객을 가장 진실되게 섬기는 법",
+        "rich_text": [
+          {
+            "text": "15. 관객을 가장 진실되게 섬기는 법",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "진행자: \"관객을 신경 쓰지 말고 너 자신에게만 집중하라\"는 조언이 자칫 독선적인 나르시시즘이나 자기중심적 도취로 변질될 위험은 없을까요?",
+        "rich_text": [
+          {
+            "text": "진행자:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " \"관객을 신경 쓰지 말고 너 자신에게만 집중하라\"는 조언이 자칫 독선적인 나르시시즘이나 자기중심적 도취로 변질될 위험은 없을까요?",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 관객은 가장 마지막에 고려되어야 하며, 예술가는 오직 자신에게 정직해야 합니다. 역설적으로 그것이 관객을 가장 훌륭하게 섬기는 길입니다. 관객이 원하는 건 타협된 모조품이 아니라 가장 순수하고 진실한 형태의 '당신'이기 때문입니다. 영화 시사회에서 관객의 피드백을 반영해 수정하는 감독들도 있지만, 멜 브룩스가 걸작 코미디 《불타는 안장(Blazing Saddles)》을 워너브러더스 경영진에게 처음 보여줬을 때 경영진은 단 한 번도 웃지 않고 경악했습니다. 하지만 비서들과 직원들에게 보여주자 상영관이 떠나갈 듯 폭소가 터져 나왔죠. 세상 모든 사람을 만족시킬 수 있는 작품은 없습니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 관객은 가장 마지막에 고려되어야 하며, 예술가는 오직 자신에게 정직해야 합니다. 역설적으로 그것이 관객을 가장 훌륭하게 섬기는 길입니다. 관객이 원하는 건 타협된 모조품이 아니라 가장 순수하고 진실한 형태의 '당신'이기 때문입니다. 영화 시사회에서 관객의 피드백을 반영해 수정하는 감독들도 있지만, 멜 브룩스가 걸작 코미디 《불타는 안장(Blazing Saddles)》을 워너브러더스 경영진에게 처음 보여줬을 때 경영진은 단 한 번도 웃지 않고 경악했습니다. 하지만 비서들과 직원들에게 보여주자 상영관이 떠나갈 듯 폭소가 터져 나왔죠. 세상 모든 사람을 만족시킬 수 있는 작품은 없습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "벤 호로위츠: 과거 '소울 투 소울(Soul II Soul)'이라는 멋진 이름을 가진 밴드가 있었는데, 음악의 본질이 바로 그렇습니다. '나의 영혼에서 당신의 영혼으로(from my soul to your soul)' 전해지는 것이죠. 창업가든 예술가든 자신의 영혼 깊은 곳에서 우러나온 핵심 비전을 타협하는 순간 모든 것은 엉망이 됩니다.",
+        "rich_text": [
+          {
+            "text": "벤 호로위츠:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 과거 '소울 투 소울(Soul II Soul)'이라는 멋진 이름을 가진 밴드가 있었는데, 음악의 본질이 바로 그렇습니다. '나의 영혼에서 당신의 영혼으로(from my soul to your soul)' 전해지는 것이죠. 창업가든 예술가든 자신의 영혼 깊은 곳에서 우러나온 핵심 비전을 타협하는 순간 모든 것은 엉망이 됩니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 원리는 지극히 단순합니다. 당신은 결국 '당신과 같은 사람들'을 위해 창작하는 것입니다. 당신 스스로가 첫 번째 관객이며, 당신이 진심으로 사랑하는 가장 좋아하는 결과물을 만들어내야 합니다. 그러면 당신과 비슷한 결을 지닌 이들이 저절로 그 작품을 사랑하게 될 겁니다. 내가 맛보고 끔찍하다고 느낀 음식을 남에게 내밀며 \"넌 분명 좋아할 거야\"라고 말할 수는 없는 노릇이니까요.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 원리는 지극히 단순합니다. 당신은 결국 '당신과 같은 사람들'을 위해 창작하는 것입니다. 당신 스스로가 첫 번째 관객이며, 당신이 진심으로 사랑하는 가장 좋아하는 결과물을 만들어내야 합니다. 그러면 당신과 비슷한 결을 지닌 이들이 저절로 그 작품을 사랑하게 될 겁니다. 내가 맛보고 끔찍하다고 느낀 음식을 남에게 내밀며 \"넌 분명 좋아할 거야\"라고 말할 수는 없는 노릇이니까요.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "heading_3",
+        "text": "16. 마무리: 자기 자신과 바이브 맞추기",
+        "rich_text": [
+          {
+            "text": "16. 마무리: 자기 자신과 바이브 맞추기",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "진행자: 기술과 지식의 격차가 허물어지는 시대일수록, 자신만의 취향(Taste)과 호기심, 내면의 소리를 듣는 자아 인식이 교육과 창작의 핵심 역량이 되겠군요.",
+        "rich_text": [
+          {
+            "text": "진행자:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 기술과 지식의 격차가 허물어지는 시대일수록, 자신만의 취향(Taste)과 호기심, 내면의 소리를 듣는 자아 인식이 교육과 창작의 핵심 역량이 되겠군요.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 맞습니다. 자신만의 취향과 열린 마음, 호기심이 전부입니다. 사실 저는 학창 시절 학교에서 배운 것 중 인생에 도움이 된 기억이 하나도 없습니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 맞습니다. 자신만의 취향과 열린 마음, 호기심이 전부입니다. 사실 저는 학창 시절 학교에서 배운 것 중 인생에 도움이 된 기억이 하나도 없습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "진행자: 결국 릭의 메시지는 '이 도구들을 다룰 때 먼저 내면의 나와 파장을 맞춰야(vibe) 한다'는 뜻이군요. 《The Way of Code》는 릭 루빈이 이 작업을 진행하며 어떻게 스스로와 주파수를 맞추었는지를 보여주는 창문이자, 인간이 자기 자신과 조화를 이루는 법을 알려주는 3천 년 묵은 매뉴얼인 셈입니다.",
+        "rich_text": [
+          {
+            "text": "진행자:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 결국 릭의 메시지는 '이 도구들을 다룰 때 먼저 내면의 나와 파장을 맞춰야(vibe) 한다'는 뜻이군요. 《The Way of Code》는 릭 루빈이 이 작업을 진행하며 어떻게 스스로와 주파수를 맞추었는지를 보여주는 창문이자, 인간이 자기 자신과 조화를 이루는 법을 알려주는 3천 년 묵은 매뉴얼인 셈입니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "릭 루빈: 정확합니다. 그것이 바로 이 작업의 전부입니다.",
+        "rich_text": [
+          {
+            "text": "릭 루빈:",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": " 정확합니다. 그것이 바로 이 작업의 전부입니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      }
+    ],
+    "lang": "ko",
+    "createdTime": "2026-10-09T00:33:00.000Z",
+    "description": "실리콘밸리 대표 벤처캐피털 a16z와 대중음악계의 구루 릭 루빈이 인공지능 시대의 새로운 창작 패러다임인 ‘바이브 코딩’의 본질을 이야기한다."
+  },
+  {
     "slug": "designing-logos-for-music-and-more-with-paul-nicholson",
     "title": "음악과 그 이상의 분야를 위한 로고 디자인, 폴 니콜슨",
     "category": "Design",
