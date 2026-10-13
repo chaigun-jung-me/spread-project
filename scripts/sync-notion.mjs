@@ -6,7 +6,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const token = process.env.NOTION_TOKEN;
 const dataSourceId = process.env.NOTION_DATA_SOURCE_ID || '7790a424-902d-44f2-ade0-560b2e51056c';
 const apiVersion = '2026-03-11';
-const categories = new Set(['Design', 'Fashion', 'Tech', 'Sports', 'Culture']);
+const categories = new Set(['Design', 'Fashion', 'Tech', 'Sports', 'Culture', 'Music']);
 const assetsDirectory = path.join(root, 'assets', 'notion');
 await rm(assetsDirectory, { recursive: true, force: true });
 await mkdir(assetsDirectory, { recursive: true });

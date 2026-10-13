@@ -15,7 +15,7 @@ The Source Spread database has been created in the connected Notion workspace. I
 | Source | Rich text | Yes |
 | Date | Date — original/source date shown on the site | Yes |
 | Sort Date | Date — controls newest-first order; initially matches Date | Yes |
-| Category | Select (`Design`, `Fashion`, `Tech`, `Sports`, `Culture`) | Yes |
+| Category | Select (`Design`, `Fashion`, `Tech`, `Sports`, `Culture`, `Music`) | Yes |
 | Source URL | URL | Yes |
 | Published | Checkbox | Yes |
 | Description | Rich text | Yes; generated from the opening when empty |
