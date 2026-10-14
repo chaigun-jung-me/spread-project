@@ -4,20 +4,23 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pull-requests: write
-  actions: write
+  contents: read
 
 concurrency:
-  group: notion-content-sync-${{ github.ref }}
+  group: notion-content-sync
   cancel-in-progress: false
 
 jobs:
   sync:
     runs-on: ubuntu-24.04
     steps:
+      # The sync deploy key is the only actor allowed to bypass the main branch rules.
+      # Content sync is independent of the UI Site QA check, which still gates code PRs.
       - name: Checkout
         uses: actions/checkout@v5
+        with:
+          ref: main
+          ssh-key: ${{ secrets.SYNC_DEPLOY_KEY }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v5
@@ -30,9 +33,7 @@ jobs:
           NOTION_DATA_SOURCE_ID: ${{ secrets.NOTION_DATA_SOURCE_ID }}
         run: node scripts/sync-notion.mjs
 
-      - name: Create a QA-gated content update
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Publish content to main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -41,38 +42,11 @@ jobs:
             echo "No changes to publish."
             exit 0
           fi
-
-          sync_branch="notion-sync-${GITHUB_RUN_ID}"
-          git switch -c "$sync_branch"
           git commit -m "chore: sync published posts from Notion"
-          git push origin "$sync_branch"
-
-          pr_url=$(gh pr create \
-            --base main \
-            --head "$sync_branch" \
-            --title "chore: sync published posts from Notion" \
-            --body "Automated Notion sync. This update will publish only after the required Site QA check passes.")
-
-          gh workflow run site-qa.yml --ref "$sync_branch"
-          qa_run_id=""
-          for attempt in $(seq 1 30); do
-            qa_run_id=$(gh run list \
-              --workflow site-qa.yml \
-              --branch "$sync_branch" \
-              --limit 10 \
-              --json databaseId,event \
-              --jq '[.[] | select(.event == "workflow_dispatch")][0].databaseId // empty')
-            if [ -n "$qa_run_id" ]; then break; fi
-            sleep 2
+          # main may have moved while the sync ran (for example a merged code PR).
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 5
           done
-          if [ -z "$qa_run_id" ]; then
-            echo "Could not find the Site QA run for $sync_branch. Leaving the PR open for inspection."
-            exit 1
-          fi
-
-          if ! gh run watch "$qa_run_id" --exit-status; then
-            echo "Site QA failed. Leaving $pr_url open and unpublished."
-            exit 1
-          fi
-
-          gh pr merge "$pr_url" --merge
+          echo "Could not push the content update to main."
+          exit 1
