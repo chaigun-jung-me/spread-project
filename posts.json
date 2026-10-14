@@ -1,5 +1,74 @@
 [
   {
+    "slug": "why-tech-bros-are-obsessed-with-taste",
+    "title": "실리콘밸리의 기술 만능주의자들은 왜 '취향'에 집착하는가",
+    "category": "Tech",
+    "date": "2026-03-26",
+    "sortDate": "2026-10-14",
+    "from": "Kyle Chayka Industries (The New Yorker)",
+    "source": "Why tech bros are obsessed with \"taste\"",
+    "url": "https://kylechayka.substack.com/p/why-tech-bros-are-obsessed-with-taste",
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "AI 기업들이 스스로를 '취향'과 결부시키려 애쓰는 이유는, 실리콘밸리 바깥의 사람들에게 그들의 도구가 결코 달갑지 않으며 멋지기는커녕 매력적이지도 않기 때문입니다. 많은 이들은 AI 도구를 자신의 생계와 미래, 나아가 자아감에 대한 위협으로 받아들입니다. 적어도 제가 아는 한, 이를 자신의 개성을 긍정하는 라이프스타일의 선택지로 여기는 사람은 거의 없습니다.",
+        "rich_text": [
+          {
+            "text": "AI 기업들이 스스로를 '취향'과 결부시키려 애쓰는 이유는, 실리콘밸리 바깥의 사람들에게 그들의 도구가 결코 달갑지 않으며 멋지기는커녕 매력적이지도 않기 때문입니다. 많은 이들은 AI 도구를 자신의 생계와 미래, 나아가 자아감에 대한 위협으로 받아들입니다. 적어도 제가 아는 한, 이를 자신의 개성을 긍정하는 라이프스타일의 선택지로 여기는 사람은 거의 없습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "지금 벌어지고 있는 현상은 일종의 '취향 세탁(taste-washing)'이라 부를 수 있습니다. 반인간주의적 기술에 자유주의적 인문주의의 그럴듯한 껍데기를 씌우려는 시도입니다. 지난주 <더 타임스(The Times)>는 독자들에게 유명 문학 작품 발췌문과 AI가 생성한 문장을 나란히 보여준 뒤 문체 면에서 어느 쪽이 더 마음에 드는지 묻는 설문조사를 열며 이러한 '신화 만들기'를 부추겼습니다. 참가자의 거의 50%가 인공지능이 쓴 글을 더 선호했습니다.",
+        "rich_text": [
+          {
+            "text": "지금 벌어지고 있는 현상은 일종의 '취향 세탁(taste-washing)'이라 부를 수 있습니다. 반인간주의적 기술에 자유주의적 인문주의의 그럴듯한 껍데기를 씌우려는 시도입니다. 지난주 <더 타임스(The Times)>는 독자들에게 유명 문학 작품 발췌문과 AI가 생성한 문장을 나란히 보여준 뒤 문체 면에서 어느 쪽이 더 마음에 드는지 묻는 설문조사를 열며 이러한 '신화 만들기'를 부추겼습니다. 참가자의 거의 50%가 인공지능이 쓴 글을 더 선호했습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "이제 AI가 힐러리 맨틀(Hilary Mantel)처럼 글을 쓸 수 있을 정도로 능숙해진 걸까요? 아니면 온라인 생태계가 너무나 파편화되고, 기만적이며, 과도하게 자극적이고, 조잡한 모조품투성이로 심각하게 오염된 나머지, 우리가 '취향'이나 안목을 제대로 발휘하는 능력 자체를 망가뜨려 버렸다는 결론이 더 맞을지도 모릅니다.",
+        "rich_text": [
+          {
+            "text": "이제 AI가 힐러리 맨틀(Hilary Mantel)처럼 글을 쓸 수 있을 정도로 능숙해진 걸까요? 아니면 온라인 생태계가 너무나 파편화되고, 기만적이며, 과도하게 자극적이고, 조잡한 모조품투성이로 심각하게 오염된 나머지, 우리가 '취향'이나 안목을 제대로 발휘하는 능력 자체를 망가뜨려 버렸다는 결론이 더 맞을지도 모릅니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      }
+    ],
+    "lang": "ko",
+    "createdTime": "2026-10-14T02:55:00.000Z",
+    "description": "AI 기업들이 기술의 위협을 가리고 그럴듯하게 포장하기 위해 '취향'이라는 개념을 덧씌우는 Taste-washing을 벌이고 있다."
+  },
+  {
     "slug": "rick-rubin-vibe-coding-is-the-punk-rock-of-software",
     "title": "릭 루빈: 바이브 코딩은 소프트웨어의 펑크 록이다",
     "category": "Tech",
