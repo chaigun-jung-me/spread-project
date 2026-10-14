@@ -15599,7 +15599,7 @@
     "category": "Tech",
     "date": "2012-06-15",
     "sortDate": "2026-10-08",
-    "from": "a16z.com",
+    "from": "a16z",
     "source": "Good Product Manager/Bad Product Manager",
     "url": "https://a16z.com/good-product-manager-bad-product-manager/",
     "body": [
@@ -18579,24 +18579,6 @@
     "source": "Who is Alex Zono and Why Does He Dig Running So Much?",
     "url": "https://believeintherun.com/articles/alex-zono/",
     "body": [
-      {
-        "type": "heading_1",
-        "text": "Alex Zono는 누구이며, 그는 왜 러닝에 푹 빠졌을까?",
-        "rich_text": [
-          {
-            "text": "Alex Zono는 누구이며, 그는 왜 러닝에 푹 빠졌을까?",
-            "href": "",
-            "annotations": {
-              "bold": false,
-              "italic": false,
-              "strikethrough": false,
-              "underline": false,
-              "code": false,
-              "color": "default"
-            }
-          }
-        ]
-      },
       {
         "type": "heading_2",
         "text": "러닝은 더 이상 단순한 스포츠가 아니다",
