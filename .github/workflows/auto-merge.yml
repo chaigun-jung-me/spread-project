@@ -1,0 +1,24 @@
+name: Auto-merge
+
+# Every ready (non-draft) PR merges itself as soon as the required Site QA check passes,
+# and Vercel then deploys main to production. Keep a PR in Draft to hold it back.
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review]
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  enable:
+    if: github.event.pull_request.draft == false && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Enable auto-merge
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+        run: gh pr merge --auto --merge "$PR_URL"

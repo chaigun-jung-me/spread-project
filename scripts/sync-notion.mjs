@@ -8,7 +8,6 @@ const dataSourceId = process.env.NOTION_DATA_SOURCE_ID || '7790a424-902d-44f2-ad
 const apiVersion = '2026-03-11';
 const categories = new Set(['Design', 'Fashion', 'Tech', 'Sports', 'Culture', 'Music']);
 const assetsDirectory = path.join(root, 'assets', 'notion');
-await rm(assetsDirectory, { recursive: true, force: true });
 await mkdir(assetsDirectory, { recursive: true });
 
 if (!token || !dataSourceId) {
@@ -16,18 +15,26 @@ if (!token || !dataSourceId) {
 }
 
 async function notion(endpoint, options = {}) {
-  const response = await fetch(`https://api.notion.com/v1/${endpoint}`, {
-    ...options,
-    headers: {
-      Authorization: `Bearer ${token}`,
-      'Notion-Version': apiVersion,
-      'Content-Type': 'application/json',
-      ...options.headers,
-    },
-  });
-  const data = await response.json();
-  if (!response.ok) throw new Error(`Notion ${response.status}: ${data.message || endpoint}`);
-  return data;
+  for (let attempt = 1; ; attempt += 1) {
+    const response = await fetch(`https://api.notion.com/v1/${endpoint}`, {
+      ...options,
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Notion-Version': apiVersion,
+        'Content-Type': 'application/json',
+        ...options.headers,
+      },
+    });
+    // Rate limits and transient Notion outages are retried instead of failing the whole sync.
+    if ((response.status === 429 || response.status >= 500) && attempt < 4) {
+      const wait = Number(response.headers.get('retry-after')) || attempt * 2;
+      await new Promise(resolve => setTimeout(resolve, wait * 1000));
+      continue;
+    }
+    const data = await response.json();
+    if (!response.ok) throw new Error(`Notion ${response.status}: ${data.message || endpoint}`);
+    return data;
+  }
 }
 
 const asText = value => Array.isArray(value) ? value.map(item => item.plain_text || item.text?.content || '').join('') : '';
@@ -167,9 +174,29 @@ do {
 } while (cursor);
 
 const published = queryResults.filter(isPublished);
+const previousPosts = JSON.parse(await readFile(path.join(root, 'posts.json'), 'utf8').catch(() => '[]'));
 const slugs = new Set();
 const posts = [];
+const skipped = [];
 for (const page of published) {
+  try {
+    posts.push(await buildPost(page));
+  } catch (error) {
+    // One incomplete or broken page must not block every other article.
+    // If it was already live, keep its last good version instead of removing it from the site.
+    const title = valueText(page, 'Title') || page.id;
+    const previous = previousPosts.find(post => post.notionId === page.id)
+      || previousPosts.find(post => !post.notionId && post.slug === slugify(valueText(page, 'Slug').trim() || valueText(page, 'Title')));
+    const kept = previous && !slugs.has(previous.slug);
+    if (kept) {
+      slugs.add(previous.slug);
+      posts.push({ ...previous, notionId: page.id });
+    }
+    skipped.push({ title, reason: error.message, kept });
+  }
+}
+
+async function buildPost(page) {
   const title = valueText(page, 'Title');
   const category = valueSelect(page, 'Category');
   const sourceUrl = valueUrl(page, 'Source URL');
@@ -192,7 +219,6 @@ for (const page of published) {
   const existingSlug = valueText(page, 'Slug').trim();
   const slug = slugify(existingSlug || title) || page.id.replaceAll('-', '');
   if (slugs.has(slug)) throw new Error(`Duplicate slug: ${slug}`);
-  slugs.add(slug);
   const rawBlocks = await fetchBlocks(page.id);
   const body = [];
   let imageCount = 0;
@@ -202,7 +228,7 @@ for (const page of published) {
     if (converted) body.push(converted);
   }
   const post = {
-    slug, title, category, date, sortDate,
+    notionId: page.id, slug, title, category, date, sortDate,
     from, source,
     url: sourceUrl, body, lang: 'ko', createdTime: page.created_time || '',
     description: valueText(page, 'Description').trim(),
@@ -224,11 +250,27 @@ for (const page of published) {
         body: JSON.stringify({ properties: generatedProperties }),
       });
     } catch (error) {
-      throw new Error(`Could not save the required generated fields to Notion for “${title}”: ${error.message}`);
+      // The generated values are already in the post, so publishing does not depend on the write-back.
+      console.log(`::warning::Could not save generated Description/Slug back to Notion for “${title}”: ${error.message}`);
     }
   }
-  posts.push(post);
+  slugs.add(slug);
+  return post;
 }
+
+// Remove downloaded images that no published post references any more.
+const referencedImages = new Set(posts.flatMap(post => post.body.filter(block => block.type === 'image').map(block => block.url.replace(/^\//, ''))));
+for (const entry of await readdir(assetsDirectory, { recursive: true, withFileTypes: true })) {
+  if (!entry.isFile()) continue;
+  const relative = path.posix.join('assets', 'notion', path.relative(assetsDirectory, path.join(entry.parentPath, entry.name)).split(path.sep).join('/'));
+  if (!referencedImages.has(relative)) await rm(path.join(root, relative), { force: true });
+}
+for (const entry of await readdir(assetsDirectory, { withFileTypes: true })) {
+  if (entry.isDirectory() && !(await readdir(path.join(assetsDirectory, entry.name))).length) {
+    await rm(path.join(assetsDirectory, entry.name), { recursive: true });
+  }
+}
+
 posts.sort((a, b) => (b.sortDate || b.date || '').localeCompare(a.sortDate || a.date || '') || (b.createdTime || '').localeCompare(a.createdTime || '') || a.title.localeCompare(b.title, 'ko'));
 await writeFile(path.join(root, 'posts.json'), `${JSON.stringify(posts, null, 2)}\n`);
 
@@ -255,3 +297,11 @@ for (const post of posts) {
 }
 
 console.log(`Synced ${posts.length} published post(s) from Notion.`);
+
+if (skipped.length) {
+  const lines = skipped.map(({ title, reason, kept }) => `- **${title}** — ${reason} (${kept ? 'kept the previously published version' : 'not published'})`);
+  for (const line of lines) console.log(`::warning::Skipped ${line.slice(2)}`);
+  if (process.env.GITHUB_STEP_SUMMARY) {
+    await writeFile(process.env.GITHUB_STEP_SUMMARY, `### Skipped Notion pages\n\nFix these in Notion; every other article was synced.\n\n${lines.join('\n')}\n`, { flag: 'a' });
+  }
+}
