@@ -12,13 +12,13 @@
     "body": [
       {
         "type": "paragraph",
-        "text": "글: 카일 차이카 (Kyle Chayka)",
+        "text": "글 | 카일 차이카 (Kyle Chayka)",
         "rich_text": [
           {
-            "text": "글: 카일 차이카 (Kyle Chayka)",
+            "text": "글 | 카일 차이카 (Kyle Chayka)",
             "href": "",
             "annotations": {
-              "bold": false,
+              "bold": true,
               "italic": false,
               "strikethrough": false,
               "underline": false,
