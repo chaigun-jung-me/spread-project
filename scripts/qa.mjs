@@ -17,8 +17,8 @@ const supportedBlocks = new Set([
 const posts = JSON.parse(await readFile(path.join(root, 'posts.json'), 'utf8'));
 const html = await readFile(path.join(root, 'index.html'), 'utf8');
 const fixture = {
-  slug: '__qa-fixture__', title: 'QA fixture article with a deliberately long title that overflows the homepage column', category: 'Culture',
-  date: '2000-01-01', sortDate: '2099-01-01', from: 'QA', source: 'QA fixture',
+  slug: '__qa-fixture__', title: 'QA fixture article', category: 'Culture',
+  date: '2000-01-01', sortDate: '1900-01-01', from: 'QA', source: 'QA fixture',
   url: 'https://example.com/source', description: 'QA fixture description. Used only in automated checks.', lang: 'en',
   body: [
     { type: 'paragraph', text: 'A regular paragraph must fill the mobile article column.', rich_text: [{ text: 'A regular paragraph must fill the mobile article column.', annotations: {} }] },
@@ -164,6 +164,13 @@ try {
   await page.goto(baseUrl, { waitUntil: 'domcontentloaded' });
   await page.locator('.list tbody tr[data-slug]').first().waitFor({ state: 'visible' });
   await page.evaluate(() => document.fonts?.ready);
+  // Long production titles are content-dependent; synthesize one in the UI test so hover behavior
+  // stays covered even when the current published articles are all short.
+  await page.locator('.list td.title > .t').first().evaluate(element => {
+    element.textContent = 'QA title deliberately extended to overflow the homepage title column and verify hover animation';
+  });
+  await page.evaluate(() => dispatchEvent(new Event('resize')));
+  await page.waitForTimeout(200);
   const desktop = await page.evaluate(() => ({
     width: document.documentElement.clientWidth,
     scrollWidth: document.documentElement.scrollWidth,
