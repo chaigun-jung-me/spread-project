@@ -274,6 +274,22 @@ for (const entry of await readdir(assetsDirectory, { withFileTypes: true })) {
 posts.sort((a, b) => (b.sortDate || b.date || '').localeCompare(a.sortDate || a.date || '') || (b.createdTime || '').localeCompare(a.createdTime || '') || a.title.localeCompare(b.title, 'ko'));
 await writeFile(path.join(root, 'posts.json'), `${JSON.stringify(posts, null, 2)}\n`);
 
+// Keep the sitemap aligned with the same published posts used to build the site.
+const sitemapUrls = [
+  'https://source-spread.kr/',
+  ...posts.map(post => `https://source-spread.kr/posts/${encodeURIComponent(post.slug)}`),
+];
+const xmlEscape = value => String(value).replace(/[&<>"']/g, character => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;',
+})[character]);
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapUrls.map(url => `  <url><loc>${xmlEscape(url)}</loc></url>`).join('\n')}
+</urlset>
+`;
+await writeFile(path.join(root, 'sitemap.xml'), sitemap);
+
+
 // Each detail URL has its own HTML shell so link previews receive metadata without running JS.
 const template = await readFile(path.join(root, 'index.html'), 'utf8');
 const generatedPosts = path.join(root, 'posts');
