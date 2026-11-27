@@ -18,7 +18,7 @@ const posts = JSON.parse(await readFile(path.join(root, 'posts.json'), 'utf8'));
 const html = await readFile(path.join(root, 'index.html'), 'utf8');
 const fixture = {
   slug: '__qa-fixture__', title: 'QA fixture article with a deliberately long title that overflows the homepage column', category: 'Culture',
-  date: '2000-01-01', sortDate: '1900-01-01', from: 'QA', source: 'QA fixture',
+  date: '2000-01-01', sortDate: '2099-01-01', from: 'QA', source: 'QA fixture',
   url: 'https://example.com/source', description: 'QA fixture description. Used only in automated checks.', lang: 'en',
   body: [
     { type: 'paragraph', text: 'A regular paragraph must fill the mobile article column.', rich_text: [{ text: 'A regular paragraph must fill the mobile article column.', annotations: {} }] },
