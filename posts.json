@@ -1,5 +1,555 @@
 [
   {
+    "notionId": "4251e4c7-f4a9-80ba-8c36-cf9bfea97991",
+    "slug": "ai-music-is-banned",
+    "title": "AI 음악은 금지됩니다",
+    "category": "Culture",
+    "date": "2026-11-25",
+    "sortDate": "2026-11-27",
+    "from": "TIDAL",
+    "source": "AI Music Is Banned",
+    "url": "https://tidal.com/magazine/article/ai-music-is-banned/1-99745",
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "올해 TIDAL은 아티스트를 보호하고 청취자에게 정확한 정보를 제공하기 위해 AI 정책을 도입했습니다.",
+        "rich_text": [
+          {
+            "text": "올해 TIDAL은 아티스트를 보호하고 청취자에게 정확한 정보를 제공하기 위해 ",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": "AI 정책",
+            "href": "https://tidal.com/ai-policy?utm_source=chatgpt.com",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": "을 도입했습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "이후 우리는 Suno, Lyria 등의 AI 도구를 통해 100% 생성된 것으로 판단되는 트랙을 식별하고, 해당 음악에 AI 생성 표시를 붙이거나 수익 창출을 중단하는 조치를 취해왔습니다.",
+        "rich_text": [
+          {
+            "text": "이후 우리는 Suno, Lyria 등의 AI 도구를 통해 100% 생성된 것으로 판단되는 트랙을 식별하고, 해당 음악에 AI 생성 표시를 붙이거나 수익 창출을 중단하는 조치를 취해왔습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "하지만 그것만으로는 충분하지 않다고 판단했습니다. 이제는 보다 강력한 변화가 필요합니다. 오늘 발표하는 정책 변경 사항과 그 이유를 설명하겠습니다.",
+        "rich_text": [
+          {
+            "text": "하지만 그것만으로는 충분하지 않다고 판단했습니다. 이제는 보다 강력한 변화가 필요합니다. 오늘 발표하는 정책 변경 사항과 그 이유를 설명하겠습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "heading_2",
+        "text": "12월 9일부터 완전히 AI로 생성된 음악은 TIDAL에 제출할 수 없으며, 기존 플랫폼에서도 삭제됩니다.",
+        "rich_text": [
+          {
+            "text": "12월 9일부터 완전히 AI로 생성된 음악은 TIDAL에 제출할 수 없으며, 기존 플랫폼에서도 삭제됩니다.",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "지난 90일 동안 TIDAL에 유통된 전체 트랙 중 43%가 완전히 AI로 생성된 음악으로 탐지됐습니다.",
+        "rich_text": [
+          {
+            "text": "지난 90일 동안 TIDAL에 유통된 전체 트랙 중 ",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": "43%가 완전히 AI로 생성된 음악으로 탐지",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": "됐습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "이 트랙들은 청취자에게 AI 생성 음악임을 표시하고, 로열티 분배 대상에서도 제외했습니다.",
+        "rich_text": [
+          {
+            "text": "이 트랙들은 청취자에게 AI 생성 음악임을 표시하고, 로열티 분배 대상에서도 제외했습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "11월 6일에는 지금까지 가장 많은 AI 음악이 유입됐습니다. 이날 TIDAL이 전달받은 전체 음원의 60% 이상이 완전한 AI 생성 음악이었습니다.",
+        "rich_text": [
+          {
+            "text": "11월 6일에는 지금까지 가장 많은 AI 음악이 유입됐습니다. 이날 TIDAL이 전달받은 전체 음원의 60% 이상이 완전한 AI 생성 음악이었습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "현재 TIDAL 카탈로그에는 약 2,700만 곡의 AI 생성 음악이 태그되어 있습니다. 이는 전체 음원 카탈로그의 6.3%에 해당합니다.",
+        "rich_text": [
+          {
+            "text": "현재 TIDAL 카탈로그에는 약 2,700만 곡의 AI 생성 음악이 태그되어 있습니다. 이는 전체 음원 카탈로그의 6.3%에 해당합니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "그런데 정작 TIDAL 구독자들은 이러한 음악을 거의 듣지 않고 있습니다. 해당 트랙 중 96%는 지난 3개월 동안 스트리밍 횟수가 0회였습니다.",
+        "rich_text": [
+          {
+            "text": "그런데 정작 TIDAL 구독자들은 이러한 음악을 거의 듣지 않고 있습니다. 해당 트랙 중 ",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": "96%는 지난 3개월 동안 스트리밍 횟수가 0회",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": "였습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "완전히 AI로 생성된 음악이 청취자를 속이거나 기존 아티스트를 사칭하는 문제도 심각합니다. 이러한 문제는 점점 더 큰 규모로 확산되고 있습니다.",
+        "rich_text": [
+          {
+            "text": "완전히 AI로 생성된 음악이 청취자를 속이거나 기존 아티스트를 사칭하는 문제도 심각합니다. 이러한 문제는 점점 더 큰 규모로 확산되고 있습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "이는 기존 아티스트의 스트리밍 횟수와 로열티 수익을 빼앗을 뿐 아니라, 팬들에게 혼란을 줍니다.",
+        "rich_text": [
+          {
+            "text": "이는 기존 아티스트의 스트리밍 횟수와 로열티 수익을 빼앗을 뿐 아니라, 팬들에게 혼란을 줍니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "지금까지 아티스트 이름을 사칭한 것으로 의심되는 트랙 65,000곡 이상을 삭제했습니다.",
+        "rich_text": [
+          {
+            "text": "지금까지 아티스트 이름을 사칭한 것으로 의심되는 트랙 65,000곡 이상을 삭제했습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "물론 모든 음악이 발매 직후부터 주목받는 것은 아닙니다. 아티스트에게는 자신의 팬층을 형성할 시간이 필요합니다.",
+        "rich_text": [
+          {
+            "text": "물론 모든 음악이 발매 직후부터 주목받는 것은 아닙니다. 아티스트에게는 자신의 팬층을 형성할 시간이 필요합니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "하지만 지금의 상황은 다릅니다. 이러한 규모의 AI 음악이 쏟아지면 TIDAL 구독자들이 실제로 듣고 싶어 하고 새롭게 발견하고자 하는 진짜 음악과 아티스트가 묻히게 됩니다.",
+        "rich_text": [
+          {
+            "text": "하지만 지금의 상황은 다릅니다. 이러한 규모의 AI 음악이 쏟아지면 TIDAL 구독자들이 실제로 듣고 싶어 하고 새롭게 발견하고자 하는 진짜 음악과 아티스트가 묻히게 됩니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "TIDAL이 아티스트에게는 자신의 음악을 공유하기 좋은 공간으로, 청취자에게는 음악을 즐기고 발견하기 좋은 공간으로 남기 위해 100% AI로 생성된 것으로 판단되는 모든 트랙을 삭제할 예정입니다.",
+        "rich_text": [
+          {
+            "text": "TIDAL이 아티스트에게는 자신의 음악을 공유하기 좋은 공간으로, 청취자에게는 음악을 즐기고 발견하기 좋은 공간으로 남기 위해 ",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": "100% AI로 생성된 것으로 판단되는 모든 트랙을 삭제",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": "할 예정입니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "또한 유통사들이 이러한 음악을 TIDAL에 전달하는 행위도 금지합니다. 메타데이터에 AI 도구만을 사용해 생성했다고 명시된 음원은 업로드 단계에서 거부할 것입니다.",
+        "rich_text": [
+          {
+            "text": "또한 유통사들이 이러한 음악을 TIDAL에 전달하는 행위도 금지합니다. 메타데이터에 AI 도구만을 사용해 생성했다고 명시된 음원은 업로드 단계에서 거부할 것입니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "다만 AI 도구의 도움을 받았더라도, AI가 만들어낸 결과물을 그대로 사용하는 것이 아닌 음악은 플랫폼에 계속 등록할 수 있습니다.",
+        "rich_text": [
+          {
+            "text": "다만 AI 도구의 도움을 받았더라도, AI가 만들어낸 결과물을 그대로 사용하는 것이 아닌 음악은 플랫폼에 계속 등록할 수 있습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "TIDAL의 AI 정책은 청취자에게 더 나은 경험을 제공하는 동시에 아티스트와 저작권자의 창작 활동 및 생계를 보호하기 위해 만들어졌습니다.",
+        "rich_text": [
+          {
+            "text": "TIDAL의 AI 정책은 청취자에게 더 나은 경험을 제공하는 동시에 아티스트와 저작권자의 창작 활동 및 생계를 보호하기 위해 만들어졌습니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "TIDAL은 언제나 아티스트가 더 많은 정당한 대가를 받을 수 있도록 노력할 것입니다.",
+        "rich_text": [
+          {
+            "text": "TIDAL은 언제나 아티스트가 더 많은 정당한 대가를 받을 수 있도록 노력할 것입니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "이번 정책 변경의 모든 내용은 결국 이 목표로 귀결됩니다.",
+        "rich_text": [
+          {
+            "text": "이번 정책 변경의 모든 내용은 결국 이 목표로 귀결됩니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "음악을 만드는 사람이라면 자신의 음악이 아무도 찾지 않는 음원에 묻히거나, 누군가 자신을 사칭해 만든 음악에 의해 복제되는 일 없이 TIDAL에 음악을 공개할 수 있어야 합니다.",
+        "rich_text": [
+          {
+            "text": "음악을 만드는 사람이라면 자신의 음악이 아무도 찾지 않는 음원에 묻히거나, 누군가 자신을 사칭해 만든 음악에 의해 복제되는 일 없이 TIDAL에 음악을 공개할 수 있어야 합니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "앞으로도 TIDAL은 관련 현황을 지속적으로 공유하고, 필요한 조치를 취해 나갈 것입니다.",
+        "rich_text": [
+          {
+            "text": "앞으로도 TIDAL은 관련 현황을 지속적으로 공유하고, 필요한 조치를 취해 나갈 것입니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "이번 정책의 시행은 AI 음악 탐지 파트너인 Ircam Amplify의 기술을 통해 이루어집니다.",
+        "rich_text": [
+          {
+            "text": "이번 정책의 시행은 AI 음악 탐지 파트너인 ",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": "Ircam Amplify",
+            "href": "",
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          },
+          {
+            "text": "의 기술을 통해 이루어집니다.",
+            "href": "",
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            }
+          }
+        ]
+      }
+    ],
+    "lang": "ko",
+    "createdTime": "2026-11-27T04:44:00.000Z",
+    "description": "TIDAL은 12월 9일부터 완전히 AI로 생성된 음악을 삭제하고, 업로드를 거부하며, 플랫폼에서 금지합니다."
+  },
+  {
     "notionId": "4251e4c7-f4a9-809b-aeed-e337c9e6294c",
     "slug": "2026-state-of-b2b-gtm-report",
     "title": "2026년 B2B GTM에서 효과를 내고 있는 것들",
