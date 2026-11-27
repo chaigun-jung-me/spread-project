@@ -164,6 +164,13 @@ try {
   await page.goto(baseUrl, { waitUntil: 'domcontentloaded' });
   await page.locator('.list tbody tr[data-slug]').first().waitFor({ state: 'visible' });
   await page.evaluate(() => document.fonts?.ready);
+  // Long production titles are content-dependent; synthesize one in the UI test so hover behavior
+  // stays covered even when the current published articles are all short.
+  await page.locator('.list td.title > .t').first().evaluate(element => {
+    element.textContent = 'QA title deliberately extended to overflow the homepage title column and verify hover animation';
+  });
+  await page.evaluate(() => dispatchEvent(new Event('resize')));
+  await page.waitForTimeout(200);
   const desktop = await page.evaluate(() => ({
     width: document.documentElement.clientWidth,
     scrollWidth: document.documentElement.scrollWidth,

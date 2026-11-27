@@ -54,6 +54,8 @@ Notion groups frequent page edits and typically delivers the event within about 
 
 ## Site icons and titles
 
+`robots.txt` allows public crawling and points to `/sitemap.xml`. The Notion sync regenerates the sitemap from the homepage and currently published article URLs, so unpublished or removed articles are excluded.
+
 Long article titles stay on one line in the homepage list; hovering or keyboard-focusing a row rolls only a title that overflows. The home-screen icon uses `apple-touch-icon.png` for iPhone and the manifest icons for supported installable browsers.
 
 ## Local preview
